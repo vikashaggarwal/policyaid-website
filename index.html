@@ -2729,6 +2729,44 @@ function sendToSheet(payload){
   fetch(GAS_URL + '?' + params, { method:'GET', mode:'no-cors' }).catch(()=>{});
 }
 
+// ── KLAVIYO LEAD CAPTURE ──
+function sendToKlaviyo(payload){
+  try {
+    window._learnq = window._learnq || [];
+
+    // Format phone to E.164 (+91XXXXXXXXXX)
+    let phone = (payload.mobile || payload.phone || '').replace(/\D/g,'');
+    if(phone.length === 10) phone = '+91' + phone;
+    else if(phone.startsWith('91') && phone.length === 12) phone = '+' + phone;
+
+    // Identify the profile
+    const profile = {
+      '$first_name':    payload.name  || '',
+      '$phone_number':  phone,
+      'Insurance Type': payload.insurance_type || 'Not selected',
+      'City':           payload.city  || '',
+      'Lead Source':    'policyaid.online'
+    };
+
+    // Add type-specific properties
+    if(payload.sum_insured)    profile['Sum Insured']     = payload.sum_insured;
+    if(payload.family_members) profile['Family Members']  = payload.family_members;
+    if(payload.eldest_age)     profile['Eldest Age']      = payload.eldest_age;
+    if(payload.reg_number)     profile['Vehicle Reg']     = payload.reg_number;
+    if(payload.destination)    profile['Travel Destination'] = payload.destination;
+    if(payload.travel_days)    profile['Trip Duration']   = payload.travel_days;
+
+    window._learnq.push(['identify', profile]);
+
+    // Track the event
+    window._learnq.push(['track', 'Quote Requested', {
+      'Insurance Type': payload.insurance_type || 'Not selected',
+      'City':           payload.city || '',
+      'Form Type':      payload.form_type || 'quote'
+    }]);
+  } catch(e){ console.warn('Klaviyo error:', e); }
+}
+
 // ── PRODUCT FIELDS SHOW/HIDE ──
 function handleQuoteTypeChange(){
   const type    = document.getElementById('quoteType').value;
@@ -2804,6 +2842,7 @@ async function submitQuote(){
   }
 
   sendToSheet(payload);
+  sendToKlaviyo(payload);
 }
 
 // ── CONTACT FORM SUBMIT ──
@@ -2820,6 +2859,7 @@ async function handleFormSubmit(e){
   payload.timestamp = new Date().toLocaleString('en-IN', {timeZone:'Asia/Kolkata'});
 
   sendToSheet(payload);
+  sendToKlaviyo(payload);
 
   // Show success (we can't check real response due to no-cors)
   setTimeout(()=>{
@@ -3080,5 +3120,7 @@ showSection('home');
 </script>
 <!-- HubSpot Tracking -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246367264.js"></script>
+<!-- Klaviyo -->
+<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Rea7ZY"></script>
 </body>
 </html>
