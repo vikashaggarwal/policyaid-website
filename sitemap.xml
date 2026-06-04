@@ -9,7 +9,7 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Products / Insurance Plans -->
+  <!-- Products -->
   <url>
     <loc>https://www.policyaid.online/#products</loc>
     <lastmod>2026-06-04</lastmod>
@@ -17,7 +17,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Blog / Insurance Insights -->
+  <!-- Blog index -->
   <url>
     <loc>https://www.policyaid.online/#blog</loc>
     <lastmod>2026-06-04</lastmod>
@@ -30,7 +30,7 @@
     <loc>https://www.policyaid.online/#about</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <!-- Contact -->
@@ -39,6 +39,66 @@
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+
+  <!-- Blog: Health Insurance -->
+  <url>
+    <loc>https://www.policyaid.online/blog/best-family-health-insurance-india-2026.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.policyaid.online/blog/health-insurance-exclusions-india.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.policyaid.online/blog/how-to-port-health-insurance-india.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog: Motor Insurance -->
+  <url>
+    <loc>https://www.policyaid.online/blog/zero-depreciation-cover-worth-it.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.policyaid.online/blog/third-party-vs-comprehensive-car-insurance.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.policyaid.online/blog/how-to-file-motor-insurance-claim-india.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog: Travel Insurance -->
+  <url>
+    <loc>https://www.policyaid.online/blog/travel-insurance-schengen-visa-india.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.policyaid.online/blog/best-travel-insurance-usa-indians.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.policyaid.online/blog/student-travel-insurance-abroad-india.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
