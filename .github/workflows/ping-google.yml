@@ -1,0 +1,15 @@
+name: Ping Google Sitemap
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ping-google:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Google to reindex sitemap
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://www.policyaid.online/sitemap.xml"
+          echo "✅ Google sitemap ping sent"
