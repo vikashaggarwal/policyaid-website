@@ -114,6 +114,7 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 :root {
   --teal: #3AB5C8;
@@ -1304,14 +1305,14 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 <!-- MOBILE NAV DRAWER -->
 <div class="mobile-nav" id="mobileNav">
   <ul>
-    <li><a href="#" onclick="showSection('home');closeMobileNav()">🏠 Home</a></li>
-    <li><a href="#" onclick="showSection('products');closeMobileNav()">🛡️ Products</a></li>
-    <li><a href="#" onclick="showSection('about');closeMobileNav()">ℹ️ About Us</a></li>
-    <li><a href="#" onclick="showSection('blog');closeMobileNav()">📖 Blog</a></li>
-    <li><a href="#" onclick="showSection('contact');closeMobileNav()">📞 Contact</a></li>
+    <li><a href="#" onclick="showSection('home');closeMobileNav()"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="#" onclick="showSection('products');closeMobileNav()"><i class="fa-solid fa-shield-halved" style="color:var(--teal-dark)"></i> Products</a></li>
+    <li><a href="#" onclick="showSection('about');closeMobileNav()"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+    <li><a href="#" onclick="showSection('blog');closeMobileNav()"><i class="fa-solid fa-book-open"></i> Blog</a></li>
+    <li><a href="#" onclick="showSection('contact');closeMobileNav()"><i class="fa-solid fa-phone"></i> Contact</a></li>
   </ul>
   <div class="mobile-nav-cta">
-    <button class="btn-primary" style="flex:1;justify-content:center" onclick="scrollToQuote();closeMobileNav()">🛡️ Get Free Quote</button>
+    <button class="btn-primary" style="flex:1;justify-content:center" onclick="scrollToQuote();closeMobileNav()"><i class="fa-solid fa-shield-halved" style="color:var(--teal-dark)"></i> Get Free Quote</button>
     <a href="https://wa.me/919930140305?text=Hi%20Policy%20Aid%2C%20I%20need%20help%20with%20insurance" target="_blank"
        style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:13px;background:#25D366;color:#fff;border-radius:50px;font-weight:700;font-size:.9rem">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1338,34 +1339,34 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       Policy Aid is your <strong>First Aid for Insurance</strong> — compare Health, Motor &amp; Travel plans from top IRDAI-approved insurers and get covered in minutes.
     </p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="scrollToQuote()">🛡️ Get Free Quote</button>
+      <button class="btn-primary" onclick="scrollToQuote()"><i class="fa-solid fa-shield-halved" style="color:var(--teal-dark)"></i> Get Free Quote</button>
       <button class="btn-outline" onclick="showSection('products')">Explore Plans →</button>
     </div>
     <div class="hero-trust">
-      <div class="trust-chip"><div class="icon">✅</div> IRDAI Approved</div>
-      <div class="trust-chip"><div class="icon">⚡</div> Instant Policy</div>
-      <div class="trust-chip"><div class="icon">🤝</div> Free Claims Help</div>
+      <div class="trust-chip"><div class="icon"><i class="fa-solid fa-circle-check" style="color:#16a34a"></i></div> IRDAI Approved</div>
+      <div class="trust-chip"><div class="icon"><i class="fa-solid fa-bolt" style="color:var(--orange)"></i></div> Instant Policy</div>
+      <div class="trust-chip"><div class="icon"><i class="fa-solid fa-handshake" style="color:var(--teal-dark)"></i></div> Free Claims Help</div>
     </div>
   </div>
 
   <div class="hero-visual">
     <div class="cards-stack">
       <div class="ins-card card-health">
-        <div class="c-emoji">🏥</div>
+        <div class="c-emoji"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i></div>
         <div class="c-type">Health Insurance</div>
         <div class="c-name">Family Floater Plan</div>
         <div class="c-price">₹799<span class="c-per">/month</span></div>
         <div class="c-badge">₹5 Lakh Cover</div>
       </div>
       <div class="ins-card card-motor">
-        <div class="c-emoji">🚗</div>
+        <div class="c-emoji"><i class="fa-solid fa-car" style="color:var(--orange)"></i></div>
         <div class="c-type">Motor Insurance</div>
         <div class="c-name">Comprehensive Cover</div>
         <div class="c-price">₹4,200<span class="c-per">/year</span></div>
         <div class="c-badge">Zero Depreciation</div>
       </div>
       <div class="ins-card card-travel">
-        <div class="c-emoji">✈️</div>
+        <div class="c-emoji"><i class="fa-solid fa-plane" style="color:#2563eb"></i></div>
         <div class="c-type">Travel Insurance</div>
         <div class="c-name">International Plan</div>
         <div class="c-price">₹299<span class="c-per">/trip</span></div>
@@ -1440,7 +1441,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   <div class="products-grid">
     <div class="p-card hot">
       <div class="p-tag">Most Popular</div>
-      <div class="p-icon">🏥</div>
+      <div class="p-icon"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i></div>
       <div class="p-title">Health Insurance</div>
       <p class="p-desc">Cashless hospitalisation at 10,000+ network hospitals across India. Individual, Family Floater &amp; Senior Citizen plans.</p>
       <ul class="p-features">
@@ -1452,7 +1453,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       <a class="p-link" onclick="scrollToQuote()">Get Health Quote →</a>
     </div>
     <div class="p-card">
-      <div class="p-icon">🚗</div>
+      <div class="p-icon"><i class="fa-solid fa-car" style="color:var(--orange)"></i></div>
       <div class="p-title">Motor Insurance</div>
       <p class="p-desc">Comprehensive car &amp; bike insurance with zero-depreciation add-ons. Renew in 2 minutes, drive with confidence.</p>
       <ul class="p-features">
@@ -1464,7 +1465,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       <a class="p-link" onclick="scrollToQuote()">Get Motor Quote →</a>
     </div>
     <div class="p-card">
-      <div class="p-icon">✈️</div>
+      <div class="p-icon"><i class="fa-solid fa-plane" style="color:#2563eb"></i></div>
       <div class="p-title">Travel Insurance</div>
       <p class="p-desc">Single trip, multi-trip &amp; student plans. Covers medical emergencies, flight delays, lost baggage &amp; more.</p>
       <ul class="p-features">
@@ -1594,7 +1595,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   <p class="compare-note">* Premiums are indicative for a family of 4 (ages 35+30+5+3 years) with ₹10L sum insured in Mumbai. Actual premiums vary by age, city, and health history. Updated May 2026. "Single AC Room" means choosing a higher room category may proportionally reduce other claim amounts.</p>
   <div class="compare-cta">
     <p style="font-size:.93rem;color:var(--mid);margin-bottom:1rem">Not sure which plan is right for your family? Our advisors compare all 22+ plans in 60 seconds — free.</p>
-    <button class="btn-primary" onclick="scrollToQuote()">🛡️ Get My Personalised Comparison</button>
+    <button class="btn-primary" onclick="scrollToQuote()"><i class="fa-solid fa-shield-halved" style="color:var(--teal-dark)"></i> Get My Personalised Comparison</button>
   </div>
 </section>
 
@@ -1637,17 +1638,17 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       <!-- Row 1: Name + Type (always visible) -->
       <input class="q-input" type="text" id="quoteName" placeholder="👤 Your Name" required>
       <select class="q-select" id="quoteType" onchange="handleQuoteTypeChange()">
-        <option value="">🛡️ Insurance Type</option>
-        <option value="health">🏥 Health Insurance</option>
-        <option value="motor">🚗 Motor Insurance</option>
-        <option value="travel">✈️ Travel Insurance</option>
+        <option value=""><i class="fa-solid fa-shield-halved" style="color:var(--teal-dark)"></i> Insurance Type</option>
+        <option value="health"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i> Health Insurance</option>
+        <option value="motor"><i class="fa-solid fa-car" style="color:var(--orange)"></i> Motor Insurance</option>
+        <option value="travel"><i class="fa-solid fa-plane" style="color:#2563eb"></i> Travel Insurance</option>
       </select>
 
       <!-- ── HEALTH FIELDS ── -->
       <div id="healthFields" class="q-conditional">
         <div class="q-fields-row">
           <select class="q-select" id="quoteSumInsured">
-            <option value="">💰 Sum Insured</option>
+            <option value=""><i class="fa-solid fa-indian-rupee-sign" style="color:var(--teal-dark)"></i> Sum Insured</option>
             <option value="10 Lacs">₹10 Lacs</option>
             <option value="15 Lacs">₹15 Lacs</option>
             <option value="20 Lacs">₹20 Lacs</option>
@@ -1685,7 +1686,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       <div id="motorFields" class="q-conditional">
         <div class="q-fields-row">
           <input class="q-input" type="text" id="quoteRegNumber"
-            placeholder="🚗 Registration Number (e.g. MH01AB1234)"
+            placeholder="<i class="fa-solid fa-car" style="color:var(--orange)"></i> Registration Number (e.g. MH01AB1234)"
             style="text-transform:uppercase">
           <select class="q-select" id="quoteClaimMade">
             <option value="">📋 Claim Made Last Year?</option>
@@ -1702,7 +1703,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       <div id="travelFields" class="q-conditional">
         <div class="q-fields-row">
           <input class="q-input-country" list="countryList" id="quoteCountry"
-            placeholder="🌍 Destination Country (type to search)">
+            placeholder="<i class="fa-solid fa-earth-asia" style="color:var(--teal-dark)"></i> Destination Country (type to search)">
           <datalist id="countryList">
             <option value="Afghanistan"><option value="Albania"><option value="Algeria">
             <option value="Andorra"><option value="Angola"><option value="Antigua and Barbuda">
@@ -1782,11 +1783,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       </div>
 
       <!-- Row 2: Mobile + City (always visible) -->
-      <input class="q-input" type="tel" id="quoteMobile" placeholder="📱 Mobile Number" required>
-      <input class="q-input" type="text" id="quoteCity" placeholder="📍 Your City">
+      <input class="q-input" type="tel" id="quoteMobile" placeholder="<i class="fa-solid fa-mobile-screen"></i> Mobile Number" required>
+      <input class="q-input" type="text" id="quoteCity" placeholder="<i class="fa-solid fa-location-dot"></i> Your City">
       <button class="q-btn" onclick="submitQuote()">Get Free Quote →</button>
     </div>
-    <div id="quoteSuccess" style="display:none;margin-top:1.2rem;padding:14px 24px;background:rgba(58,181,200,0.18);border:1.5px solid var(--teal-mid);border-radius:50px;color:var(--teal-dark);font-size:.9rem;font-weight:700">✅ Got it, <span id="quoteNameDisplay"></span>! Our advisor will call you within 30 minutes on <span id="quotePhoneDisplay"></span></div>
+    <div id="quoteSuccess" style="display:none;margin-top:1.2rem;padding:14px 24px;background:rgba(58,181,200,0.18);border:1.5px solid var(--teal-mid);border-radius:50px;color:var(--teal-dark);font-size:.9rem;font-weight:700"><i class="fa-solid fa-circle-check" style="color:#16a34a"></i> Got it, <span id="quoteNameDisplay"></span>! Our advisor will call you within 30 minutes on <span id="quotePhoneDisplay"></span></div>
     <p style="font-size:.75rem;color:var(--muted);margin-top:1.2rem">By submitting you agree to our Privacy Policy. IRDAI Licensed Insurance Broker.</p>
   </div>
 </section>
@@ -1808,22 +1809,22 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   </div>
   <div class="why-cards">
     <div class="w-card">
-      <div class="w-icon">⚡</div>
+      <div class="w-icon"><i class="fa-solid fa-bolt" style="color:var(--orange)"></i></div>
       <div class="w-title">Instant Policy Issuance</div>
       <p class="w-text">Pay online and get your policy document emailed in under 2 minutes.</p>
     </div>
     <div class="w-card">
-      <div class="w-icon">🤝</div>
+      <div class="w-icon"><i class="fa-solid fa-handshake" style="color:var(--teal-dark)"></i></div>
       <div class="w-title">Free Claims Support</div>
       <p class="w-text">Our team handles the paperwork and follow-ups so you don't have to.</p>
     </div>
     <div class="w-card">
-      <div class="w-icon">💰</div>
+      <div class="w-icon"><i class="fa-solid fa-indian-rupee-sign" style="color:var(--teal-dark)"></i></div>
       <div class="w-title">Best Price Guarantee</div>
       <p class="w-text">We compare across 22+ insurers. You never overpay again.</p>
     </div>
     <div class="w-card">
-      <div class="w-icon">🔔</div>
+      <div class="w-icon"><i class="fa-solid fa-bell" style="color:var(--orange)"></i></div>
       <div class="w-title">Renewal Reminders</div>
       <p class="w-text">We remind you 30 days before your policy expires. Never lapse your cover again.</p>
     </div>
@@ -1834,12 +1835,12 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 <div class="renewal-strip">
   <div class="renewal-inner">
     <div class="renewal-text">
-      <strong>⏰ Insurance Renewal Due Soon?</strong>
+      <strong><i class="fa-solid fa-clock" style="color:var(--orange)"></i> Insurance Renewal Due Soon?</strong>
       <span>Renew your motor or travel insurance in under 2 minutes — better price, same coverage.</span>
     </div>
     <div class="renewal-btns">
-      <button class="renewal-btn motor" onclick="scrollToQuote()">🚗 Renew Motor Insurance</button>
-      <button class="renewal-btn travel" onclick="scrollToQuote()">✈️ Renew Travel Insurance</button>
+      <button class="renewal-btn motor" onclick="scrollToQuote()"><i class="fa-solid fa-car" style="color:var(--orange)"></i> Renew Motor Insurance</button>
+      <button class="renewal-btn travel" onclick="scrollToQuote()"><i class="fa-solid fa-plane" style="color:#2563eb"></i> Renew Travel Insurance</button>
     </div>
   </div>
 </div>
@@ -1855,7 +1856,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
     <a href="https://g.page/r/CZJiPrZiKk8XEBM/review" target="_blank" rel="noopener"
        style="display:flex;align-items:center;gap:10px;padding:10px 20px;background:#fff;border:2px solid var(--border);border-radius:50px;text-decoration:none;transition:all .2s;flex-shrink:0"
        onmouseover="this.style.borderColor='var(--teal)'" onmouseout="this.style.borderColor='var(--border)'">
-      <span style="font-size:1.3rem">⭐</span>
+      <span style="font-size:1.3rem"><i class="fa-solid fa-star" style="color:#f59e0b"></i></span>
       <div>
         <div style="font-size:.82rem;font-weight:800;color:var(--dark)">4.8 on Google Reviews</div>
         <div style="font-size:.72rem;color:var(--muted)">Leave us a review →</div>
@@ -1902,7 +1903,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   </div>
   <div class="blog-grid">
     <div class="b-card">
-      <div class="b-thumb th-health">🏥</div>
+      <div class="b-thumb th-health"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i></div>
       <div class="b-body">
         <span class="b-tag">Health Insurance</span>
         <h3 class="b-title">Best Family Health Insurance Plans in India 2025</h3>
@@ -1911,7 +1912,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       </div>
     </div>
     <div class="b-card">
-      <div class="b-thumb th-motor">🚗</div>
+      <div class="b-thumb th-motor"><i class="fa-solid fa-car" style="color:var(--orange)"></i></div>
       <div class="b-body">
         <span class="b-tag">Motor Insurance</span>
         <h3 class="b-title">Zero Depreciation Cover: Is It Worth the Extra Premium?</h3>
@@ -1920,7 +1921,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       </div>
     </div>
     <div class="b-card">
-      <div class="b-thumb th-travel">✈️</div>
+      <div class="b-thumb th-travel"><i class="fa-solid fa-plane" style="color:#2563eb"></i></div>
       <div class="b-body">
         <span class="b-tag">Travel Insurance</span>
         <h3 class="b-title">Do You Really Need Travel Insurance for a Schengen Visa?</h3>
@@ -1989,7 +1990,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
     <!-- HEALTH -->
     <div class="p-card hot">
       <div class="p-tag">Most Popular</div>
-      <div class="p-icon">🏥</div>
+      <div class="p-icon"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i></div>
       <div class="p-title">Health Insurance</div>
       <p class="p-desc">One hospitalisation can wipe out years of savings. Health insurance makes sure it doesn't.</p>
       <ul class="p-features">
@@ -2005,7 +2006,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
     </div>
     <!-- MOTOR -->
     <div class="p-card">
-      <div class="p-icon">🚗</div>
+      <div class="p-icon"><i class="fa-solid fa-car" style="color:var(--orange)"></i></div>
       <div class="p-title">Motor Insurance</div>
       <p class="p-desc">Legally required and financially essential. One accident without proper cover can cost you lakhs.</p>
       <ul class="p-features">
@@ -2021,7 +2022,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
     </div>
     <!-- TRAVEL -->
     <div class="p-card">
-      <div class="p-icon">✈️</div>
+      <div class="p-icon"><i class="fa-solid fa-plane" style="color:#2563eb"></i></div>
       <div class="p-title">Travel Insurance</div>
       <p class="p-desc">Domestic and international travel insurance for individuals, families, students and frequent flyers.</p>
       <ul class="p-features">
@@ -2047,7 +2048,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card featured">
       <div class="addon-header">
-        <div class="addon-emoji">🎗️</div>
+        <div class="addon-emoji"><i class="fa-solid fa-ribbon" style="color:#db2777"></i></div>
         <div class="addon-title">Critical Illness Cover</div>
         <span class="addon-badge">Most Important</span>
       </div>
@@ -2057,7 +2058,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🤱</div>
+        <div class="addon-emoji"><i class="fa-solid fa-baby" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">Maternity Cover</div>
       </div>
       <p class="addon-desc">Covers delivery costs (normal &amp; C-section), pre-natal care, and newborn treatment. Most plans have a 9-month to 2-year waiting period.</p>
@@ -2066,7 +2067,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🏨</div>
+        <div class="addon-emoji"><i class="fa-solid fa-bed-pulse" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">Room Rent Waiver</div>
       </div>
       <p class="addon-desc">Many plans cap hospital rooms at ₹1,000–₹3,000/day. Choosing a better room reduces your entire claim — including doctor fees. This add-on removes that cap completely.</p>
@@ -2075,7 +2076,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🩺</div>
+        <div class="addon-emoji"><i class="fa-solid fa-stethoscope" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">OPD (Outpatient) Cover</div>
       </div>
       <p class="addon-desc">Standard plans only cover hospital stays. OPD cover pays for doctor consultations, diagnostic tests, and medicines outside the hospital — expenses you have every month.</p>
@@ -2084,7 +2085,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">💵</div>
+        <div class="addon-emoji"><i class="fa-solid fa-money-bill-wave" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">Hospital Cash Benefit</div>
       </div>
       <p class="addon-desc">Get ₹500–₹5,000 cash per day while admitted. This is paid on top of your regular claim — use it for food, transport, or home help. Every day in hospital has hidden costs.</p>
@@ -2093,7 +2094,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🌍</div>
+        <div class="addon-emoji"><i class="fa-solid fa-earth-asia" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">Global Treatment Cover</div>
       </div>
       <p class="addon-desc">Extends your health cover for emergency hospitalisation anywhere in the world. If you travel frequently or want the option of treatment abroad, this is essential.</p>
@@ -2102,7 +2103,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🦷</div>
+        <div class="addon-emoji"><i class="fa-solid fa-tooth" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">Dental &amp; Vision Cover</div>
       </div>
       <p class="addon-desc">Covers dental treatment (fillings, extractions, root canals) and eye care (spectacles, lenses, eye surgery) — expenses that virtually all standard health plans exclude by default.</p>
@@ -2111,7 +2112,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🚑</div>
+        <div class="addon-emoji"><i class="fa-solid fa-truck-medical" style="color:var(--orange)"></i></div>
         <div class="addon-title">Ambulance Cover</div>
       </div>
       <p class="addon-desc">Road and air ambulance costs covered in full. A road ambulance costs ₹2,000–₹5,000. An air ambulance can cost lakhs. Never avoid calling one because of the bill.</p>
@@ -2120,7 +2121,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🧤</div>
+        <div class="addon-emoji"><i class="fa-solid fa-hand-dots" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">Consumables Cover</div>
       </div>
       <p class="addon-desc">During any hospital stay, doctors use disposable items — syringes, gloves, PPE kits, bandages, and catheters. These can add ₹5,000–₹20,000 to your bill. Standard policies don't cover them. This add-on does.</p>
@@ -2129,7 +2130,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🌿</div>
+        <div class="addon-emoji"><i class="fa-solid fa-leaf" style="color:#16a34a"></i></div>
         <div class="addon-title">AYUSH Treatment Cover</div>
       </div>
       <p class="addon-desc">Covers inpatient treatment under Ayurveda, Yoga, Unani, Siddha and Homeopathy. Many families prefer traditional medicine — this add-on ensures you're not out of pocket when you choose it.</p>
@@ -2138,7 +2139,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🛡️</div>
+        <div class="addon-emoji"><i class="fa-solid fa-shield-halved" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">Personal Accident Rider</div>
       </div>
       <p class="addon-desc">Accidental death or permanent disability pays a fixed lump sum directly to you or your family — separate from any hospital treatment claim. A financial safety net for life's worst moments.</p>
@@ -2148,7 +2149,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   </div>
   <div style="text-align:center;margin-top:2.5rem">
     <p style="font-size:.88rem;color:var(--mid);margin-bottom:1rem">Not sure which add-ons suit your family? Our advisors will tell you exactly what's worth it — no upselling.</p>
-    <button class="btn-primary" onclick="scrollToQuote()">🏥 Talk to a Health Advisor</button>
+    <button class="btn-primary" onclick="scrollToQuote()"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i> Talk to a Health Advisor</button>
   </div>
 </section>
 
@@ -2161,7 +2162,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card featured">
       <div class="addon-header">
-        <div class="addon-emoji">🔢</div>
+        <div class="addon-emoji"><i class="fa-solid fa-circle-0" style="color:var(--orange)"></i></div>
         <div class="addon-title">Zero Depreciation</div>
         <span class="addon-badge">Must Have</span>
       </div>
@@ -2171,7 +2172,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🧾</div>
+        <div class="addon-emoji"><i class="fa-solid fa-file-invoice" style="color:var(--orange)"></i></div>
         <div class="addon-title">Return to Invoice (RTI)</div>
       </div>
       <p class="addon-desc">If your car is stolen or totally destroyed, standard insurance pays today's market value — always lower than what you paid. RTI gives you the original invoice price instead.</p>
@@ -2180,7 +2181,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">⚙️</div>
+        <div class="addon-emoji"><i class="fa-solid fa-gear" style="color:var(--orange)"></i></div>
         <div class="addon-title">Engine Protection Cover</div>
       </div>
       <p class="addon-desc">Standard policies don't cover engine damage from waterlogging or oil leakage. Repairing or replacing an engine costs ₹50,000–₹3 lakhs — one of the most expensive car repairs.</p>
@@ -2189,7 +2190,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">⭐</div>
+        <div class="addon-emoji"><i class="fa-solid fa-star" style="color:#f59e0b"></i></div>
         <div class="addon-title">NCB Protector</div>
       </div>
       <p class="addon-desc">Made one claim? Normally your No-Claim Bonus resets to zero and your renewal premium jumps. NCB Protector lets you make one claim while keeping your accumulated discount intact.</p>
@@ -2198,7 +2199,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🔩</div>
+        <div class="addon-emoji"><i class="fa-solid fa-screwdriver-wrench" style="color:var(--orange)"></i></div>
         <div class="addon-title">Consumables Cover</div>
       </div>
       <p class="addon-desc">Every repair uses nuts, bolts, engine oil, coolant, and small parts. Standard policies don't pay for these — the garage bills you separately. This add-on covers them all.</p>
@@ -2207,7 +2208,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🔑</div>
+        <div class="addon-emoji"><i class="fa-solid fa-key" style="color:var(--orange)"></i></div>
         <div class="addon-title">Key &amp; Lock Replacement</div>
       </div>
       <p class="addon-desc">Modern smart keys and key fobs cost ₹5,000–₹30,000 to replace and reprogram. If you lose your keys or they're stolen, this add-on covers the full replacement and lock-change cost.</p>
@@ -2216,7 +2217,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🛞</div>
+        <div class="addon-emoji"><i class="fa-solid fa-circle-dot" style="color:var(--orange)"></i></div>
         <div class="addon-title">Tyre Protection Cover</div>
       </div>
       <p class="addon-desc">Standard policies don't cover tyre bursts, flat tyres, or sidewall damage unless caused directly by an accident. Tyre replacement on Indian roads is a common, costly surprise.</p>
@@ -2244,7 +2245,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">🏨</div>
+        <div class="addon-emoji"><i class="fa-solid fa-bed-pulse" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">Emergency Transport &amp; Hotel</div>
       </div>
       <p class="addon-desc">If your car breaks down far from home and repairs take over 24 hours, this add-on covers your hotel stay and travel back home. Particularly useful for highway and outstation travel.</p>
@@ -2253,7 +2254,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
     <div class="addon-card">
       <div class="addon-header">
-        <div class="addon-emoji">💸</div>
+        <div class="addon-emoji"><i class="fa-solid fa-sack-dollar" style="color:var(--orange)"></i></div>
         <div class="addon-title">Daily Garage Cash</div>
       </div>
       <p class="addon-desc">When your car is at a network garage for repairs after an accident, you get a fixed daily cash allowance — typically ₹500–₹1,500/day — to cover taxi or transport costs while you wait.</p>
@@ -2263,7 +2264,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   </div>
   <div style="text-align:center;margin-top:2.5rem">
     <p style="font-size:.88rem;color:var(--mid);margin-bottom:1rem">Not sure which add-ons fit your car and driving habits? Our advisors tell you exactly what's worth it — and what isn't.</p>
-    <button class="btn-primary" onclick="scrollToQuote()">🚗 Talk to a Motor Advisor</button>
+    <button class="btn-primary" onclick="scrollToQuote()"><i class="fa-solid fa-car" style="color:var(--orange)"></i> Talk to a Motor Advisor</button>
   </div>
 </section>
 
@@ -2387,7 +2388,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   <p style="font-size:.76rem;color:var(--muted);text-align:center;margin-top:.8rem">* Premiums are indicative for 1 adult aged 30, 10-day Europe trip. Actual premiums vary by age, duration and destination. Updated May 2026.</p>
   <div style="text-align:center;margin-top:1.8rem">
     <p style="font-size:.93rem;color:var(--mid);margin-bottom:1rem">Travelling soon? Our advisors find the right plan for your destination in 60 seconds — free.</p>
-    <button class="btn-primary" onclick="scrollToQuote()">✈️ Get My Travel Insurance Quote</button>
+    <button class="btn-primary" onclick="scrollToQuote()"><i class="fa-solid fa-plane" style="color:#2563eb"></i> Get My Travel Insurance Quote</button>
   </div>
 </section>
 
@@ -2439,7 +2440,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem;margin-top:2.5rem">
     <div class="w-card accent"><div class="w-icon">🔍</div><div class="w-title">Transparency</div><p class="w-text">No hidden fees. No confusing jargon. We explain every clause in plain English.</p></div>
     <div class="w-card"><div class="w-icon">❤️</div><div class="w-title">Empathy</div><p class="w-text">We treat every claim as if it were our own family member's.</p></div>
-    <div class="w-card"><div class="w-icon">⚡</div><div class="w-title">Speed</div><p class="w-text">Instant quotes. Instant policies. Fast claims. Your time is valuable.</p></div>
+    <div class="w-card"><div class="w-icon"><i class="fa-solid fa-bolt" style="color:var(--orange)"></i></div><div class="w-title">Speed</div><p class="w-text">Instant quotes. Instant policies. Fast claims. Your time is valuable.</p></div>
     <div class="w-card"><div class="w-icon">🏆</div><div class="w-title">Integrity</div><p class="w-text">IRDAI licensed and compliant. Your trust is our most important asset.</p></div>
   </div>
 </section>
@@ -2473,7 +2474,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   <div class="blog-grid" id="blogGrid">
     <!-- HEALTH -->
     <div class="b-card" data-cat="health">
-      <div class="b-thumb th-health">🏥</div>
+      <div class="b-thumb th-health"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i></div>
       <div class="b-body">
         <span class="b-tag">Health Insurance</span>
         <h3 class="b-title">Best Family Health Insurance Plans in India 2025</h3>
@@ -2501,7 +2502,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
     </div>
     <!-- MOTOR -->
     <div class="b-card" data-cat="motor">
-      <div class="b-thumb th-motor">🚗</div>
+      <div class="b-thumb th-motor"><i class="fa-solid fa-car" style="color:var(--orange)"></i></div>
       <div class="b-body">
         <span class="b-tag">Motor Insurance</span>
         <h3 class="b-title">Zero Depreciation Cover: Is It Worth the Extra Premium?</h3>
@@ -2519,7 +2520,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       </div>
     </div>
     <div class="b-card" data-cat="motor">
-      <div class="b-thumb th-motor">⚡</div>
+      <div class="b-thumb th-motor"><i class="fa-solid fa-bolt" style="color:var(--orange)"></i></div>
       <div class="b-body">
         <span class="b-tag">Motor Insurance</span>
         <h3 class="b-title">How to File a Motor Insurance Claim in India: Step-by-Step Guide</h3>
@@ -2529,7 +2530,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
     </div>
     <!-- TRAVEL -->
     <div class="b-card" data-cat="travel">
-      <div class="b-thumb th-travel">✈️</div>
+      <div class="b-thumb th-travel"><i class="fa-solid fa-plane" style="color:#2563eb"></i></div>
       <div class="b-body">
         <span class="b-tag">Travel Insurance</span>
         <h3 class="b-title">Do You Really Need Travel Insurance for a Schengen Visa?</h3>
@@ -2589,10 +2590,10 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
     <h2 class="s-title">Talk to a Real Human</h2>
     <p style="font-size:.93rem;color:var(--mid);line-height:1.75;margin-bottom:1.5rem">No bots. No hold music. Just an expert who listens and helps.</p>
     <div class="contact-info">
-      <div class="c-item"><div class="c-icon">📱</div><div><div class="c-label">Phone / WhatsApp</div><div class="c-val"><a href="tel:+919930140305" style="color:var(--dark)">+91 99301 40305</a></div></div></div>
-      <div class="c-item"><div class="c-icon">✉️</div><div><div class="c-label">Email</div><div class="c-val"><a href="mailto:policyaid@gmail.com" style="color:var(--dark)">policyaid@gmail.com</a></div></div></div>
-      <div class="c-item"><div class="c-icon">⏰</div><div><div class="c-label">Business Hours</div><div class="c-val">Mon–Sat, 9 AM – 7 PM IST</div></div></div>
-      <div class="c-item"><div class="c-icon">📍</div><div><div class="c-label">Registered Office</div><div class="c-val">Mumbai, Maharashtra, India</div></div></div>
+      <div class="c-item"><div class="c-icon"><i class="fa-solid fa-mobile-screen"></i></div><div><div class="c-label">Phone / WhatsApp</div><div class="c-val"><a href="tel:+919930140305" style="color:var(--dark)">+91 99301 40305</a></div></div></div>
+      <div class="c-item"><div class="c-icon"><i class="fa-solid fa-envelope"></i></div><div><div class="c-label">Email</div><div class="c-val"><a href="mailto:policyaid@gmail.com" style="color:var(--dark)">policyaid@gmail.com</a></div></div></div>
+      <div class="c-item"><div class="c-icon"><i class="fa-solid fa-clock" style="color:var(--orange)"></i></div><div><div class="c-label">Business Hours</div><div class="c-val">Mon–Sat, 9 AM – 7 PM IST</div></div></div>
+      <div class="c-item"><div class="c-icon"><i class="fa-solid fa-location-dot"></i></div><div><div class="c-label">Registered Office</div><div class="c-val">Mumbai, Maharashtra, India</div></div></div>
     </div>
   </div>
   <div class="contact-form">
@@ -2618,8 +2619,8 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       <input type="hidden" name="_subject" value="New Lead – Policy Aid Website">
       <input type="hidden" name="_replyto" value="policyaid@gmail.com">
       <button type="submit" class="f-btn" id="submitBtn">Send Message →</button>
-      <div id="formSuccess" style="display:none;margin-top:12px;padding:12px;background:var(--teal-pale);border-radius:10px;text-align:center;font-size:.88rem;color:var(--teal-dark);font-weight:600">✅ Message sent! We'll call you within 30 minutes.</div>
-      <div id="formError" style="display:none;margin-top:12px;padding:12px;background:#fef0eb;border-radius:10px;text-align:center;font-size:.88rem;color:var(--orange);font-weight:600">❌ Something went wrong. Please call us directly at +91 99301 40305</div>
+      <div id="formSuccess" style="display:none;margin-top:12px;padding:12px;background:var(--teal-pale);border-radius:10px;text-align:center;font-size:.88rem;color:var(--teal-dark);font-weight:600"><i class="fa-solid fa-circle-check" style="color:#16a34a"></i> Message sent! We'll call you within 30 minutes.</div>
+      <div id="formError" style="display:none;margin-top:12px;padding:12px;background:#fef0eb;border-radius:10px;text-align:center;font-size:.88rem;color:var(--orange);font-weight:600"><i class="fa-solid fa-circle-xmark" style="color:#dc2626"></i> Something went wrong. Please call us directly at +91 99301 40305</div>
     </form>
     <p style="font-size:.74rem;color:var(--muted);margin-top:10px;text-align:center">We respect your privacy. Your details are never sold or shared.</p>
   </div>
@@ -2629,7 +2630,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
 <!-- ── FOOTER (shown on all pages) ── -->
 <footer id="siteFooter">
-  <div class="irdai">⚠️ <strong>IRDAI Disclaimer:</strong> Policy Aid is a licensed insurance broker under IRDAI. Insurance is a subject matter of solicitation. For more details on risk factors, terms and conditions, please read the sales brochure before concluding a sale. Tax benefits are subject to changes in tax laws. All insurance products are subject to IRDAI regulations.</div>
+  <div class="irdai"><i class="fa-solid fa-triangle-exclamation" style="color:#d97706"></i> <strong>IRDAI Disclaimer:</strong> Policy Aid is a licensed insurance broker under IRDAI. Insurance is a subject matter of solicitation. For more details on risk factors, terms and conditions, please read the sales brochure before concluding a sale. Tax benefits are subject to changes in tax laws. All insurance products are subject to IRDAI regulations.</div>
   <div class="f-grid">
     <div class="f-brand">
       <div class="logo">
@@ -2640,7 +2641,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
         </div>
       </div>
       <p style="margin-top:1rem">India's friendliest insurance broker. Health, Motor &amp; Travel insurance — compared, explained and supported by real humans.</p>
-      <p style="margin-top:.8rem;font-size:.85rem;line-height:1.9">📱 <a href="tel:+919930140305" style="color:rgba(255,255,255,.7)">+91 99301 40305</a><br>✉️ <a href="mailto:policyaid@gmail.com" style="color:rgba(255,255,255,.7)">policyaid@gmail.com</a></p>
+      <p style="margin-top:.8rem;font-size:.85rem;line-height:1.9"><i class="fa-solid fa-mobile-screen"></i> <a href="tel:+919930140305" style="color:rgba(255,255,255,.7)">+91 99301 40305</a><br><i class="fa-solid fa-envelope"></i> <a href="mailto:policyaid@gmail.com" style="color:rgba(255,255,255,.7)">policyaid@gmail.com</a></p>
     </div>
     <div class="f-col">
       <h4>Products</h4>
@@ -2920,7 +2921,7 @@ const posts = {
       <li>New insurer verifies your history and offers a quote within 15 days</li>
       <li>Accept the offer and pay the new premium — portability is complete!</li>
     </ol>
-    <p style="font-size:.93rem;color:var(--mid);line-height:1.75;margin-top:1.2rem">⚠️ You cannot port if your current policy has lapsed. The new insurer can reject your application if you have more than 2 major claims in the past 3 years.</p>`
+    <p style="font-size:.93rem;color:var(--mid);line-height:1.75;margin-top:1.2rem"><i class="fa-solid fa-triangle-exclamation" style="color:#d97706"></i> You cannot port if your current policy has lapsed. The new insurer can reject your application if you have more than 2 major claims in the past 3 years.</p>`
   },
   motor1:{
     tag:'Motor Insurance',color:'var(--orange)',
@@ -2931,11 +2932,11 @@ const posts = {
     <p style="font-size:.93rem;color:var(--mid);line-height:1.75;margin-bottom:1.2rem">In a standard comprehensive policy, the insurer deducts depreciation on replaced parts during a claim. A plastic bumper, for example, depreciates at 30% per year. So if your bumper costs ₹15,000 to replace, you may only get ₹9,000–10,000. Zero-dep waives this deduction — you get the full replacement cost.</p>
     <h3 style="font-family:Playfair Display,serif;font-size:1.2rem;margin:1.5rem 0 .8rem">When Is Zero-Dep Worth It?</h3>
     <ul style="padding-left:1.2rem;color:var(--mid);font-size:.92rem;line-height:1.9;margin-bottom:1.2rem">
-      <li>✅ <strong>New car (0–5 years old)</strong> — Absolutely worth it. High-value parts depreciate fast.</li>
-      <li>✅ <strong>High-traffic city driving</strong> — Mumbai, Delhi, Bengaluru — more minor scrapes, more claims.</li>
-      <li>✅ <strong>Expensive cars</strong> — SUVs, luxury sedans — repair costs are high.</li>
-      <li>❌ <strong>Old car (7+ years)</strong> — Depreciation is already high; limited benefit.</li>
-      <li>❌ <strong>Experienced, careful driver with low usage</strong> — Probably won't claim often.</li>
+      <li><i class="fa-solid fa-circle-check" style="color:#16a34a"></i> <strong>New car (0–5 years old)</strong> — Absolutely worth it. High-value parts depreciate fast.</li>
+      <li><i class="fa-solid fa-circle-check" style="color:#16a34a"></i> <strong>High-traffic city driving</strong> — Mumbai, Delhi, Bengaluru — more minor scrapes, more claims.</li>
+      <li><i class="fa-solid fa-circle-check" style="color:#16a34a"></i> <strong>Expensive cars</strong> — SUVs, luxury sedans — repair costs are high.</li>
+      <li><i class="fa-solid fa-circle-xmark" style="color:#dc2626"></i> <strong>Old car (7+ years)</strong> — Depreciation is already high; limited benefit.</li>
+      <li><i class="fa-solid fa-circle-xmark" style="color:#dc2626"></i> <strong>Experienced, careful driver with low usage</strong> — Probably won't claim often.</li>
     </ul>
     <h3 style="font-family:Playfair Display,serif;font-size:1.2rem;margin:1.5rem 0 .8rem">Real Example</h3>
     <p style="font-size:.93rem;color:var(--mid);line-height:1.75">A 2022 Honda City owner in Mumbai paid ₹1,800 extra for zero-dep. After a minor parking accident, the repair bill was ₹28,000. Without zero-dep, the payout would have been ~₹18,000. With zero-dep: full ₹28,000. The add-on paid for itself 15x over in one claim.</p>`
