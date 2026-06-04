@@ -31,15 +31,20 @@ const CONFIG = {
   // Google Sheet ID (from sheet URL: .../spreadsheets/d/SHEET_ID/edit)
   SHEET_ID: '1_wHOpHYkoBzhhot0pjuwL2AFnKijrZJcRxn_eeGjhmY',
 
-  // Sheet tab names (create these tabs in your spreadsheet)
+  // Sheet tab names
   QUOTE_SHEET:   'Quotes',
   CONTACT_SHEET: 'ContactMessages',
 
-  // WhatsApp notification via CallMeBot
-  WA_PHONE:      '919930140305',   // your number with country code, no +
-  CALLMEBOT_API_KEY: 'PASTE_API_KEY_HERE',  // from CallMeBot setup above
+  // ── Admin WhatsApp via CallMeBot (free) ──
+  WA_PHONE:          '919930140305',      // admin number, no +
+  CALLMEBOT_API_KEY: 'PASTE_API_KEY_HERE',
 
-  // Business name in notifications
+  // ── Meta WhatsApp Cloud API (for sending to leads) ──
+  META_WA_TOKEN:       'PASTE_META_TOKEN_HERE',    // from Meta Developer Console
+  META_PHONE_NUMBER_ID:'PASTE_PHONE_NUMBER_ID_HERE',// from Meta Developer Console
+  META_TEMPLATE_NAME:  'policy_aid_quote_ack',     // template name you create in Meta
+
+  // Business name
   BIZ_NAME: 'Policy Aid'
 };
 // ──────────────────────────────────────────────
@@ -163,6 +168,9 @@ function saveQuoteLead(p) {
     extraWA + `\n` +
     `📍 ${p.city || 'N/A'}`;
   sendWhatsApp(waMsg);
+
+  // ── WhatsApp to lead (Meta Cloud API) ──
+  sendWhatsAppToLead(p.mobile, p.name, p.insurance_type);
 }
 
 // ── CONTACT MESSAGE ─────────────────────────────
@@ -223,6 +231,45 @@ function sendWhatsApp(message) {
     UrlFetchApp.fetch(url);
   } catch(e) {
     Logger.log('WhatsApp error: ' + e);
+  }
+}
+
+// ── WHATSAPP TO LEAD via Meta Cloud API ────────
+function sendWhatsAppToLead(phone, name, insuranceType) {
+  if (!CONFIG.META_WA_TOKEN || CONFIG.META_WA_TOKEN === 'PASTE_META_TOKEN_HERE') return;
+  try {
+    // Normalise phone to E.164 (91XXXXXXXXXX)
+    let p = phone.replace(/\D/g, '');
+    if (p.length === 10) p = '91' + p;
+
+    const url     = 'https://graph.facebook.com/v19.0/' + CONFIG.META_PHONE_NUMBER_ID + '/messages';
+    const payload = {
+      messaging_product: 'whatsapp',
+      to: p,
+      type: 'template',
+      template: {
+        name: CONFIG.META_TEMPLATE_NAME,
+        language: { code: 'en_IN' },
+        components: [{
+          type: 'body',
+          parameters: [
+            { type: 'text', text: name          || 'there'    },
+            { type: 'text', text: insuranceType || 'insurance'}
+          ]
+        }]
+      }
+    };
+
+    UrlFetchApp.fetch(url, {
+      method:      'post',
+      contentType: 'application/json',
+      headers:     { Authorization: 'Bearer ' + CONFIG.META_WA_TOKEN },
+      payload:     JSON.stringify(payload),
+      muteHttpExceptions: true
+    });
+    Logger.log('WhatsApp sent to lead: ' + p);
+  } catch(e) {
+    Logger.log('Meta WA error: ' + e);
   }
 }
 
