@@ -1783,8 +1783,9 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       </div>
 
       <!-- Row 2: Mobile + City (always visible) -->
-      <input class="q-input" type="tel" id="quoteMobile" placeholder="<i class="fa-solid fa-mobile-screen"></i> Mobile Number" required>
-      <input class="q-input" type="text" id="quoteCity" placeholder="<i class="fa-solid fa-location-dot"></i> Your City">
+      <input class="q-input" type="tel" id="quoteMobile" placeholder="📱 Mobile Number *" required maxlength="10" pattern="[0-9]{10}" inputmode="numeric" oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)">
+      <input class="q-input" type="text" id="quoteCity" placeholder="📍 Your City *" required>
+      <input class="q-input" type="email" id="quoteEmail" placeholder="✉️ Email Address *" required>
       <button class="q-btn" onclick="submitQuote()">Get Free Quote →</button>
     </div>
     <div id="quoteSuccess" style="display:none;margin-top:1.2rem;padding:14px 24px;background:rgba(58,181,200,0.18);border:1.5px solid var(--teal-mid);border-radius:50px;color:var(--teal-dark);font-size:.9rem;font-weight:700"><i class="fa-solid fa-circle-check" style="color:#16a34a"></i> Got it, <span id="quoteNameDisplay"></span>! Our advisor will call you within 30 minutes on <span id="quotePhoneDisplay"></span></div>
@@ -2742,6 +2743,7 @@ function sendToKlaviyo(payload){
     // Identify the profile
     const profile = {
       '$first_name':    payload.name  || '',
+      '$email':         payload.email || '',
       '$phone_number':  phone,
       'Insurance Type': payload.insurance_type || 'Not selected',
       'City':           payload.city  || '',
@@ -2797,8 +2799,15 @@ async function submitQuote(){
   const type   = document.getElementById('quoteType').value;
   const mobile = document.getElementById('quoteMobile').value.trim();
   const city   = document.getElementById('quoteCity').value.trim();
-  if(!name)  { alert('Please enter your name'); return; }
-  if(!mobile){ alert('Please enter your mobile number'); return; }
+  const email  = document.getElementById('quoteEmail').value.trim();
+
+  // Validation
+  if(!name)                          { alert('Please enter your name'); return; }
+  if(!mobile)                        { alert('Please enter your mobile number'); return; }
+  if(!/^[0-9]{10}$/.test(mobile))   { alert('Please enter a valid 10-digit mobile number'); return; }
+  if(!city)                          { alert('Please enter your city'); return; }
+  if(!email)                         { alert('Please enter your email address'); return; }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address'); return; }
 
   // Friendly type label
   const typeLabels = { health:'Health Insurance', motor:'Motor Insurance', travel:'Travel Insurance' };
@@ -2815,6 +2824,7 @@ async function submitQuote(){
     form_type:      'quote',
     name:           name,
     mobile:         mobile,
+    email:          email,
     insurance_type: typeLabel,
     city:           city || 'Not provided',
     timestamp:      new Date().toLocaleString('en-IN', {timeZone:'Asia/Kolkata'})
@@ -3121,6 +3131,9 @@ showSection('home');
 <!-- HubSpot Tracking -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/246367264.js"></script>
 <!-- Klaviyo -->
-<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Rea7ZY"></script>
+<script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/Rea7ZY/klaviyo.js?company_id=Rea7ZY'></script>
+<script type="text/javascript">
+!function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?function(){var n;(n=window._klOnsite).push.apply(n,arguments)}:function(){for(var n=arguments.length,o=new Array(n),w=0;w<n;w++)o[w]=arguments[w];var t="function"==typeof o[o.length-1]?o.pop():void 0,e=new Promise((function(n){window._klOnsite.push([i].concat(o,[function(i){t&&t(i),n(i)}]))}));return e}}})}catch(n){window.klaviyo=window.klaviyo||[],window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();
+</script>
 </body>
 </html>
