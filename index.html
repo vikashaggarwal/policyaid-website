@@ -2751,14 +2751,32 @@ function sendToKlaviyo(payload){
     };
 
     // Add type-specific properties
-    if(payload.sum_insured)    profile['Sum Insured']     = payload.sum_insured;
-    if(payload.family_members) profile['Family Members']  = payload.family_members;
-    if(payload.eldest_age)     profile['Eldest Age']      = payload.eldest_age;
-    if(payload.reg_number)     profile['Vehicle Reg']     = payload.reg_number;
+    if(payload.sum_insured)    profile['Sum Insured']        = payload.sum_insured;
+    if(payload.family_members) profile['Family Members']     = payload.family_members;
+    if(payload.eldest_age)     profile['Eldest Age']         = payload.eldest_age;
+    if(payload.reg_number)     profile['Vehicle Reg']        = payload.reg_number;
     if(payload.destination)    profile['Travel Destination'] = payload.destination;
-    if(payload.travel_days)    profile['Trip Duration']   = payload.travel_days;
+    if(payload.travel_days)    profile['Trip Duration']      = payload.travel_days;
 
     window._learnq.push(['identify', profile]);
+
+    // Subscribe profile to Email List (Tpu35t) so flow emails are delivered
+    if(payload.email){
+      fetch('https://a.klaviyo.com/client/subscriptions/?company_id=Rea7ZY', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'revision': '2023-12-15' },
+        body: JSON.stringify({
+          data: {
+            type: 'subscription',
+            attributes: {
+              list_id: 'Tpu35t',
+              email: payload.email,
+              custom_source: 'policyaid.online Quote Form'
+            }
+          }
+        })
+      }).catch(()=>{});
+    }
 
     // Track the event
     window._learnq.push(['track', 'Quote Requested', {
