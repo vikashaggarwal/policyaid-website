@@ -2770,12 +2770,21 @@ function sendToKlaviyo(payload){
             type: 'subscription',
             attributes: {
               list_id: 'Tpu35t',
-              email: payload.email,
-              custom_source: 'policyaid.online Quote Form'
+              custom_source: 'policyaid.online Quote Form',
+              profile: {
+                data: {
+                  type: 'profile',
+                  attributes: {
+                    email:        payload.email,
+                    first_name:   payload.name  || '',
+                    phone_number: phone
+                  }
+                }
+              }
             }
           }
         })
-      }).catch(()=>{});
+      }).then(r => console.log('Klaviyo sub:', r.status)).catch(e => console.warn('Klaviyo sub error:', e));
     }
 
     // Track the event
