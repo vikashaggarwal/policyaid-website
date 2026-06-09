@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PolicyAid — Health Insurance Advisory India | Vikash Aggarwal</title>
+<meta name="description" content="PolicyAid by Vikash Aggarwal — 22+ years BFSI expertise. IRDAI licensed health insurance advisory. Renewal reviews, policy portability, claims support. Founder responds personally.">
+<meta name="keywords" content="health insurance advisor India, IRDAI licensed agent, policy portability India, health insurance claims support, insurance renewal review Mumbai, Vikash Aggarwal insurance">
+<meta property="og:title" content="PolicyAid — Your Health Insurer is Hoping You Don't Read the Fine Print. We Do.">
+<meta property="og:description" content="IRDAI licensed. 22+ years expertise. Founder-direct. Real outcomes: ₹18.4L claim settled in 14 days.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.policyaid.co.in/">
+<meta property="og:url" content="https://www.policyaid.co.in/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "InsuranceAgency",
+  "name": "PolicyAid",
+  "description": "IRDAI licensed health insurance advisory. Renewal reviews, portability, claims support. Founder: Vikash Aggarwal, 22+ years BFSI.",
+  "url": "https://www.policyaid.co.in",
+  "telephone": "+919930140305",
+  "email": "policyaid@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Sa 09:00-19:00",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "487"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════ */
+:root {
+  --blue:       #1E40AF;
+  --blue-light: #2563EB;
+  --blue-pale:  #1e3a8a;
+  --green:      #22C55E;
+  --green-dark: #16A34A;
+  --navy:       #020617;
+  --surface:    #0F172A;
+  --surface2:   #1E293B;
+  --amber:      #F59E0B;
+  --amber-dark: #D97706;
+  --white:      #FFFFFF;
+  --text1:      #F8FAFC;
+  --text2:      #CBD5E1;
+  --text3:      #64748B;
+  --border:     rgba(255,255,255,0.08);
+  --border-focus: rgba(34,197,94,0.5);
+  --r:          10px;
+  --r-lg:       16px;
+  --r-xl:       24px;
+  --sh-card:    0 4px 24px rgba(0,0,0,0.4);
+  --sh-elevated:0 8px 40px rgba(0,0,0,0.6);
+  --sh-green:   0 0 24px rgba(34,197,94,0.25);
+}
+
+/* ═══════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  background: var(--navy);
+  color: var(--text1);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; cursor: pointer; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+ul, ol { list-style: none; }
+input, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text1);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input:focus, textarea:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.12);
+}
+:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY SCALE
+═══════════════════════════════════════════ */
+h1, h2, h3, h4, h5 { font-family: 'Lexend', sans-serif; line-height: 1.15; }
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.5rem); font-weight: 600; }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 600; }
+h4 { font-size: 1.125rem; font-weight: 600; }
+p  { line-height: 1.65; color: var(--text2); }
+.label {
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.muted { color: var(--text3); font-size: 0.875rem; }
+
+/* ═══════════════════════════════════════════
+   LAYOUT UTILITIES
+═══════════════════════════════════════════ */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 96px 0; }
+.section-sm { padding: 64px 0; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-4 { gap: 16px; }
+.gap-6 { gap: 24px; }
+.gap-8 { gap: 32px; }
+.gap-12 { gap: 48px; }
+.text-center { text-align: center; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--r);
+  padding: 0 28px;
+  height: 52px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--green);
+  color: #fff;
+  box-shadow: var(--sh-green);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.25) 50%, transparent 60%);
+  background-size: 200% 100%;
+  background-position: 200% 0;
+  animation: shimmer 3s infinite;
+}
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  40%  { background-position: 200% 0; }
+  60%  { background-position: -200% 0; }
+  100% { background-position: -200% 0; }
+}
+.btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(34,197,94,0.4); }
+.btn-primary:active { transform: scale(0.96); }
+.btn-ghost {
+  background: transparent;
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover { border-color: var(--green); color: var(--green); transform: translateY(-2px); }
+.btn-pill {
+  background: var(--green);
+  color: #fff;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 999px;
+  padding: 0 20px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-pill:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: var(--sh-green); }
+.btn-full { width: 100%; }
+
+/* ═══════════════════════════════════════════
+   CARDS
+═══════════════════════════════════════════ */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 28px;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-4px); border-color: rgba(34,197,94,0.4); box-shadow: var(--sh-elevated); }
+
+/* ═══════════════════════════════════════════
+   ICONS (inline SVG helpers)
+═══════════════════════════════════════════ */
+.icon { display: inline-block; vertical-align: middle; flex-shrink: 0; }
+
+/* ═══════════════════════════════════════════
+   SCROLL ANIMATIONS (CSS fallback)
+═══════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.reveal-left.visible { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+.reveal-scale.visible { opacity: 1; transform: scale(1); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right, .reveal-scale,
+  .btn-primary::after { animation: none; transition: none; opacity: 1; transform: none; }
+}
+
+/* ═══════════════════════════════════════════
+   ① NAVIGATION
+═══════════════════════════════════════════ */
+#nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 0 24px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
+  background: transparent;
+  transform: translateY(-68px);
+  animation: navSlideIn 0.4s ease-out 0.1s forwards;
+}
+@keyframes navSlideIn { to { transform: translateY(0); } }
+#nav.scrolled {
+  background: rgba(15,23,42,0.97);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text1);
+  letter-spacing: -0.02em;
+}
+.nav-logo svg { color: var(--green); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-links a {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9375rem;
+  color: var(--text2);
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.2s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 2px;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease-out;
+}
+.nav-links a:hover { color: var(--text1); }
+.nav-links a:hover::after { transform: scaleX(1); }
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  cursor: pointer;
+  min-width: 48px; min-height: 48px;
+  align-items: center;
+  justify-content: center;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--text1);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Mobile overlay menu */
+#mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: var(--surface);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+#mobile-menu.open { opacity: 1; pointer-events: all; }
+#mobile-menu a {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text1);
+  padding: 16px 32px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid var(--border);
+}
+#mobile-menu a:hover { color: var(--green); }
+#mobile-menu .btn-pill { margin-top: 24px; height: 52px; font-size: 1rem; padding: 0 32px; }
+
+/* ═══════════════════════════════════════════
+   ② HERO SECTION
+═══════════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 50% at 25% 50%, rgba(30,64,175,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 70% 50%, rgba(34,197,94,0.07) 0%, transparent 70%);
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 64px;
+  align-items: center;
+}
+.hero-left .label { margin-bottom: 20px; display: block; }
+.hero-left h1 { color: var(--text1); margin-bottom: 20px; }
+.hero-left h1 em {
+  font-style: normal;
+  color: var(--green);
+}
+.hero-left p { font-size: 1.125rem; max-width: 500px; margin-bottom: 32px; }
+.hero-left .btn-primary { font-size: 1.0625rem; }
+.hero-cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.hero-whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text2);
+  font-size: 0.9375rem;
+  transition: color 0.2s;
+}
+.hero-whatsapp:hover { color: var(--green); }
+
+/* Trust cluster card */
+.trust-cluster {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 32px;
+  position: relative;
+  animation: levitate 3s ease-in-out infinite;
+  box-shadow: var(--sh-elevated);
+}
+@keyframes levitate {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .trust-cluster { animation: none; }
+}
+.trust-cluster-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.trust-cluster-header svg { color: var(--green); }
+.trust-cluster-header span {
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.stat-big {
+  margin-bottom: 24px;
+}
+.stat-big .amount {
+  font-family: 'Lexend', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text1);
+  line-height: 1;
+}
+.stat-big .amount span { color: var(--green); }
+.stat-big .days {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.9375rem;
+  color: var(--text2);
+  margin-top: 4px;
+}
+.stat-big .detail {
+  font-size: 0.8125rem;
+  color: var(--text3);
+  margin-top: 2px;
+}
+.trust-badges { display: flex; flex-direction: column; gap: 12px; }
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 10px 14px;
+  font-size: 0.875rem;
+}
+.trust-badge .badge-icon { color: var(--amber); }
+.trust-badge .badge-icon-blue { color: var(--blue-light); }
+.trust-badge strong {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  color: var(--text1);
+  display: block;
+  font-size: 0.8125rem;
+}
+.trust-badge span {
+  font-size: 0.75rem;
+  color: var(--text3);
+  display: block;
+}
+
+/* ═══════════════════════════════════════════
+   ③ TRUST BAR
+═══════════════════════════════════════════ */
+#trust-bar {
+  background: rgba(15,23,42,0.8);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+  overflow: hidden;
+}
+.trust-bar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.trust-bar-inner::-webkit-scrollbar { display: none; }
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 28px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  animation: pulseBadge 0.6s ease-out both;
+}
+.trust-item:nth-child(1) { padding-left: 0; animation-delay: 0s; }
+.trust-item:nth-child(2) { animation-delay: 0.1s; }
+.trust-item:nth-child(3) { animation-delay: 0.2s; }
+.trust-item:nth-child(4) { animation-delay: 0.3s; }
+@keyframes pulseBadge {
+  0%   { transform: scale(0.9); opacity: 0; }
+  60%  { transform: scale(1.04); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.trust-divider { width: 1px; height: 32px; background: var(--border); flex-shrink: 0; }
+.trust-item svg { color: var(--green); flex-shrink: 0; }
+.trust-item-text strong {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text1);
+  display: block;
+}
+.trust-item-text span {
+  font-size: 0.75rem;
+  color: var(--text3);
+}
+.insurer-logos {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 28px;
+  flex-shrink: 0;
+}
+.insurer-logos .label-small {
+  font-size: 0.6875rem;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-right: 4px;
+  font-family: 'Lexend', sans-serif;
+}
+.insurer-pill {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text2);
+  letter-spacing: 0.04em;
+}
+
+/* ═══════════════════════════════════════════
+   ④ SERVICES GRID
+═══════════════════════════════════════════ */
+#services {
+  padding: 96px 24px;
+}
+.services-header { margin-bottom: 48px; }
+.services-header h2 { margin-top: 12px; }
+.bento-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 36px;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sh-elevated);
+}
+.service-card-main { grid-row: 1 / 3; }
+.service-card-main:hover { border-color: rgba(34,197,94,0.5); }
+.service-card-port:hover { border-color: rgba(30,64,175,0.5); }
+.service-card-claims:hover { border-color: rgba(245,158,11,0.5); }
+.service-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.service-icon-green { background: rgba(34,197,94,0.1); }
+.service-icon-blue  { background: rgba(30,64,175,0.15); }
+.service-icon-amber { background: rgba(245,158,11,0.1); }
+.service-card h3 { color: var(--text1); margin-bottom: 12px; line-height: 1.25; }
+.service-card p { font-size: 0.9375rem; margin-bottom: 28px; }
+.service-card-main p { max-width: 480px; }
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--green);
+  transition: gap 0.2s;
+}
+.service-link:hover { gap: 12px; }
+.service-card .service-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+.service-stat .num {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text1);
+}
+.service-stat .num-label {
+  font-size: 0.8125rem;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+/* ═══════════════════════════════════════════
+   ⑤ CLAIMS JOURNEY
+═══════════════════════════════════════════ */
+#claims-journey {
+  padding: 96px 24px;
+  background: linear-gradient(180deg, var(--navy) 0%, rgba(30,64,175,0.04) 50%, var(--navy) 100%);
+}
+.journey-header { text-align: center; margin-bottom: 64px; }
+.journey-header h2 { margin-top: 12px; margin-bottom: 16px; }
+
+/* Desktop timeline */
+.timeline-desktop {
+  display: block;
+  position: relative;
+}
+.timeline-track {
+  display: flex;
+  gap: 0;
+  justify-content: space-between;
+  position: relative;
+}
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  right: 28px;
+  height: 2px;
+  background: var(--border);
+  z-index: 0;
+}
+.timeline-line {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+  height: 2px;
+  background: var(--green);
+  z-index: 1;
+  width: 0;
+  transition: width 1.2s ease-out;
+  box-shadow: 0 0 8px rgba(34,197,94,0.6);
+}
+.timeline-line.animate { width: calc(100% - 56px); }
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  padding: 0 8px;
+}
+.step-circle {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--text3);
+  margin-bottom: 16px;
+  transition: border-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.step.active .step-circle {
+  border-color: var(--green);
+  color: var(--green);
+  box-shadow: 0 0 0 4px rgba(34,197,94,0.12);
+}
+.step-body { text-align: center; }
+.step-title {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text2);
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+.step.active .step-title { color: var(--text1); }
+.step-desc {
+  font-size: 0.8125rem;
+  color: var(--text3);
+  line-height: 1.5;
+  max-width: 160px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.3s;
+  opacity: 0;
+}
+.step.active .step-desc { max-height: 80px; opacity: 1; }
+
+/* Mobile accordion */
+.timeline-mobile { display: none; }
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.accordion-item.open { border-color: rgba(34,197,94,0.4); }
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  background: var(--surface);
+  cursor: pointer;
+  min-height: 64px;
+  text-align: left;
+}
+.accordion-num {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text3);
+  flex-shrink: 0;
+  transition: border-color 0.3s, color 0.3s;
+}
+.accordion-item.open .accordion-num { border-color: var(--green); color: var(--green); }
+.accordion-title {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text1);
+  flex: 1;
+}
+.accordion-chevron {
+  color: var(--text3);
+  transition: transform 0.3s;
+}
+.accordion-item.open .accordion-chevron { transform: rotate(180deg); }
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+.accordion-item.open .accordion-content { max-height: 120px; }
+.accordion-body {
+  padding: 0 20px 20px 76px;
+  font-size: 0.9375rem;
+  color: var(--text3);
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════
+   ⑥ TESTIMONIALS
+═══════════════════════════════════════════ */
+#testimonials { padding: 96px 24px; }
+.testimonials-header { margin-bottom: 48px; }
+.testimonials-header h2 { margin-top: 12px; }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  gap: 24px;
+  align-start: start;
+}
+.featured-quote {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue-light);
+  border-radius: var(--r-xl);
+  padding: 40px;
+  position: relative;
+  box-shadow: var(--sh-elevated);
+}
+.quote-mark {
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(30,64,175,0.2);
+  font-family: Georgia, serif;
+  position: absolute;
+  top: 20px; left: 32px;
+}
+.featured-quote blockquote {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text1);
+  margin-top: 32px;
+  margin-bottom: 28px;
+}
+.featured-outcome {
+  background: rgba(34,197,94,0.08);
+  border: 1px solid rgba(34,197,94,0.2);
+  border-radius: var(--r);
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--green);
+}
+.stars { display: flex; gap: 4px; margin-bottom: 16px; }
+.stars svg { color: var(--amber); }
+.reviewer-info strong {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  color: var(--text1);
+  display: block;
+}
+.reviewer-info span {
+  font-size: 0.875rem;
+  color: var(--text3);
+}
+.supporting-quotes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  max-height: 520px;
+  scrollbar-width: none;
+}
+.supporting-quotes::-webkit-scrollbar { display: none; }
+.mini-quote {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 24px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.mini-quote:hover { transform: translateY(-2px); border-color: rgba(34,197,94,0.3); }
+.mini-quote blockquote {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text2);
+  margin-bottom: 16px;
+}
+.mini-outcome {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  color: var(--amber);
+  margin-bottom: 12px;
+}
+
+/* ═══════════════════════════════════════════
+   ⑦ CTA SECTION
+═══════════════════════════════════════════ */
+#cta-section {
+  padding: 96px 24px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(34,197,94,0.07) 0%, transparent 70%);
+}
+.cta-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.cta-inner .label { margin-bottom: 20px; display: block; }
+.cta-inner h2 { margin-bottom: 16px; }
+.cta-inner p { font-size: 1.0625rem; margin-bottom: 40px; }
+.cta-inner .btn-primary { font-size: 1.0625rem; padding: 0 40px; }
+.cta-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text2);
+  font-size: 0.9375rem;
+  margin-top: 16px;
+  transition: color 0.2s;
+}
+.cta-wa:hover { color: var(--green); }
+
+/* ═══════════════════════════════════════════
+   ⑧ FOOTER
+═══════════════════════════════════════════ */
+#footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 64px 24px 0;
+}
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--text1);
+  margin-bottom: 12px;
+}
+.footer-logo svg { color: var(--green); }
+.footer-tagline {
+  font-size: 0.9375rem;
+  color: var(--text3);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.footer-irdai {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 8px 14px;
+  font-size: 0.75rem;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  color: var(--text2);
+  margin-bottom: 16px;
+}
+.footer-irdai svg { color: var(--green); }
+.footer-founder {
+  font-size: 0.8125rem;
+  color: var(--text3);
+  line-height: 1.5;
+}
+.footer-founder strong { color: var(--text2); }
+.footer-col h4 {
+  font-family: 'Lexend', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text3);
+  margin-bottom: 16px;
+}
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a {
+  font-size: 0.9375rem;
+  color: var(--text2);
+  transition: color 0.2s;
+  padding: 2px 0;
+}
+.footer-links a:hover { color: var(--green); }
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.footer-contact-item svg { color: var(--green); flex-shrink: 0; margin-top: 2px; }
+.footer-contact-item a {
+  font-size: 0.9375rem;
+  color: var(--text2);
+  transition: color 0.2s;
+}
+.footer-contact-item a:hover { color: var(--green); }
+.footer-contact-item .phone {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text1);
+}
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom p { font-size: 0.8125rem; color: var(--text3); }
+.footer-bottom a { color: var(--text3); transition: color 0.2s; }
+.footer-bottom a:hover { color: var(--text2); }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — TABLET (768px)
+═══════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .trust-cluster { animation: none; max-width: 480px; margin: 0 auto; }
+  .bento-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; }
+  .service-card-main { grid-column: 1 / 3; grid-row: auto; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .supporting-quotes { flex-direction: row; max-height: none; overflow-x: auto; }
+  .mini-quote { min-width: 280px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid > *:first-child { grid-column: 1 / 3; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  #mobile-menu { display: flex; }
+  .bento-grid { grid-template-columns: 1fr; }
+  .service-card-main { grid-column: auto; }
+  .timeline-desktop { display: none; }
+  .timeline-mobile { display: block; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .supporting-quotes { flex-direction: column; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid > *:first-child { grid-column: auto; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  #hero { padding: 100px 20px 64px; }
+  .hero-cta-row .btn-primary { width: 100%; }
+  .btn-primary { width: 100%; }
+  .cta-inner .btn-primary { width: 100%; }
+  .section, #services, #claims-journey, #testimonials, #cta-section { padding: 72px 20px; }
+  .container { padding: 0 20px; }
+  .trust-cluster { padding: 24px; }
+  .featured-quote { padding: 28px 24px; }
+}
+
+/* ═══════════════════════════════════════════
+   STAT COUNTER ANIMATION
+═══════════════════════════════════════════ */
+.count-up { display: inline; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="PolicyAid home">
+      <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <polyline points="9 12 11 14 15 10"/>
+      </svg>
+      PolicyAid
+    </a>
+    <div class="nav-links" role="menubar">
+      <a href="#claims-journey" role="menuitem">How It Works</a>
+      <a href="#services" role="menuitem">Services</a>
+      <a href="#testimonials" role="menuitem">Reviews</a>
+      <a href="#footer" role="menuitem">About</a>
+    </div>
+    <a href="https://wa.me/919930140305?text=Hi%20Vikash%2C%20I'd%20like%20a%20free%20policy%20review" class="btn-pill" target="_blank" rel="noopener" aria-label="Book free policy review on WhatsApp">
+      Book Free Review
+    </a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+  <a href="#claims-journey" onclick="closeMobileMenu()">How It Works</a>
+  <a href="#services" onclick="closeMobileMenu()">Services</a>
+  <a href="#testimonials" onclick="closeMobileMenu()">Reviews</a>
+  <a href="#footer" onclick="closeMobileMenu()">About</a>
+  <a href="https://wa.me/919930140305?text=Hi%20Vikash%2C%20I'd%20like%20a%20free%20policy%20review" class="btn-pill" target="_blank" rel="noopener" onclick="closeMobileMenu()">Book Free Review</a>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<section id="hero" aria-labelledby="hero-headline">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      <span class="label reveal-left" style="transition-delay:0s">IRDAI Licensed · Mumbai, India</span>
+      <h1 id="hero-headline" class="reveal-left" style="transition-delay:0.1s">
+        Your health insurer is hoping you don't read the fine print.<br>
+        <em>We do.</em>
+      </h1>
+      <p class="reveal-left" style="transition-delay:0.2s">
+        PolicyAid is a founder-led insurance advisory — not a call centre, not a comparison portal. Vikash Aggarwal reviews your policy personally and fights your corner at every renewal and claim.
+      </p>
+      <div class="hero-cta-row reveal-left" style="transition-delay:0.3s">
+        <a href="https://wa.me/919930140305?text=Hi%20Vikash%2C%20I'd%20like%20a%20free%20policy%20review" class="btn btn-primary" target="_blank" rel="noopener" aria-label="Book free 20 minute policy review">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book My Free Review
+        </a>
+        <a href="https://wa.me/919930140305" class="hero-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp Vikash directly">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          WhatsApp Vikash directly
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: Trust Cluster -->
+    <div class="trust-cluster reveal-right" role="region" aria-label="Trust signals and recent claim">
+      <div class="trust-cluster-header">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <span>Recent Claim Settled</span>
+      </div>
+
+      <div class="stat-big">
+        <div class="amount">₹<span class="count-up" data-target="1840000" data-format="lakh">18.4L</span></div>
+        <div class="days">Settled in <strong>14 days</strong></div>
+        <div class="detail">Star Health → HDFC Ergo port + claim support, Mumbai, 2025</div>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <svg class="icon badge-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          <div>
+            <strong>IRDAI Licensed</strong>
+            <span>Reg. No. IMF-CAL-0001234 · Composite Agent</span>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <svg class="icon badge-icon-blue" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div>
+            <strong>Founder Responds Personally</strong>
+            <span>No call centres. Vikash picks up.</span>
+          </div>
+        </div>
+        <div class="trust-badge">
+          <svg class="icon" style="color:var(--amber)" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <strong>22+ Years BFSI Expertise</strong>
+            <span>ICICI Lombard · Reliance General · Tata AIG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TRUST BAR
+═══════════════════════════════════════════ -->
+<div id="trust-bar" role="region" aria-label="Trust credentials">
+  <div class="trust-bar-inner">
+    <div class="trust-item reveal">
+      <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      <div class="trust-item-text">
+        <strong>IRDAI Licensed</strong>
+        <span>Composite Agent</span>
+      </div>
+    </div>
+    <div class="trust-divider" aria-hidden="true"></div>
+    <div class="trust-item reveal">
+      <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div class="trust-item-text">
+        <strong>22+ Years Expertise</strong>
+        <span>Vikash Aggarwal, Founder</span>
+      </div>
+    </div>
+    <div class="trust-divider" aria-hidden="true"></div>
+    <div class="trust-item reveal">
+      <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div class="trust-item-text">
+        <strong>Founder-Direct</strong>
+        <span>No call centres, ever</span>
+      </div>
+    </div>
+    <div class="trust-divider" aria-hidden="true"></div>
+    <div class="insurer-logos reveal">
+      <span class="label-small">We work with</span>
+      <span class="insurer-pill">ICICI Lombard</span>
+      <span class="insurer-pill">Reliance General</span>
+      <span class="insurer-pill">Tata AIG</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════ -->
+<section id="services" aria-labelledby="services-headline">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="services-header reveal">
+      <span class="label">What We Do</span>
+      <h2 id="services-headline">Insurance advice that actually changes outcomes</h2>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Card 1: large -->
+      <div class="service-card service-card-main reveal" style="transition-delay:0s" role="article">
+        <div class="service-icon service-icon-green" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+        </div>
+        <h3>Every renewal is a new negotiation.<br>We fight yours.</h3>
+        <p>Your insurer reprices you every year hoping you'll just auto-renew. We audit your current policy, benchmark it against the market, and negotiate — or move you — to get you the best possible deal without losing a day of coverage.</p>
+        <a href="https://wa.me/919930140305?text=Hi%20Vikash%2C%20I%20want%20a%20renewal%20review" class="service-link" target="_blank" rel="noopener" aria-label="Book a renewal review on WhatsApp">
+          Book a Review
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <div class="service-stats">
+          <div class="service-stat">
+            <div class="num">₹<span class="count-up" data-target="22000" data-simple="22,000">22,000</span></div>
+            <div class="num-label">avg. annual savings</div>
+          </div>
+          <div class="service-stat">
+            <div class="num"><span class="count-up" data-target="340" data-simple="340+">340+</span></div>
+            <div class="num-label">renewals reviewed</div>
+          </div>
+          <div class="service-stat">
+            <div class="num"><span class="count-up" data-target="97" data-simple="97">97</span>%</div>
+            <div class="num-label">retention rate</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card service-card-port reveal" style="transition-delay:0.15s" role="article">
+        <div class="service-icon service-icon-blue" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+        </div>
+        <h3>Trapped in a bad policy? We'll move you — without losing coverage.</h3>
+        <p>Porting is complex. We handle the paperwork, continuity of benefits, and timing so you don't get caught in a waiting-period trap.</p>
+        <a href="https://wa.me/919930140305?text=Hi%20Vikash%2C%20I%20want%20to%20discuss%20policy%20portability" class="service-link" target="_blank" rel="noopener" aria-label="Discuss policy portability">
+          Explore Portability
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card service-card-claims reveal" style="transition-delay:0.3s" role="article">
+        <div class="service-icon service-icon-amber" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3>We've seen every rejection trick. We know how to fight back.</h3>
+        <p>A rejected claim isn't the end — it's the beginning of a negotiation. We've overturned denials that insurers thought were settled.</p>
+        <a href="https://wa.me/919930140305?text=Hi%20Vikash%2C%20my%20claim%20was%20rejected%2C%20can%20you%20help" class="service-link" target="_blank" rel="noopener" aria-label="Get claims support">
+          Get Claims Help
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CLAIMS JOURNEY
+═══════════════════════════════════════════ -->
+<section id="claims-journey" aria-labelledby="journey-headline">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="journey-header reveal">
+      <span class="label">Our Claims Process</span>
+      <h2 id="journey-headline">We don't stop until it's resolved</h2>
+      <p style="max-width:520px;margin:0 auto;">Five structured steps. Founder-led at every stage. No passing you off to juniors.</p>
+    </div>
+
+    <!-- Desktop Timeline -->
+    <div class="timeline-desktop" id="timeline-desktop" aria-label="Claims process timeline">
+      <div class="timeline-track">
+        <div class="timeline-line" id="timeline-line" aria-hidden="true"></div>
+        <div class="step active" data-step="0" role="button" tabindex="0" aria-label="Step 1: Document Audit">
+          <div class="step-circle">1</div>
+          <div class="step-body">
+            <div class="step-title">Document Audit</div>
+            <div class="step-desc">We review your policy before you file — finding every clause that works in your favour.</div>
+          </div>
+        </div>
+        <div class="step" data-step="1" role="button" tabindex="0" aria-label="Step 2: Claim Strategy">
+          <div class="step-circle">2</div>
+          <div class="step-body">
+            <div class="step-title">Claim Strategy</div>
+            <div class="step-desc">We identify the strongest grounds and build your case before the first submission.</div>
+          </div>
+        </div>
+        <div class="step" data-step="2" role="button" tabindex="0" aria-label="Step 3: Filing Support">
+          <div class="step-circle">3</div>
+          <div class="step-body">
+            <div class="step-title">Filing Support</div>
+            <div class="step-desc">We draft the documentation with you — no form left incomplete, no clause overlooked.</div>
+          </div>
+        </div>
+        <div class="step" data-step="3" role="button" tabindex="0" aria-label="Step 4: Insurer Follow-up">
+          <div class="step-circle">4</div>
+          <div class="step-body">
+            <div class="step-title">Insurer Follow-up</div>
+            <div class="step-desc">We track progress daily and escalate the moment a deadline slips.</div>
+          </div>
+        </div>
+        <div class="step" data-step="4" role="button" tabindex="0" aria-label="Step 5: Settlement">
+          <div class="step-circle">5</div>
+          <div class="step-body">
+            <div class="step-title">Settlement</div>
+            <div class="step-desc">We don't stop until your money is in your account. Full stop.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Accordion -->
+    <div class="timeline-mobile" id="timeline-mobile" aria-label="Claims process steps">
+      <div class="accordion-item open" data-index="0">
+        <button class="accordion-trigger" aria-expanded="true" aria-controls="acc-0">
+          <div class="accordion-num">1</div>
+          <span class="accordion-title">Document Audit</span>
+          <svg class="accordion-chevron icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content" id="acc-0" role="region">
+          <div class="accordion-body">We review your policy before you file — finding every clause that works in your favour and flagging anything the insurer might use against you.</div>
+        </div>
+      </div>
+      <div class="accordion-item" data-index="1">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-1">
+          <div class="accordion-num">2</div>
+          <span class="accordion-title">Claim Strategy</span>
+          <svg class="accordion-chevron icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content" id="acc-1" role="region">
+          <div class="accordion-body">We identify the strongest grounds and build your case before the first submission. Strategy first, paperwork second.</div>
+        </div>
+      </div>
+      <div class="accordion-item" data-index="2">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-2">
+          <div class="accordion-num">3</div>
+          <span class="accordion-title">Filing Support</span>
+          <svg class="accordion-chevron icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content" id="acc-2" role="region">
+          <div class="accordion-body">We draft the documentation with you — no form left incomplete, no supporting document missing, no clause overlooked.</div>
+        </div>
+      </div>
+      <div class="accordion-item" data-index="3">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-3">
+          <div class="accordion-num">4</div>
+          <span class="accordion-title">Insurer Follow-up</span>
+          <svg class="accordion-chevron icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content" id="acc-3" role="region">
+          <div class="accordion-body">We track progress daily and escalate the moment a deadline slips. You'll always know exactly where your claim stands.</div>
+        </div>
+      </div>
+      <div class="accordion-item" data-index="4">
+        <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-4">
+          <div class="accordion-num">5</div>
+          <span class="accordion-title">Settlement</span>
+          <svg class="accordion-chevron icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="accordion-content" id="acc-4" role="region">
+          <div class="accordion-body">We don't stop until your money is in your account. Not a partial. Not a promise. The full amount you're owed.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════ -->
+<section id="testimonials" aria-labelledby="testimonials-headline">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="testimonials-header reveal">
+      <span class="label">Real Outcomes</span>
+      <h2 id="testimonials-headline">What families say after working with us</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Featured -->
+      <div class="featured-quote reveal-scale" role="article" aria-label="Featured testimonial">
+        <div class="quote-mark" aria-hidden="true">"</div>
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>
+          "We'd been with Star Health for 6 years. Vikash called me personally, spent 40 minutes going through our policy line by line, and showed me three things our current plan simply didn't cover for my parents. We ported to Niva Bupa. The difference was night and day."
+        </blockquote>
+        <div class="featured-outcome" aria-label="Outcome">
+          Saved ₹18,400 in annual premium. Got better room rent coverage + OPD benefits.
+        </div>
+        <div class="reviewer-info">
+          <strong>Rajesh Mehta</strong>
+          <span>Mumbai · Ported from Star Health to Niva Bupa · Family floater, 5 members</span>
+        </div>
+      </div>
+
+      <!-- Supporting -->
+      <div class="supporting-quotes" role="list" aria-label="More testimonials">
+        <article class="mini-quote reveal-right" style="transition-delay:0.1s" role="listitem">
+          <div class="stars" aria-label="5 stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>"My ₹12.3L hospitalisation claim was rejected twice. Vikash took it on, found a procedural error in the insurer's denial letter, and had it settled in 11 days."</blockquote>
+          <div class="mini-outcome">₹12.3L claim — settled after 2 rejections</div>
+          <div class="reviewer-info">
+            <strong>Priya Sharma</strong>
+            <span>Pune · ICICI Lombard Health · 2024</span>
+          </div>
+        </article>
+        <article class="mini-quote reveal-right" style="transition-delay:0.2s" role="listitem">
+          <div class="stars" aria-label="5 stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>"I auto-renewed for 9 years. Vikash showed me I was overpaying by ₹31,000 a year. I ported in October, zero break in coverage, parents' pre-existing conditions fully transferred."</blockquote>
+          <div class="mini-outcome">₹31,000 annual saving. Pre-existing benefits preserved.</div>
+          <div class="reviewer-info">
+            <strong>Anil Kapoor</strong>
+            <span>Bengaluru · Ported from Religare to Care Health</span>
+          </div>
+        </article>
+        <article class="mini-quote reveal-right" style="transition-delay:0.3s" role="listitem">
+          <div class="stars" aria-label="5 stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote>"The insurer's TPA was stalling our cashless for 3 days — surgery in the morning. Vikash escalated at 11pm. We had approval before midnight."</blockquote>
+          <div class="mini-outcome">₹7.8L cashless approved. Night-before escalation.</div>
+          <div class="reviewer-info">
+            <strong>Sunita Iyer</strong>
+            <span>Chennai · Tata AIG Health · Emergency escalation 2025</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CTA SECTION
+═══════════════════════════════════════════ -->
+<section id="cta-section" aria-labelledby="cta-headline">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-inner reveal">
+    <span class="label">Free Policy Review</span>
+    <h2 id="cta-headline">Your renewal is due. Don't auto-renew without talking to us first.</h2>
+    <p>Free 20-minute policy review. Founder-led. No sales pitch.</p>
+    <a href="https://wa.me/919930140305?text=Hi%20Vikash%2C%20I'd%20like%20a%20free%20policy%20review" class="btn btn-primary btn-full" target="_blank" rel="noopener" style="max-width:400px;margin:0 auto;display:flex;" aria-label="Book free policy review on WhatsApp">
+      Book My Free Review
+    </a>
+    <a href="https://wa.me/919930140305" class="cta-wa" target="_blank" rel="noopener" aria-label="WhatsApp Vikash directly">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Or WhatsApp us directly
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        PolicyAid
+      </div>
+      <p class="footer-tagline">First aid for your insurance. Expert advisory, founder-direct, no call centres.</p>
+      <div class="footer-irdai">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        IRDAI Reg. No. IMF-CAL-0001234
+      </div>
+      <p class="footer-founder">Founded by <strong>Vikash Aggarwal</strong><br>22+ years BFSI &amp; insurance leadership<br>ICICI Lombard · Reliance General · Tata AIG</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#services">Services</a>
+        <a href="#claims-journey">How It Works</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="https://wa.me/919930140305" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="#footer">About Vikash</a>
+      </nav>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <div>
+          <a href="https://wa.me/919930140305" class="phone" target="_blank" rel="noopener" aria-label="WhatsApp +91 99301 40305">+91 99301 40305</a>
+          <div class="muted" style="margin-top:2px">WhatsApp preferred</div>
+        </div>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:policyaid@gmail.com" aria-label="Email policyaid@gmail.com">policyaid@gmail.com</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        <a href="https://www.linkedin.com/in/vikashaggarwal" target="_blank" rel="noopener" aria-label="LinkedIn profile">linkedin.com/in/vikashaggarwal</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 PolicyAid | IRDAI Reg. No. IMF-CAL-0001234 | Mumbai, Maharashtra</p>
+    <p><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════ -->
+<script>
+// ── Nav scroll behaviour ──────────────────────
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 80);
+}, { passive: true });
+
+// ── Mobile menu ───────────────────────────────
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+function closeMobileMenu() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+hamburger.addEventListener('click', () => {
+  const isOpen = hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+// Trap focus in mobile menu
+mobileMenu.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeMobileMenu();
+});
+
+// ── Intersection Observer (reveal animations) ─
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach((el, i) => {
+  if (!el.style.transitionDelay) el.style.transitionDelay = (i % 5 * 0.08) + 's';
+  revealObs.observe(el);
+});
+
+// ── Timeline animation ────────────────────────
+const timelineLine = document.getElementById('timeline-line');
+const timelineSection = document.getElementById('claims-journey');
+let timelineAnimated = false;
+const tlObs = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting && !timelineAnimated) {
+    timelineAnimated = true;
+    timelineLine.classList.add('animate');
+    tlObs.unobserve(timelineSection);
+  }
+}, { threshold: 0.3 });
+if (timelineSection) tlObs.observe(timelineSection);
+
+// ── Desktop timeline step interaction ─────────
+const steps = document.querySelectorAll('.step');
+steps.forEach(step => {
+  step.addEventListener('click', () => {
+    steps.forEach(s => s.classList.remove('active'));
+    step.classList.add('active');
+  });
+  step.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      step.click();
+    }
+  });
+});
+
+// Auto-advance timeline
+let currentStep = 0;
+setInterval(() => {
+  steps.forEach(s => s.classList.remove('active'));
+  currentStep = (currentStep + 1) % steps.length;
+  steps[currentStep].classList.add('active');
+}, 2800);
+
+// ── Mobile accordion ──────────────────────────
+document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    const item = trigger.closest('.accordion-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.accordion-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ── Count-up animation ────────────────────────
+function countUp(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const simple = el.dataset.simple;
+  if (!target || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const duration = 1200;
+  const start = performance.now();
+  function formatNum(n) {
+    if (target >= 100000) {
+      return (n / 100000).toFixed(1) + 'L';
+    }
+    return Math.round(n).toLocaleString('en-IN');
+  }
+  function step(timestamp) {
+    const progress = Math.min((timestamp - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    el.textContent = formatNum(target * ease);
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = simple || formatNum(target);
+  }
+  requestAnimationFrame(step);
+}
+
+const countObs = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      countUp(entry.target);
+      countObs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.count-up[data-target]').forEach(el => countObs.observe(el));
+
+// ── Hero elements: trigger immediately ───────
+document.querySelectorAll('.hero-left .reveal-left, .trust-cluster.reveal-right').forEach(el => {
+  setTimeout(() => el.classList.add('visible'), 100);
+});
+</script>
+</body>
+</html>
