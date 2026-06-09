@@ -177,6 +177,12 @@ nav{
 .nav-links{display:flex;gap:2.2rem;list-style:none}
 .nav-links a{font-size:0.9rem;font-weight:500;color:var(--mid);transition:color .2s}
 .nav-links a:hover{color:var(--teal-dark)}
+.nav-dropdown{position:relative}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:-12px;background:#fff;border:1px solid var(--border);border-radius:12px;min-width:200px;padding:8px 0;box-shadow:0 12px 32px rgba(0,0,0,.1);list-style:none;z-index:300}
+.nav-dropdown-menu li a{display:block;padding:10px 18px;font-size:.88rem;font-weight:600;color:var(--dark);transition:background .15s,color .15s}
+.nav-dropdown-menu li a:hover{background:var(--teal-pale);color:var(--teal-dark)}
+.nav-dropdown:hover .nav-dropdown-menu{display:block}
+.nav-dropdown-trigger{display:flex;align-items:center;gap:4px}
 
 .nav-btns{display:flex;gap:.8rem;align-items:center}
 .btn-ghost{
@@ -1288,7 +1294,14 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
   <ul class="nav-links" id="navLinks">
     <li><a href="#" onclick="showSection('home')" class="active" id="nav-home">Home</a></li>
-    <li><a href="#" onclick="showSection('products')" id="nav-products">Products</a></li>
+    <li class="nav-dropdown">
+      <a href="#" class="nav-dropdown-trigger" id="nav-products">Products &#9660;</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="/products/health-insurance.html">Health Insurance</a></li>
+        <li><a href="/products/motor-insurance.html">Motor Insurance</a></li>
+        <li><a href="/products/travel-insurance.html">Travel Insurance</a></li>
+      </ul>
+    </li>
     <li><a href="#" onclick="showSection('about')" id="nav-about">About Us</a></li>
     <li><a href="#" onclick="showSection('blog')" id="nav-blog">Blog</a></li>
     <li><a href="#" onclick="showSection('contact')" id="nav-contact">Contact</a></li>
@@ -1307,7 +1320,9 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 <div class="mobile-nav" id="mobileNav">
   <ul>
     <li><a href="#" onclick="showSection('home');closeMobileNav()"><i class="fa-solid fa-house"></i> Home</a></li>
-    <li><a href="#" onclick="showSection('products');closeMobileNav()"><i class="fa-solid fa-shield-halved" style="color:var(--teal-dark)"></i> Products</a></li>
+    <li><a href="/products/health-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i> Health Insurance</a></li>
+    <li><a href="/products/motor-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-car" style="color:var(--orange)"></i> Motor Insurance</a></li>
+    <li><a href="/products/travel-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-plane" style="color:#2563eb"></i> Travel Insurance</a></li>
     <li><a href="#" onclick="showSection('about');closeMobileNav()"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
     <li><a href="#" onclick="showSection('blog');closeMobileNav()"><i class="fa-solid fa-book-open"></i> Blog</a></li>
     <li><a href="#" onclick="showSection('contact');closeMobileNav()"><i class="fa-solid fa-phone"></i> Contact</a></li>
@@ -1437,7 +1452,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       <h2 class="s-title" style="margin-bottom:.5rem">Insurance Plans Built<br>for Real Indian Lives</h2>
       <p style="font-size:.95rem;color:var(--mid);max-width:460px;line-height:1.7">From first-time buyers to seasoned travellers — we've got a plan for every need and budget.</p>
     </div>
-    <button class="btn-outline" onclick="showSection('products')">View All Plans →</button>
+    <a class="btn-outline" href="/products/health-insurance.html" style="display:inline-block">View All Plans →</a>
   </div>
   <div class="products-grid">
     <div class="p-card hot">
@@ -1451,7 +1466,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
         <li>Day-care procedures included</li>
         <li>Free annual health check-up</li>
       </ul>
-      <a class="p-link" onclick="scrollToQuote()">Get Health Quote →</a>
+      <a class="p-link" href="/products/health-insurance.html">Explore Health Plans →</a>
     </div>
     <div class="p-card">
       <div class="p-icon"><i class="fa-solid fa-car" style="color:var(--orange)"></i></div>
@@ -1463,7 +1478,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
         <li>24/7 roadside assistance</li>
         <li>Cashless repairs at 4000+ garages</li>
       </ul>
-      <a class="p-link" onclick="scrollToQuote()">Get Motor Quote →</a>
+      <a class="p-link" href="/products/motor-insurance.html">Explore Motor Plans →</a>
     </div>
     <div class="p-card">
       <div class="p-icon"><i class="fa-solid fa-plane" style="color:#2563eb"></i></div>
@@ -1475,7 +1490,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
         <li>Lost passport &amp; baggage cover</li>
         <li>Available for NRIs &amp; frequent flyers</li>
       </ul>
-      <a class="p-link" onclick="scrollToQuote()">Get Travel Quote →</a>
+      <a class="p-link" href="/products/travel-insurance.html">Explore Travel Plans →</a>
     </div>
   </div>
 </section>
