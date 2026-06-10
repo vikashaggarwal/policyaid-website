@@ -1,0 +1,39 @@
+name: SEO Blog Agent
+
+on:
+  schedule:
+    # 4:30 PM IST = 11:00 UTC, every Tuesday and Friday
+    - cron: '0 11 * * 2,5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  write-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run SEO blog agent
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+        run: npm run seo-blog-agent
+
+      - name: Commit and push new posts
+        run: |
+          git config user.name "Policy Aid SEO Agent"
+          git config user.email "actions@github.com"
+          git add blog/ index.html sitemap.xml
+          git diff --cached --quiet || git commit -m "Auto-publish SEO blog posts ($(date +'%Y-%m-%d'))"
+          git push

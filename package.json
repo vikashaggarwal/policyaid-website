@@ -1,0 +1,12 @@
+{
+  "name": "policyaid-seo-blog-agent",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "seo-blog-agent": "node scripts/seo-blog-agent.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "nodemailer": "^6.9.15"
+  }
+}
