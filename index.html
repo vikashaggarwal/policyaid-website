@@ -1295,6 +1295,50 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   .compare-scroll{display:none}
   .compare-cards{display:block}
 }
+
+/* ── EXIT-INTENT / LEAD MAGNET POPUP ── */
+.exit-overlay{
+  position:fixed;inset:0;background:rgba(18,32,42,.6);
+  display:none;align-items:center;justify-content:center;
+  z-index:1000;padding:20px;backdrop-filter:blur(2px);
+}
+.exit-overlay.active{display:flex;animation:exitFadeIn .25s ease}
+@keyframes exitFadeIn{from{opacity:0}to{opacity:1}}
+.exit-modal{
+  background:#fff;border-radius:var(--r-lg);max-width:440px;width:100%;
+  padding:36px 32px;position:relative;box-shadow:var(--sh-lg);
+  animation:exitPopIn .3s ease;text-align:center;
+}
+@keyframes exitPopIn{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}
+.exit-close{
+  position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;
+  border:none;background:var(--cream);color:var(--mid);font-size:1.1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:background .2s;
+}
+.exit-close:hover{background:var(--border)}
+.exit-icon{
+  width:60px;height:60px;border-radius:50%;background:var(--teal-pale);
+  display:flex;align-items:center;justify-content:center;margin:0 auto 16px;
+}
+.exit-icon i{font-size:1.5rem;color:var(--teal-dark)}
+.exit-modal h3{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:800;color:var(--dark);margin-bottom:10px;line-height:1.3}
+.exit-modal p{font-size:.9rem;color:var(--mid);line-height:1.6;margin-bottom:18px}
+.exit-form{display:flex;flex-direction:column;gap:10px}
+.exit-form input{
+  width:100%;padding:13px 16px;border:2px solid var(--border);border-radius:50px;
+  font-family:inherit;font-size:.9rem;color:var(--dark);background:var(--cream);
+}
+.exit-form input:focus{outline:none;border-color:var(--teal)}
+.exit-btn{
+  width:100%;padding:13px 16px;border:none;border-radius:50px;background:var(--orange);
+  color:#fff;font-family:inherit;font-weight:700;font-size:.9rem;cursor:pointer;
+  transition:background .2s,transform .2s;margin-top:4px;
+}
+.exit-btn:hover{background:var(--orange-light);transform:translateY(-1px)}
+.exit-note{font-size:.74rem;color:var(--muted);margin-top:14px;margin-bottom:0}
+.exit-success{display:none}
+.exit-success i{font-size:2rem;color:#22c55e;margin-bottom:10px}
+.exit-success a{color:var(--teal-dark);font-weight:700}
 </style>
 </head>
 <body>
@@ -2804,6 +2848,27 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   </div>
 </footer>
 
+<!-- EXIT-INTENT / LEAD MAGNET POPUP -->
+<div class="exit-overlay" id="exitPopup" onclick="if(event.target===this) closeExitPopup()">
+  <div class="exit-modal">
+    <button class="exit-close" onclick="closeExitPopup()" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="exit-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+    <h3>Wait — Get Your Free Insurance Buying Checklist</h3>
+    <p>21 things to check before you buy any health, motor, travel or property policy — so you don't get a nasty surprise at claim time.</p>
+    <form class="exit-form" id="exitForm" onsubmit="submitExitForm(event)">
+      <input type="text" id="exitName" placeholder="Your Name" required>
+      <input type="email" id="exitEmail" placeholder="Email Address" required>
+      <input type="tel" id="exitPhone" placeholder="Mobile Number (optional)" pattern="[0-9]{10}">
+      <button type="submit" class="exit-btn"><i class="fa-solid fa-download" style="margin-right:8px"></i>Send Me the Checklist</button>
+    </form>
+    <div class="exit-success" id="exitSuccess">
+      <i class="fa-solid fa-circle-check"></i>
+      <p>Thanks! Your checklist is downloading now.<br>You can also <a href="/resources/insurance-buying-checklist.pdf" download>grab it here</a> any time.</p>
+    </div>
+    <p class="exit-note">No spam, ever. Unsubscribe anytime.</p>
+  </div>
+</div>
+
 <script>
 // ── PAGE NAVIGATION ──
 const pages = ['home','products','about','blog','contact'];
@@ -2920,6 +2985,59 @@ function sendToKlaviyo(payload){
       'Form Type':      payload.form_type || 'quote'
     }]);
   } catch(e){ console.warn('Klaviyo error:', e); }
+}
+
+// ── EXIT-INTENT / LEAD MAGNET POPUP ──
+let exitPopupShown = false;
+
+function showExitPopup(){
+  if(exitPopupShown || sessionStorage.getItem('exitPopupShown')) return;
+  exitPopupShown = true;
+  sessionStorage.setItem('exitPopupShown', '1');
+  document.getElementById('exitPopup').classList.add('active');
+}
+
+function closeExitPopup(){
+  document.getElementById('exitPopup').classList.remove('active');
+}
+
+// Desktop: trigger when the mouse leaves towards the top of the viewport
+document.addEventListener('mouseout', function(e){
+  if(!e.relatedTarget && e.clientY <= 0) showExitPopup();
+});
+
+// Mobile/fallback: trigger after 30s if the visitor has scrolled past the hero
+setTimeout(function(){
+  if(window.scrollY > window.innerHeight * 0.5) showExitPopup();
+}, 30000);
+
+async function submitExitForm(e){
+  e.preventDefault();
+  const name  = document.getElementById('exitName').value.trim();
+  const email = document.getElementById('exitEmail').value.trim();
+  const phone = document.getElementById('exitPhone').value.trim();
+
+  const payload = {
+    form_type:      'lead_magnet',
+    name:           name,
+    email:          email,
+    mobile:         phone || 'Not provided',
+    insurance_type: 'Insurance Buying Checklist',
+    city:           'Not provided',
+    timestamp:      new Date().toLocaleString('en-IN', {timeZone:'Asia/Kolkata'})
+  };
+  sendToSheet(payload);
+  sendToKlaviyo(payload);
+
+  document.getElementById('exitForm').style.display = 'none';
+  document.getElementById('exitSuccess').style.display = 'block';
+
+  const a = document.createElement('a');
+  a.href = '/resources/insurance-buying-checklist.pdf';
+  a.download = 'Policy-Aid-Insurance-Buying-Checklist.pdf';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
 }
 
 // ── PRODUCT FIELDS SHOW/HIDE ──
