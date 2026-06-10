@@ -105,6 +105,23 @@ footer{background:#12202A;color:rgba(255,255,255,.5);padding:28px 6%;text-align:
 footer a{color:#2563eb}
 
 @media(max-width:700px){.hero h1{font-size:1.8rem}.picks-grid{grid-template-columns:1fr}}
+
+@media(max-width:700px){
+  .table-wrap{overflow-x:visible;box-shadow:none;border-radius:0;background:transparent}
+  table{min-width:0}
+  thead{display:none}
+  tbody tr{display:block;background:#fff;border:1px solid #EDF2F7;border-radius:14px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.04);overflow:hidden}
+  tbody tr:hover{background:#fff}
+  td{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid #F2F5F7;font-size:.85rem}
+  tbody tr td:last-child{border-bottom:none}
+  td::before{content:attr(data-label);font-weight:700;color:#7E9BAD;font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;margin-right:12px;flex-shrink:0}
+  td:first-child{display:block;background:#12202A;color:#fff;font-weight:800;font-size:.95rem;padding:14px 16px}
+  td:first-child::before{content:none}
+  td:first-child span{color:rgba(255,255,255,.65) !important}
+  td:last-child{justify-content:center;padding:14px 16px}
+  td:last-child::before{content:none}
+  td:last-child a{background:#2563eb;color:#fff !important;padding:9px 28px;border-radius:50px;font-size:.82rem;font-weight:700}
+}
 </style>
 </head>
 <body>
@@ -216,104 +233,104 @@ footer a{color:#2563eb}
       </thead>
       <tbody>
         <tr>
-          <td>Travel Ace<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Bajaj Allianz</span></td>
-          <td>&#8377;195</td>
-          <td>$50K – $500K</td>
-          <td><span class="tag-green">93.54%</span></td>
-          <td>$5,00,000</td>
-          <td>Standard, Silver, Gold, Platinum, Super Age</td>
-          <td>Up to 99 yrs</td>
-          <td><a href="bajaj-allianz-travel-ace.html">Review</a></td>
+          <td data-label="Plan">Travel Ace<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Bajaj Allianz</span></td>
+          <td data-label="15-Day Premium*">&#8377;195</td>
+          <td data-label="Sum Insured Range">$50K – $500K</td>
+          <td data-label="Claim Ratio"><span class="tag-green">93.54%</span></td>
+          <td data-label="Max Cover">$5,00,000</td>
+          <td data-label="Plan Variants">Standard, Silver, Gold, Platinum, Super Age</td>
+          <td data-label="Entry Age">Up to 99 yrs</td>
+          <td data-label="Review"><a href="bajaj-allianz-travel-ace.html">Review</a></td>
         </tr>
         <tr>
-          <td>TripSecure+<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">ICICI Lombard</span></td>
-          <td>&#8377;300</td>
-          <td>$50K – $500K</td>
-          <td><span class="tag-blue">91.2%</span></td>
-          <td>$5,00,000</td>
-          <td>Silver, Gold, Gold Plus, Platinum</td>
-          <td>Up to 99 yrs</td>
-          <td><a href="icici-lombard-tripsecure.html">Review</a></td>
+          <td data-label="Plan">TripSecure+<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">ICICI Lombard</span></td>
+          <td data-label="15-Day Premium*">&#8377;300</td>
+          <td data-label="Sum Insured Range">$50K – $500K</td>
+          <td data-label="Claim Ratio"><span class="tag-blue">91.2%</span></td>
+          <td data-label="Max Cover">$5,00,000</td>
+          <td data-label="Plan Variants">Silver, Gold, Gold Plus, Platinum</td>
+          <td data-label="Entry Age">Up to 99 yrs</td>
+          <td data-label="Review"><a href="icici-lombard-tripsecure.html">Review</a></td>
         </tr>
         <tr>
-          <td>TravelAssure<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Niva Bupa</span></td>
-          <td>&#8377;300</td>
-          <td>$50K – $500K</td>
-          <td><span class="tag-blue">90.8%</span></td>
-          <td>$5,00,000</td>
-          <td>Lite, Basic, Comprehensive, Honeymooners, Sports &amp; Adventure</td>
-          <td>Up to 99 yrs</td>
-          <td><a href="niva-bupa-travel-assure.html">Review</a></td>
+          <td data-label="Plan">TravelAssure<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Niva Bupa</span></td>
+          <td data-label="15-Day Premium*">&#8377;300</td>
+          <td data-label="Sum Insured Range">$50K – $500K</td>
+          <td data-label="Claim Ratio"><span class="tag-blue">90.8%</span></td>
+          <td data-label="Max Cover">$5,00,000</td>
+          <td data-label="Plan Variants">Lite, Basic, Comprehensive, Honeymooners, Sports &amp; Adventure</td>
+          <td data-label="Entry Age">Up to 99 yrs</td>
+          <td data-label="Review"><a href="niva-bupa-travel-assure.html">Review</a></td>
         </tr>
         <tr>
-          <td>Travel Guard International Plus<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Tata AIG</span></td>
-          <td>&#8377;338</td>
-          <td>$50K – $1M</td>
-          <td><span class="tag-green">94.1%</span></td>
-          <td>$10,00,000</td>
-          <td>Silver, Gold, Platinum, Titanium, Senior</td>
-          <td>Up to 99 yrs</td>
-          <td><a href="tata-aig-travel-guard.html">Review</a></td>
+          <td data-label="Plan">Travel Guard International Plus<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Tata AIG</span></td>
+          <td data-label="15-Day Premium*">&#8377;338</td>
+          <td data-label="Sum Insured Range">$50K – $1M</td>
+          <td data-label="Claim Ratio"><span class="tag-green">94.1%</span></td>
+          <td data-label="Max Cover">$10,00,000</td>
+          <td data-label="Plan Variants">Silver, Gold, Platinum, Titanium, Senior</td>
+          <td data-label="Entry Age">Up to 99 yrs</td>
+          <td data-label="Review"><a href="tata-aig-travel-guard.html">Review</a></td>
         </tr>
         <tr>
-          <td>Travel Explorer<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">HDFC Ergo</span></td>
-          <td>&#8377;465</td>
-          <td>$40K – $1M</td>
-          <td><span class="tag-green">95.3%</span></td>
-          <td>$10,00,000</td>
-          <td>Silver, Gold, Platinum, Titanium</td>
-          <td>Up to 99 yrs</td>
-          <td><a href="hdfc-ergo-travel-explorer.html">Review</a></td>
+          <td data-label="Plan">Travel Explorer<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">HDFC Ergo</span></td>
+          <td data-label="15-Day Premium*">&#8377;465</td>
+          <td data-label="Sum Insured Range">$40K – $1M</td>
+          <td data-label="Claim Ratio"><span class="tag-green">95.3%</span></td>
+          <td data-label="Max Cover">$10,00,000</td>
+          <td data-label="Plan Variants">Silver, Gold, Platinum, Titanium</td>
+          <td data-label="Entry Age">Up to 99 yrs</td>
+          <td data-label="Review"><a href="hdfc-ergo-travel-explorer.html">Review</a></td>
         </tr>
         <tr>
-          <td>Happy Traveller<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Digit</span></td>
-          <td>&#8377;395</td>
-          <td>$50K – $500K</td>
-          <td><span class="tag-blue">89.6%</span></td>
-          <td>$5,00,000</td>
-          <td>Single Trip, Multi-Trip Annual</td>
-          <td>Up to 99 yrs</td>
-          <td><a href="digit-happy-traveller.html">Review</a></td>
+          <td data-label="Plan">Happy Traveller<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Digit</span></td>
+          <td data-label="15-Day Premium*">&#8377;395</td>
+          <td data-label="Sum Insured Range">$50K – $500K</td>
+          <td data-label="Claim Ratio"><span class="tag-blue">89.6%</span></td>
+          <td data-label="Max Cover">$5,00,000</td>
+          <td data-label="Plan Variants">Single Trip, Multi-Trip Annual</td>
+          <td data-label="Entry Age">Up to 99 yrs</td>
+          <td data-label="Review"><a href="digit-happy-traveller.html">Review</a></td>
         </tr>
         <tr>
-          <td>Travel Care<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">IndusInd (Reliance)</span></td>
-          <td>&#8377;450</td>
-          <td>$15K – $500K</td>
-          <td><span class="tag-blue">87.34%</span></td>
-          <td>$5,00,000</td>
-          <td>Asia Standard/Silver, Schengen Basic/Standard, Corporate Standard/Plus/Elite</td>
-          <td>Up to 90 yrs</td>
-          <td><a href="indusind-travel-care.html">Review</a></td>
+          <td data-label="Plan">Travel Care<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">IndusInd (Reliance)</span></td>
+          <td data-label="15-Day Premium*">&#8377;450</td>
+          <td data-label="Sum Insured Range">$15K – $500K</td>
+          <td data-label="Claim Ratio"><span class="tag-blue">87.34%</span></td>
+          <td data-label="Max Cover">$5,00,000</td>
+          <td data-label="Plan Variants">Asia Standard/Silver, Schengen Basic/Standard, Corporate Standard/Plus/Elite</td>
+          <td data-label="Entry Age">Up to 90 yrs</td>
+          <td data-label="Review"><a href="indusind-travel-care.html">Review</a></td>
         </tr>
         <tr>
-          <td>International Travel Insurance<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Care Health</span></td>
-          <td>&#8377;550</td>
-          <td>$10K – $1M</td>
-          <td><span class="tag-blue">90.1%</span></td>
-          <td>$10,00,000</td>
-          <td>Per-day customisable plans</td>
-          <td>No max age</td>
-          <td><a href="care-international-travel.html">Review</a></td>
+          <td data-label="Plan">International Travel Insurance<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">Care Health</span></td>
+          <td data-label="15-Day Premium*">&#8377;550</td>
+          <td data-label="Sum Insured Range">$10K – $1M</td>
+          <td data-label="Claim Ratio"><span class="tag-blue">90.1%</span></td>
+          <td data-label="Max Cover">$10,00,000</td>
+          <td data-label="Plan Variants">Per-day customisable plans</td>
+          <td data-label="Entry Age">No max age</td>
+          <td data-label="Review"><a href="care-international-travel.html">Review</a></td>
         </tr>
         <tr>
-          <td>Overseas Travel Ease (Elite)<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">New India Assurance</span></td>
-          <td>&#8377;480</td>
-          <td>$25K – $500K</td>
-          <td><span class="tag-green">96.4%</span></td>
-          <td>$5,00,000</td>
-          <td>Basic, Economy, Advanced, Elite, Supreme</td>
-          <td>Up to 70 yrs</td>
-          <td><a href="new-india-overseas-travel-ease.html">Review</a></td>
+          <td data-label="Plan">Overseas Travel Ease (Elite)<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">New India Assurance</span></td>
+          <td data-label="15-Day Premium*">&#8377;480</td>
+          <td data-label="Sum Insured Range">$25K – $500K</td>
+          <td data-label="Claim Ratio"><span class="tag-green">96.4%</span></td>
+          <td data-label="Max Cover">$5,00,000</td>
+          <td data-label="Plan Variants">Basic, Economy, Advanced, Elite, Supreme</td>
+          <td data-label="Entry Age">Up to 70 yrs</td>
+          <td data-label="Review"><a href="new-india-overseas-travel-ease.html">Review</a></td>
         </tr>
         <tr>
-          <td>Travel Insurance (Business &amp; Holiday)<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">SBI General</span></td>
-          <td>&#8377;500</td>
-          <td>$50K – $500K</td>
-          <td><span class="tag-blue">88.7%</span></td>
-          <td>$5,00,000</td>
-          <td>Business, Holiday — Single &amp; Multi-Trip</td>
-          <td>6 months – 70 yrs</td>
-          <td><a href="sbi-general-travel-insurance.html">Review</a></td>
+          <td data-label="Plan">Travel Insurance (Business &amp; Holiday)<br><span style="font-weight:400;color:#8aa0ae;font-size:.78rem">SBI General</span></td>
+          <td data-label="15-Day Premium*">&#8377;500</td>
+          <td data-label="Sum Insured Range">$50K – $500K</td>
+          <td data-label="Claim Ratio"><span class="tag-blue">88.7%</span></td>
+          <td data-label="Max Cover">$5,00,000</td>
+          <td data-label="Plan Variants">Business, Holiday — Single &amp; Multi-Trip</td>
+          <td data-label="Entry Age">6 months – 70 yrs</td>
+          <td data-label="Review"><a href="sbi-general-travel-insurance.html">Review</a></td>
         </tr>
       </tbody>
     </table>
