@@ -101,6 +101,17 @@ td:first-child{font-weight:700;color:var(--dark)}
 .faq-q:hover{color:var(--teal-dark)}
 .faq-icon{color:var(--muted);flex-shrink:0}
 .faq-a{padding:0 20px 18px;font-size:.88rem;color:var(--mid);line-height:1.75;display:none}
+/* PLANS CTA */
+.plans-cta-box{background:linear-gradient(135deg,#060d1a,#0f2a6e);border-radius:20px;padding:48px 40px;text-align:center;color:#fff;margin:2rem 0}
+.plans-cta-box h2{color:#fff;font-size:1.8rem;margin-bottom:12px}
+.plans-cta-box p{color:rgba(255,255,255,.85);max-width:500px;margin:0 auto 28px;line-height:1.7}
+.featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:28px}
+.featured-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:18px 16px;text-align:left}
+.featured-card .f-insurer{font-size:.72rem;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.featured-card .f-plan{font-weight:800;font-size:.95rem;color:#fff;margin-bottom:8px}
+.featured-card .f-price{font-size:1.3rem;font-weight:900;color:#fff}
+.featured-card .f-price span{font-size:.75rem;font-weight:400;color:rgba(255,255,255,.7)}
+.featured-card .f-link{display:block;margin-top:12px;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.9);border-top:1px solid rgba(255,255,255,.15);padding-top:10px}
 /* CTA */
 .cta-band{background:linear-gradient(135deg,#060d1a,#0f2a6e);border-radius:20px;padding:48px 40px;text-align:center;margin:2rem 0;color:#fff}
 .cta-band h2{color:#fff;font-size:1.8rem;margin-bottom:12px}
@@ -110,7 +121,7 @@ td:first-child{font-weight:700;color:var(--dark)}
 .btn-call{background:transparent;color:#fff;font-weight:700;font-size:.95rem;padding:13px 30px;border-radius:50px;border:2px solid rgba(255,255,255,.4);display:inline-flex;align-items:center;gap:8px}
 footer{background:var(--dark);color:rgba(255,255,255,.5);padding:28px 6%;text-align:center;font-size:.82rem}
 footer a{color:var(--teal)}
-@media(max-width:768px){.nav-links,.nav-btns{display:none}.hero,.section{padding:48px 5%}.cta-band{padding:36px 24px}}
+@media(max-width:768px){.nav-links,.nav-btns{display:none}.hero,.section{padding:48px 5%}.cta-band,.plans-cta-box{padding:36px 24px}}
 </style>
 </head>
 <body>
@@ -157,7 +168,8 @@ footer a{color:var(--teal)}
     <div class="hero-stat"><strong>Free</strong><span>Expert Advice</span></div>
   </div>
   <div class="hero-btns">
-    <a href="https://wa.me/919930140305?text=Hi%20Policy%20Aid%2C%20I%20need%20a%20travel%20insurance%20quote" class="btn-hero-primary"><i class="fa-brands fa-whatsapp" style="margin-right:8px"></i>Get My Travel Quote</a>
+    <a href="/plans/travel-insurance-comparison.html" class="btn-hero-primary"><i class="fa-solid fa-chart-bar" style="margin-right:8px"></i>Compare All 10 Plans</a>
+    <a href="https://wa.me/919930140305?text=Hi%20Policy%20Aid%2C%20I%20need%20a%20travel%20insurance%20quote" class="btn-hero-secondary"><i class="fa-brands fa-whatsapp" style="margin-right:8px"></i>Get My Travel Quote</a>
     <a href="tel:+919930140305" class="btn-hero-secondary"><i class="fa-solid fa-phone" style="margin-right:8px"></i>Call Us Now</a>
   </div>
 </div>
@@ -185,6 +197,32 @@ footer a{color:var(--teal)}
         <h3>Student / Study Abroad</h3>
         <p>Designed for students studying overseas. Covers medical treatment, mental health support and personal liability for the full academic year.</p>
         <span class="type-best">Best for: Students in US, UK, Canada, Australia</span>
+      </div>
+    </div>
+
+    <div class="plans-cta-box">
+      <h2>Compare All 10 Travel Insurance Plans</h2>
+      <p>We've analysed premiums, sum insured, claim ratios and coverage features for every major travel insurer in India.</p>
+      <a href="/plans/travel-insurance-comparison.html" class="btn-hero-primary" style="display:inline-block;margin-bottom:8px;color:var(--blue)">See Full Comparison →</a>
+      <div class="featured-grid">
+        <div class="featured-card">
+          <div class="f-insurer">Bajaj Allianz</div>
+          <div class="f-plan">Travel Ace</div>
+          <div class="f-price">&#8377;195<span>/15-day trip*</span></div>
+          <a href="/plans/bajaj-allianz-travel-ace.html" class="f-link">View Review →</a>
+        </div>
+        <div class="featured-card">
+          <div class="f-insurer">IndusInd (Reliance)</div>
+          <div class="f-plan">Travel Care</div>
+          <div class="f-price">&#8377;450<span>/15-day trip*</span></div>
+          <a href="/plans/indusind-travel-care.html" class="f-link">View Review →</a>
+        </div>
+        <div class="featured-card">
+          <div class="f-insurer">Care Health</div>
+          <div class="f-plan">International Travel</div>
+          <div class="f-price">&#8377;550<span>/15-day trip*</span></div>
+          <a href="/plans/care-international-travel.html" class="f-link">View Review →</a>
+        </div>
       </div>
     </div>
   </div>
