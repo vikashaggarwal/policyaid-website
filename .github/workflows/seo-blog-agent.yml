@@ -1,9 +1,6 @@
 name: SEO Blog Agent
 
 on:
-  schedule:
-    # 4:30 PM IST = 11:00 UTC, every Tuesday and Friday
-    - cron: '0 11 * * 2,5'
   workflow_dispatch: {}
 
 permissions:
