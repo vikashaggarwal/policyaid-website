@@ -17,6 +17,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Careers -->
+  <url>
+    <loc>https://www.policyaid.co.in/careers.html</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
   <!-- Legal -->
   <url>
     <loc>https://www.policyaid.co.in/privacy-policy.html</loc>
