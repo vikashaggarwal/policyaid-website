@@ -22,7 +22,7 @@ const ROOT = path.resolve(new URL(".", import.meta.url).pathname, "..");
 const BLOG_DIR = path.join(ROOT, "blog");
 const INDEX_FILE = path.join(ROOT, "index.html");
 const SITEMAP_FILE = path.join(ROOT, "sitemap.xml");
-const SITE_URL = "https://www.policyaid.co.in";
+const SITE_URL = "https://policyaid.co.in";
 
 const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5-20250929";
 const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });

@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Ping Google to reindex sitemap
         run: |
-          curl -s "https://www.google.com/ping?sitemap=https://www.policyaid.online/sitemap.xml"
+          curl -s "https://www.google.com/ping?sitemap=https://policyaid.co.in/sitemap.xml"
           echo "✅ Google sitemap ping sent"
