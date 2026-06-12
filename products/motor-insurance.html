@@ -90,6 +90,29 @@ td:first-child{font-weight:700;color:var(--dark)}
 .tag-yes{background:#C6F6D5;color:#276749;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px}
 .tag-no{background:#FED7D7;color:#9B2C2C;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px}
 .tag-opt{background:#FEFCBF;color:#744210;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px}
+/* COMPARISON TABLE */
+.table-wrap{overflow-x:auto;margin:24px 0;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.table-wrap table{min-width:900px}
+.table-wrap td a{color:var(--teal-dark);font-weight:600;font-size:.8rem}
+.tag-green{background:#C6F6D5;color:#276749;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
+.tag-blue{background:#BEE3F8;color:#2B6CB0;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
+.tag-orange{background:#FEFCBF;color:#744210;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
+@media(max-width:700px){
+  .table-wrap{overflow-x:visible;box-shadow:none;border-radius:0;background:transparent}
+  .table-wrap table{min-width:0}
+  .table-wrap thead{display:none}
+  .table-wrap tbody tr{display:block;background:#fff;border:1px solid var(--border);border-radius:14px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.04);overflow:hidden}
+  .table-wrap tbody tr:hover{background:#fff}
+  .table-wrap td{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--border);font-size:.85rem;text-align:right}
+  .table-wrap tbody tr td:last-child{border-bottom:none}
+  .table-wrap td::before{content:attr(data-label);font-weight:700;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;margin-right:12px;flex-shrink:0;text-align:left}
+  .table-wrap td:first-child{display:block;background:var(--dark);color:#fff;font-weight:800;font-size:.95rem;padding:14px 16px;text-align:left}
+  .table-wrap td:first-child::before{content:none}
+  .table-wrap td:first-child span{color:rgba(255,255,255,.65) !important}
+  .table-wrap td:last-child{justify-content:center;padding:14px 16px}
+  .table-wrap td:last-child::before{content:none}
+  .table-wrap td:last-child a{background:var(--teal-dark);color:#fff !important;padding:9px 28px;border-radius:50px;font-size:.82rem;font-weight:700}
+}
 /* COVER GRID */
 .cover-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
 .cover-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px;display:flex;gap:14px;align-items:flex-start}
@@ -195,7 +218,7 @@ footer a{color:var(--teal)}
     <div class="hero-stat"><strong>Free</strong><span>Expert Advice</span></div>
   </div>
   <div class="hero-btns">
-    <a href="/plans/motor-insurance-comparison.html" class="btn-hero-primary"><i class="fa-solid fa-chart-bar" style="margin-right:8px"></i>Compare All 10 Plans</a>
+    <a href="#full-comparison" class="btn-hero-primary" onclick="showComparison(event)"><i class="fa-solid fa-chart-bar" style="margin-right:8px"></i>Compare All 10 Plans</a>
     <a href="https://wa.me/919930140305?text=Hi%20Policy%20Aid%2C%20I%20need%20a%20motor%20insurance%20quote" class="btn-hero-secondary"><i class="fa-brands fa-whatsapp" style="margin-right:8px"></i>Get My Motor Quote</a>
     <a href="tel:+919930140305" class="btn-hero-secondary"><i class="fa-solid fa-phone" style="margin-right:8px"></i>Call Us Now</a>
   </div>
@@ -311,10 +334,137 @@ footer a{color:var(--teal)}
         </div>
       </div>
       <div style="margin-top:28px">
-        <a href="/plans/motor-insurance-comparison.html" class="btn-hero-primary"><i class="fa-solid fa-chart-bar" style="margin-right:8px"></i>Compare All 10 Plans</a>
+        <a href="#full-comparison" class="btn-hero-primary" onclick="showComparison(event)"><i class="fa-solid fa-chart-bar" style="margin-right:8px"></i>Compare All 10 Plans</a>
       </div>
     </div>
 
+  </div>
+</div>
+
+<div class="section" id="full-comparison" style="display:none">
+  <div class="section-inner">
+    <div class="section-label">Full Comparison</div>
+    <h2>Complete Comparison — All 10 Car Insurance Plans</h2>
+    <p class="section-sub">Indicative comprehensive premiums for a 1.2L petrol hatchback, 5 years old, IDV ~&#8377;4,00,000–5,00,000, Mumbai, 20% NCB. Updated June 2026.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Annual Premium*</th>
+            <th>IDV Range</th>
+            <th>Claim Ratio</th>
+            <th>Network Garages</th>
+            <th>Plan Variants</th>
+            <th>Key Add-Ons</th>
+            <th>Review</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Plan">Car Insurance<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">HDFC ERGO</span></td>
+            <td data-label="Annual Premium*">&#8377;4,800</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-green">~99.4%</span></td>
+            <td data-label="Network Garages">12,200+</td>
+            <td data-label="Plan Variants">Comprehensive, Third-Party, Standalone OD</td>
+            <td data-label="Key Add-Ons">Zero Dep, RTI, Consumables, NCB Protect</td>
+            <td data-label="Review"><a href="/plans/hdfc-ergo-car-shield.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Car Insurance<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Digit</span></td>
+            <td data-label="Annual Premium*">&#8377;4,650</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-green">97.2%</span></td>
+            <td data-label="Network Garages">6,000+</td>
+            <td data-label="Plan Variants">Comprehensive, Third-Party</td>
+            <td data-label="Key Add-Ons">Zero Dep, Engine Protect, Roadside Assistance, NCB Protect</td>
+            <td data-label="Review"><a href="/plans/digit-car-insurance.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Car Insurance<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Bajaj Allianz</span></td>
+            <td data-label="Annual Premium*">&#8377;4,500</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-green">~98%</span></td>
+            <td data-label="Network Garages">4,000+</td>
+            <td data-label="Plan Variants">Comprehensive/Package, Standalone OD, Flexible (Pay As You Drive)</td>
+            <td data-label="Key Add-Ons">Zero Dep / Bumper-to-Bumper, Consumables, Roadside Assistance, Electrical Accessories</td>
+            <td data-label="Review"><a href="/plans/bajaj-allianz-car-insurance.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Private Car Package Policy<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">ICICI Lombard</span></td>
+            <td data-label="Annual Premium*">&#8377;4,950</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">~92.9%</span></td>
+            <td data-label="Network Garages">6,800+</td>
+            <td data-label="Plan Variants">Comprehensive, Own Damage, Third-Party, Pay As You Drive</td>
+            <td data-label="Key Add-Ons">Zero Dep, Engine Protect Plus, Key Protect, Garage Cash, RTI</td>
+            <td data-label="Review"><a href="/plans/icici-lombard-car-insurance.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Auto Secure<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Tata AIG</span></td>
+            <td data-label="Annual Premium*">&#8377;5,400</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-green">~95.4%</span></td>
+            <td data-label="Network Garages">7,500+</td>
+            <td data-label="Plan Variants">Comprehensive, Third-Party, Standalone OD</td>
+            <td data-label="Key Add-Ons">20+ add-ons incl. Zero Dep, Engine Secure, Tyre Cover, RTI</td>
+            <td data-label="Review"><a href="/plans/tata-aig-auto-secure.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Private Car Package Policy<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">SBI General</span></td>
+            <td data-label="Annual Premium*">&#8377;5,200</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-orange">102.07% (incurred)</span></td>
+            <td data-label="Network Garages">20,000+</td>
+            <td data-label="Plan Variants">Comprehensive, Third-Party, Standalone OD</td>
+            <td data-label="Key Add-Ons">Zero Dep, NCB Protect, Personal Accident Cover, Roadside Assistance</td>
+            <td data-label="Review"><a href="/plans/sbi-general-car-insurance.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Private Car Insurance<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">New India Assurance</span></td>
+            <td data-label="Annual Premium*">&#8377;4,700</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">~96%</span></td>
+            <td data-label="Network Garages">3,000+</td>
+            <td data-label="Plan Variants">Comprehensive, Third-Party, Standalone OD</td>
+            <td data-label="Key Add-Ons">Zero Dep, NCB Protect, Personal Accident Cover</td>
+            <td data-label="Review"><a href="/plans/new-india-car-insurance.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Private Car Insurance<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Reliance General</span></td>
+            <td data-label="Annual Premium*">&#8377;4,900</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">~94%</span></td>
+            <td data-label="Network Garages">8,500+</td>
+            <td data-label="Plan Variants">Comprehensive, Third-Party, Pay As You Drive</td>
+            <td data-label="Key Add-Ons">Zero Dep, Engine Protect, Roadside Assistance, Tyre Protect</td>
+            <td data-label="Review"><a href="/plans/reliance-general-car-insurance.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Car Secure<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Future Generali</span></td>
+            <td data-label="Annual Premium*">&#8377;4,600</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-orange">93%</span></td>
+            <td data-label="Network Garages">3,000+</td>
+            <td data-label="Plan Variants">Comprehensive, Third-Party, Standalone OD</td>
+            <td data-label="Key Add-Ons">Zero Dep, Engine Protect, NCB Protect, Roadside Assistance</td>
+            <td data-label="Review"><a href="/plans/future-generali-car-secure.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Car Insurance<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Royal Sundaram</span></td>
+            <td data-label="Annual Premium*">&#8377;4,400</td>
+            <td data-label="IDV Range">Up to vehicle's market value</td>
+            <td data-label="Claim Ratio"><span class="tag-orange">~85%</span></td>
+            <td data-label="Network Garages">3,300+</td>
+            <td data-label="Plan Variants">Comprehensive, Third-Party, Standalone OD</td>
+            <td data-label="Key Add-Ons">Zero Dep, Roadside Assistance, Return to Invoice</td>
+            <td data-label="Review"><a href="/plans/royal-sundaram-car-insurance.html">Review</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.78rem;color:var(--muted)">* Indicative comprehensive premiums for a 1.2L petrol hatchback, ~5 years old, IDV around &#8377;4,00,000–5,00,000, registered in Mumbai with 20% NCB. Actual premiums vary by car make/model, age, city, IDV, NCB and add-ons selected. Data updated June 2026.</p>
   </div>
 </div>
 
@@ -363,6 +513,12 @@ footer a{color:var(--teal)}
 </footer>
 
 <script>
+function showComparison(e){
+  if(e) e.preventDefault();
+  var el = document.getElementById('full-comparison');
+  el.style.display = 'block';
+  el.scrollIntoView({behavior:'smooth', block:'start'});
+}
 function toggle(el){
   var a=el.nextElementSibling;
   var icon=el.querySelector('.faq-icon i');

@@ -119,6 +119,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(247,251,252,
 .featured-card .f-price{font-size:1.3rem;font-weight:900;color:#fff}
 .featured-card .f-price span{font-size:.75rem;font-weight:400;color:rgba(255,255,255,.7)}
 .featured-card .f-link{display:block;margin-top:12px;font-size:.78rem;font-weight:700;color:rgba(255,255,255,.9);border-top:1px solid rgba(255,255,255,.15);padding-top:10px}
+/* COMPARISON TABLE */
+.table-wrap{overflow-x:auto;margin:24px 0;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.table-wrap table{width:100%;border-collapse:collapse;background:#fff;min-width:900px}
+.table-wrap thead tr{background:var(--dark)}
+.table-wrap thead th{color:#fff;font-size:.78rem;font-weight:700;padding:14px 16px;text-align:left;white-space:nowrap}
+.table-wrap thead th:first-child{min-width:180px}
+.table-wrap tbody tr{border-bottom:1px solid var(--border);transition:background .15s}
+.table-wrap tbody tr:hover{background:var(--cream)}
+.table-wrap tbody tr:last-child{border-bottom:none}
+.table-wrap td{padding:13px 16px;font-size:.85rem;color:var(--dark);vertical-align:middle}
+.table-wrap td:first-child{font-weight:700}
+.table-wrap td a{color:var(--teal-dark);font-weight:600;font-size:.8rem}
+.tag-green{background:#C6F6D5;color:#276749;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
+.tag-blue{background:#BEE3F8;color:#2B6CB0;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
+.tag-orange{background:#FEFCBF;color:#744210;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
+@media(max-width:700px){
+  .table-wrap{overflow-x:visible;box-shadow:none;border-radius:0;background:transparent}
+  .table-wrap table{min-width:0}
+  .table-wrap thead{display:none}
+  .table-wrap tbody tr{display:block;background:#fff;border:1px solid var(--border);border-radius:14px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.04);overflow:hidden}
+  .table-wrap tbody tr:hover{background:#fff}
+  .table-wrap td{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--border);font-size:.85rem;text-align:right}
+  .table-wrap tbody tr td:last-child{border-bottom:none}
+  .table-wrap td::before{content:attr(data-label);font-weight:700;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;margin-right:12px;flex-shrink:0;text-align:left}
+  .table-wrap td:first-child{display:block;background:var(--dark);color:#fff;font-weight:800;font-size:.95rem;padding:14px 16px;text-align:left}
+  .table-wrap td:first-child::before{content:none}
+  .table-wrap td:first-child span{color:rgba(255,255,255,.65) !important}
+  .table-wrap td:last-child{justify-content:center;padding:14px 16px}
+  .table-wrap td:last-child::before{content:none}
+  .table-wrap td:last-child a{background:var(--teal-dark);color:#fff !important;padding:9px 28px;border-radius:50px;font-size:.82rem;font-weight:700}
+}
 /* FAQ */
 .faq-list{display:flex;flex-direction:column;gap:10px}
 .faq-item{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}
@@ -199,7 +230,7 @@ footer a{color:var(--teal)}
     <div class="hero-stat"><strong>IRDAI</strong><span>Licensed Agent</span></div>
   </div>
   <div class="hero-btns">
-    <a href="/plans/health-insurance-comparison.html" class="btn-hero-primary"><i class="fa-solid fa-chart-bar" style="margin-right:8px"></i>Compare All 10 Plans</a>
+    <a href="#full-comparison" class="btn-hero-primary" onclick="showComparison(event)"><i class="fa-solid fa-chart-bar" style="margin-right:8px"></i>Compare All 10 Plans</a>
     <a href="https://wa.me/919930140305?text=Hi%20Policy%20Aid%2C%20I%20need%20health%20insurance%20advice" class="btn-hero-secondary"><i class="fa-brands fa-whatsapp" style="margin-right:8px"></i>Talk to Advisor</a>
   </div>
 </div>
@@ -279,7 +310,7 @@ footer a{color:var(--teal)}
     <div class="plans-cta-box">
       <h2>Compare All 10 Health Insurance Plans</h2>
       <p>We've analysed premiums, claim ratios, network hospitals and coverage features for every major insurer in India.</p>
-      <a href="/plans/health-insurance-comparison.html" class="btn-hero-primary" style="display:inline-block;margin-bottom:8px">See Full Comparison →</a>
+      <a href="#full-comparison" class="btn-hero-primary" style="display:inline-block;margin-bottom:8px" onclick="showComparison(event)">See Full Comparison →</a>
       <div class="featured-grid">
         <div class="featured-card">
           <div class="f-insurer">Care Health</div>
@@ -302,6 +333,144 @@ footer a{color:var(--teal)}
       </div>
       <p style="font-size:.72rem;color:rgba(255,255,255,.5);margin-top:16px">* Indicative premium for family of 4, &#8377;10L cover, Mumbai</p>
     </div>
+  </div>
+</div>
+
+<div class="section" id="full-comparison" style="display:none">
+  <div class="section-inner">
+    <div class="section-label">Full Comparison</div>
+    <h2>Complete Comparison — All 10 Health Insurance Plans</h2>
+    <p class="section-sub">Indicative premiums for a family of 4 (ages 35+30+5+3) with &#8377;10 lakh sum insured in Mumbai. Updated June 2026.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Monthly Premium*</th>
+            <th>Network Hospitals</th>
+            <th>Claim Ratio</th>
+            <th>Max Cover</th>
+            <th>Room Rent</th>
+            <th>NCB</th>
+            <th>Pre-existing Wait</th>
+            <th>Review</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Plan">Care Supreme<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Care Health</span></td>
+            <td data-label="Monthly Premium*">&#8377;999</td>
+            <td data-label="Network Hospitals">19,000+</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">95.2%</span></td>
+            <td data-label="Max Cover">&#8377;6 Crore</td>
+            <td data-label="Room Rent">Any</td>
+            <td data-label="NCB">100%</td>
+            <td data-label="Pre-existing Wait">3 years</td>
+            <td data-label="Review"><a href="/plans/care-health-supreme.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Star Comprehensive<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Star Health</span></td>
+            <td data-label="Monthly Premium*">&#8377;1,150</td>
+            <td data-label="Network Hospitals">14,000+</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">94.4%</span></td>
+            <td data-label="Max Cover">&#8377;1 Crore</td>
+            <td data-label="Room Rent">Any</td>
+            <td data-label="NCB">100%</td>
+            <td data-label="Pre-existing Wait">4 years</td>
+            <td data-label="Review"><a href="/plans/star-health-comprehensive.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Optima Restore<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">HDFC Ergo</span></td>
+            <td data-label="Monthly Premium*">&#8377;1,280</td>
+            <td data-label="Network Hospitals">13,000+</td>
+            <td data-label="Claim Ratio"><span class="tag-green">96.1%</span></td>
+            <td data-label="Max Cover">&#8377;50 Lakh</td>
+            <td data-label="Room Rent">Any</td>
+            <td data-label="NCB">Restore</td>
+            <td data-label="Pre-existing Wait">3 years</td>
+            <td data-label="Review"><a href="/plans/hdfc-ergo-optima-restore.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Reassure 2.0<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Niva Bupa</span></td>
+            <td data-label="Monthly Premium*">&#8377;1,390</td>
+            <td data-label="Network Hospitals">10,000+</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">93.8%</span></td>
+            <td data-label="Max Cover">&#8377;1 Crore</td>
+            <td data-label="Room Rent">Any</td>
+            <td data-label="NCB">150%</td>
+            <td data-label="Pre-existing Wait">3 years</td>
+            <td data-label="Review"><a href="/plans/niva-bupa-reassure-2.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Elevate Pro<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">ICICI Lombard</span></td>
+            <td data-label="Monthly Premium*">&#8377;1,450</td>
+            <td data-label="Network Hospitals">9,500+</td>
+            <td data-label="Claim Ratio"><span class="tag-green">96.7%</span></td>
+            <td data-label="Max Cover">&#8377;2 Crore</td>
+            <td data-label="Room Rent">Any</td>
+            <td data-label="NCB">100%</td>
+            <td data-label="Pre-existing Wait">3 years</td>
+            <td data-label="Review"><a href="/plans/icici-lombard-elevate.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Health Guard<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Bajaj Allianz</span></td>
+            <td data-label="Monthly Premium*">&#8377;950</td>
+            <td data-label="Network Hospitals">18,000+</td>
+            <td data-label="Claim Ratio"><span class="tag-green">96.8%</span></td>
+            <td data-label="Max Cover">&#8377;50 Lakh</td>
+            <td data-label="Room Rent">Any</td>
+            <td data-label="NCB">100%</td>
+            <td data-label="Pre-existing Wait">3 years</td>
+            <td data-label="Review"><a href="/plans/bajaj-allianz-health-guard.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Medicare Premier<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Tata AIG</span></td>
+            <td data-label="Monthly Premium*">&#8377;1,250</td>
+            <td data-label="Network Hospitals">10,000+</td>
+            <td data-label="Claim Ratio"><span class="tag-orange">93.1%</span></td>
+            <td data-label="Max Cover">&#8377;3 Crore</td>
+            <td data-label="Room Rent">Single AC</td>
+            <td data-label="NCB">100%</td>
+            <td data-label="Pre-existing Wait">3 years</td>
+            <td data-label="Review"><a href="/plans/tata-aig-medicare-premier.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Floater Mediclaim<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">New India Assurance</span></td>
+            <td data-label="Monthly Premium*">&#8377;850</td>
+            <td data-label="Network Hospitals">8,000+</td>
+            <td data-label="Claim Ratio"><span class="tag-green">98.9%</span></td>
+            <td data-label="Max Cover">&#8377;15 Lakh</td>
+            <td data-label="Room Rent">Single AC</td>
+            <td data-label="NCB">50%</td>
+            <td data-label="Pre-existing Wait">4 years</td>
+            <td data-label="Review"><a href="/plans/new-india-floater-mediclaim.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Activ Health Platinum<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Aditya Birla</span></td>
+            <td data-label="Monthly Premium*">&#8377;1,350</td>
+            <td data-label="Network Hospitals">11,000+</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">95.8%</span></td>
+            <td data-label="Max Cover">&#8377;2 Crore</td>
+            <td data-label="Room Rent">Any</td>
+            <td data-label="NCB">100%</td>
+            <td data-label="Pre-existing Wait">3 years</td>
+            <td data-label="Review"><a href="/plans/aditya-birla-activ-health.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Arogya Supreme<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">SBI General</span></td>
+            <td data-label="Monthly Premium*">&#8377;980</td>
+            <td data-label="Network Hospitals">14,000+</td>
+            <td data-label="Claim Ratio"><span class="tag-green">96.1%</span></td>
+            <td data-label="Max Cover">&#8377;50 Lakh</td>
+            <td data-label="Room Rent">Any</td>
+            <td data-label="NCB">100%</td>
+            <td data-label="Pre-existing Wait">3 years</td>
+            <td data-label="Review"><a href="/plans/sbi-general-arogya-supreme.html">Review</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.78rem;color:var(--muted)">* Indicative premiums for family of 4 (35+30+5+3 yrs), &#8377;10L sum insured, Mumbai. Actual premiums vary by age, city and health history. Data updated June 2026.</p>
   </div>
 </div>
 
@@ -376,6 +545,12 @@ footer a{color:var(--teal)}
 </footer>
 
 <script>
+function showComparison(e){
+  if(e) e.preventDefault();
+  var el = document.getElementById('full-comparison');
+  el.style.display = 'block';
+  el.scrollIntoView({behavior:'smooth', block:'start'});
+}
 function toggle(el){
   var a=el.nextElementSibling;
   var icon=el.querySelector('.faq-icon i');

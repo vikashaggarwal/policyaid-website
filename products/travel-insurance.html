@@ -106,6 +106,29 @@ td:first-child{font-weight:700;color:var(--dark)}
 .tag-yes{background:#C6F6D5;color:#276749;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px}
 .tag-no{background:#FED7D7;color:#9B2C2C;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px}
 .tag-opt{background:#FEFCBF;color:#744210;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px}
+/* COMPARISON TABLE */
+.table-wrap{overflow-x:auto;margin:24px 0;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.table-wrap table{min-width:900px}
+.table-wrap td a{color:var(--teal-dark);font-weight:600;font-size:.8rem}
+.tag-green{background:#C6F6D5;color:#276749;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
+.tag-blue{background:#BEE3F8;color:#2B6CB0;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
+.tag-orange{background:#FEFCBF;color:#744210;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px}
+@media(max-width:700px){
+  .table-wrap{overflow-x:visible;box-shadow:none;border-radius:0;background:transparent}
+  .table-wrap table{min-width:0}
+  .table-wrap thead{display:none}
+  .table-wrap tbody tr{display:block;background:#fff;border:1px solid var(--border);border-radius:14px;margin-bottom:14px;box-shadow:0 2px 12px rgba(0,0,0,.04);overflow:hidden}
+  .table-wrap tbody tr:hover{background:#fff}
+  .table-wrap td{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--border);font-size:.85rem;text-align:right}
+  .table-wrap tbody tr td:last-child{border-bottom:none}
+  .table-wrap td::before{content:attr(data-label);font-weight:700;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.4px;margin-right:12px;flex-shrink:0;text-align:left}
+  .table-wrap td:first-child{display:block;background:var(--dark);color:#fff;font-weight:800;font-size:.95rem;padding:14px 16px;text-align:left}
+  .table-wrap td:first-child::before{content:none}
+  .table-wrap td:first-child span{color:rgba(255,255,255,.65) !important}
+  .table-wrap td:last-child{justify-content:center;padding:14px 16px}
+  .table-wrap td:last-child::before{content:none}
+  .table-wrap td:last-child a{background:var(--teal-dark);color:#fff !important;padding:9px 28px;border-radius:50px;font-size:.82rem;font-weight:700}
+}
 /* FAQ */
 .faq-list{display:flex;flex-direction:column;gap:10px}
 .faq-item{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}
@@ -194,7 +217,7 @@ footer a{color:var(--teal)}
     <div class="hero-stat"><strong>Free</strong><span>Expert Advice</span></div>
   </div>
   <div class="hero-btns">
-    <a href="/plans/travel-insurance-comparison.html" class="btn-hero-primary"><i class="fa-solid fa-chart-bar" style="margin-right:8px"></i>Compare All 10 Plans</a>
+    <a href="#full-comparison" class="btn-hero-primary" onclick="showComparison(event)"><i class="fa-solid fa-chart-bar" style="margin-right:8px"></i>Compare All 10 Plans</a>
     <a href="https://wa.me/919930140305?text=Hi%20Policy%20Aid%2C%20I%20need%20a%20travel%20insurance%20quote" class="btn-hero-secondary"><i class="fa-brands fa-whatsapp" style="margin-right:8px"></i>Get My Travel Quote</a>
     <a href="tel:+919930140305" class="btn-hero-secondary"><i class="fa-solid fa-phone" style="margin-right:8px"></i>Call Us Now</a>
   </div>
@@ -229,7 +252,7 @@ footer a{color:var(--teal)}
     <div class="plans-cta-box">
       <h2>Compare All 10 Travel Insurance Plans</h2>
       <p>We've analysed premiums, sum insured, claim ratios and coverage features for every major travel insurer in India.</p>
-      <a href="/plans/travel-insurance-comparison.html" class="btn-hero-primary" style="display:inline-block;margin-bottom:8px;color:var(--blue)">See Full Comparison →</a>
+      <a href="#full-comparison" class="btn-hero-primary" style="display:inline-block;margin-bottom:8px;color:var(--blue)" onclick="showComparison(event)">See Full Comparison →</a>
       <div class="featured-grid">
         <div class="featured-card">
           <div class="f-insurer">Bajaj Allianz</div>
@@ -251,6 +274,133 @@ footer a{color:var(--teal)}
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="section" id="full-comparison" style="display:none">
+  <div class="section-inner">
+    <div class="section-label">Full Comparison</div>
+    <h2>Complete Comparison — All 10 Travel Insurance Plans</h2>
+    <p class="section-sub">Indicative premiums for a 15-day international trip (Europe/Schengen), $50,000 medical cover, age 35. Updated June 2026.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>15-Day Premium*</th>
+            <th>Sum Insured Range</th>
+            <th>Claim Ratio</th>
+            <th>Max Cover</th>
+            <th>Plan Variants</th>
+            <th>Entry Age</th>
+            <th>Review</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Plan">Travel Ace<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Bajaj Allianz</span></td>
+            <td data-label="15-Day Premium*">&#8377;195</td>
+            <td data-label="Sum Insured Range">$50K – $500K</td>
+            <td data-label="Claim Ratio"><span class="tag-green">93.54%</span></td>
+            <td data-label="Max Cover">$5,00,000</td>
+            <td data-label="Plan Variants">Standard, Silver, Gold, Platinum, Super Age</td>
+            <td data-label="Entry Age">Up to 99 yrs</td>
+            <td data-label="Review"><a href="/plans/bajaj-allianz-travel-ace.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">TripSecure+<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">ICICI Lombard</span></td>
+            <td data-label="15-Day Premium*">&#8377;300</td>
+            <td data-label="Sum Insured Range">$50K – $500K</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">91.2%</span></td>
+            <td data-label="Max Cover">$5,00,000</td>
+            <td data-label="Plan Variants">Silver, Gold, Gold Plus, Platinum</td>
+            <td data-label="Entry Age">Up to 99 yrs</td>
+            <td data-label="Review"><a href="/plans/icici-lombard-tripsecure.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">TravelAssure<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Niva Bupa</span></td>
+            <td data-label="15-Day Premium*">&#8377;300</td>
+            <td data-label="Sum Insured Range">$50K – $500K</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">90.8%</span></td>
+            <td data-label="Max Cover">$5,00,000</td>
+            <td data-label="Plan Variants">Lite, Basic, Comprehensive, Honeymooners, Sports &amp; Adventure</td>
+            <td data-label="Entry Age">Up to 99 yrs</td>
+            <td data-label="Review"><a href="/plans/niva-bupa-travel-assure.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Travel Guard International Plus<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Tata AIG</span></td>
+            <td data-label="15-Day Premium*">&#8377;338</td>
+            <td data-label="Sum Insured Range">$50K – $1M</td>
+            <td data-label="Claim Ratio"><span class="tag-green">94.1%</span></td>
+            <td data-label="Max Cover">$10,00,000</td>
+            <td data-label="Plan Variants">Silver, Gold, Platinum, Titanium, Senior</td>
+            <td data-label="Entry Age">Up to 99 yrs</td>
+            <td data-label="Review"><a href="/plans/tata-aig-travel-guard.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Travel Explorer<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">HDFC Ergo</span></td>
+            <td data-label="15-Day Premium*">&#8377;465</td>
+            <td data-label="Sum Insured Range">$40K – $1M</td>
+            <td data-label="Claim Ratio"><span class="tag-green">95.3%</span></td>
+            <td data-label="Max Cover">$10,00,000</td>
+            <td data-label="Plan Variants">Silver, Gold, Platinum, Titanium</td>
+            <td data-label="Entry Age">Up to 99 yrs</td>
+            <td data-label="Review"><a href="/plans/hdfc-ergo-travel-explorer.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Happy Traveller<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Digit</span></td>
+            <td data-label="15-Day Premium*">&#8377;395</td>
+            <td data-label="Sum Insured Range">$50K – $500K</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">89.6%</span></td>
+            <td data-label="Max Cover">$5,00,000</td>
+            <td data-label="Plan Variants">Single Trip, Multi-Trip Annual</td>
+            <td data-label="Entry Age">Up to 99 yrs</td>
+            <td data-label="Review"><a href="/plans/digit-happy-traveller.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Travel Care<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">IndusInd (Reliance)</span></td>
+            <td data-label="15-Day Premium*">&#8377;450</td>
+            <td data-label="Sum Insured Range">$15K – $500K</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">87.34%</span></td>
+            <td data-label="Max Cover">$5,00,000</td>
+            <td data-label="Plan Variants">Asia Standard/Silver, Schengen Basic/Standard, Corporate Standard/Plus/Elite</td>
+            <td data-label="Entry Age">Up to 90 yrs</td>
+            <td data-label="Review"><a href="/plans/indusind-travel-care.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">International Travel Insurance<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">Care Health</span></td>
+            <td data-label="15-Day Premium*">&#8377;550</td>
+            <td data-label="Sum Insured Range">$10K – $1M</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">90.1%</span></td>
+            <td data-label="Max Cover">$10,00,000</td>
+            <td data-label="Plan Variants">Per-day customisable plans</td>
+            <td data-label="Entry Age">No max age</td>
+            <td data-label="Review"><a href="/plans/care-international-travel.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Overseas Travel Ease (Elite)<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">New India Assurance</span></td>
+            <td data-label="15-Day Premium*">&#8377;480</td>
+            <td data-label="Sum Insured Range">$25K – $500K</td>
+            <td data-label="Claim Ratio"><span class="tag-green">96.4%</span></td>
+            <td data-label="Max Cover">$5,00,000</td>
+            <td data-label="Plan Variants">Basic, Economy, Advanced, Elite, Supreme</td>
+            <td data-label="Entry Age">Up to 70 yrs</td>
+            <td data-label="Review"><a href="/plans/new-india-overseas-travel-ease.html">Review</a></td>
+          </tr>
+          <tr>
+            <td data-label="Plan">Travel Insurance (Business &amp; Holiday)<br><span style="font-weight:400;color:var(--muted);font-size:.78rem">SBI General</span></td>
+            <td data-label="15-Day Premium*">&#8377;500</td>
+            <td data-label="Sum Insured Range">$50K – $500K</td>
+            <td data-label="Claim Ratio"><span class="tag-blue">88.7%</span></td>
+            <td data-label="Max Cover">$5,00,000</td>
+            <td data-label="Plan Variants">Business, Holiday — Single &amp; Multi-Trip</td>
+            <td data-label="Entry Age">6 months – 70 yrs</td>
+            <td data-label="Review"><a href="/plans/sbi-general-travel-insurance.html">Review</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.78rem;color:var(--muted)">* Indicative premiums for a 15-day international trip (Europe/Schengen), $50,000 medical cover, age 35. Actual premiums vary by age, destination, trip duration and sum insured selected. Data updated June 2026.</p>
   </div>
 </div>
 
@@ -360,6 +510,12 @@ footer a{color:var(--teal)}
 </footer>
 
 <script>
+function showComparison(e){
+  if(e) e.preventDefault();
+  var el = document.getElementById('full-comparison');
+  el.style.display = 'block';
+  el.scrollIntoView({behavior:'smooth', block:'start'});
+}
 function toggle(el){
   var a=el.nextElementSibling;
   var icon=el.querySelector('.faq-icon i');
