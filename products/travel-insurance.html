@@ -129,6 +129,13 @@ td:first-child{font-weight:700;color:var(--dark)}
   .table-wrap td:last-child::before{content:none}
   .table-wrap td:last-child a{background:var(--teal-dark);color:#fff !important;padding:9px 28px;border-radius:50px;font-size:.82rem;font-weight:700}
 }
+.docs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.doc-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;gap:14px;align-items:flex-start;transition:box-shadow .2s,border-color .2s}
+.doc-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.06);border-color:var(--teal)}
+.doc-icon{width:42px;height:42px;border-radius:10px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.doc-icon i{color:var(--teal-dark);font-size:1.05rem}
+.doc-card h4{font-size:.86rem;font-weight:700;margin-bottom:4px}
+.doc-card p{font-size:.78rem;color:var(--muted)}
 /* FAQ */
 .faq-list{display:flex;flex-direction:column;gap:10px}
 .faq-item{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}
@@ -156,12 +163,26 @@ td:first-child{font-weight:700;color:var(--dark)}
 .btn-call{background:transparent;color:#fff;font-weight:700;font-size:.95rem;padding:13px 30px;border-radius:50px;border:2px solid rgba(255,255,255,.4);display:inline-flex;align-items:center;gap:8px}
 footer{background:var(--dark);color:rgba(255,255,255,.5);padding:28px 6%;text-align:center;font-size:.82rem}
 footer a{color:var(--teal)}
-@media(max-width:768px){.nav-links,.nav-btns{display:none}.hero,.section{padding:48px 5%}.cta-band,.plans-cta-box{padding:36px 24px}}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:300}
+.hamburger span{width:24px;height:2.5px;background:var(--dark);border-radius:2px;transition:all .3s;display:block}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-nav{display:none;position:fixed;top:72px;left:0;right:0;background:#fff;border-bottom:2px solid var(--border);padding:1.2rem 6%;z-index:199;box-shadow:0 8px 32px rgba(0,0,0,.1);animation:slideDown .22s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.mobile-nav.open{display:block}
+.mobile-nav ul{list-style:none;display:flex;flex-direction:column;gap:0}
+.mobile-nav ul li a{display:block;padding:13px 0;font-size:1rem;font-weight:600;color:var(--dark);border-bottom:1px solid var(--border);transition:color .2s}
+.mobile-nav ul li:last-child a{border-bottom:none}
+.mobile-nav ul li a:hover{color:var(--teal-dark)}
+.mobile-nav-cta{margin-top:1rem;display:flex;gap:.8rem;flex-wrap:wrap}
+@media(max-width:1024px){.nav-links,.nav-btns{display:none}.hamburger{display:flex}}
+@media(max-width:768px){.hero,.section{padding:48px 5%}.cta-band,.plans-cta-box{padding:36px 24px}}
 </style>
 </head>
 <body>
 
-<nav>
+<nav id="mainNav">
   <a href="/" class="logo">
     <div class="logo-img"><img src="/logo.jpeg" alt="Policy Aid Logo" onerror="this.style.display='none'"></div>
     <div class="logo-text">
@@ -169,28 +190,33 @@ footer a{color:var(--teal)}
       <span class="logo-tag">First Aid for Insurance</span>
     </div>
   </a>
-  <ul class="nav-links">
+  <ul class="nav-links" id="navLinks">
     <li><a href="/">Home</a></li>
     <li class="nav-dropdown">
-      <a href="#" class="nav-dropdown-trigger active">Products <i class="fa-solid fa-chevron-down" style="font-size:.7rem"></i></a>
+      <a href="#" class="nav-dropdown-trigger active">Products &#9660;</a>
       <ul class="nav-dropdown-menu">
-        <li><a href="/health-insurance/"><i class="fa-solid fa-book-medical" style="margin-right:8px;color:var(--teal-dark)"></i>Health Insurance Guide</a></li>
-        <li><a href="/motor-insurance/"><i class="fa-solid fa-book" style="margin-right:8px;color:var(--orange)"></i>Motor Insurance Guide</a></li>
-        <li><a href="/travel-insurance/"><i class="fa-solid fa-book" style="margin-right:8px;color:#2563eb"></i>Travel Insurance Guide</a></li>
-        <li><a href="/products/health-insurance.html"><i class="fa-solid fa-hospital-user" style="margin-right:8px;color:var(--teal-dark)"></i>Health Insurance</a></li>
-        <li><a href="/products/motor-insurance.html"><i class="fa-solid fa-car" style="margin-right:8px;color:var(--orange)"></i>Motor Insurance</a></li>
-        <li><a href="/products/travel-insurance.html" style="color:var(--blue)"><i class="fa-solid fa-plane" style="margin-right:8px"></i>Travel Insurance</a></li>
-        <li><a href="/products/property-insurance.html"><i class="fa-solid fa-house" style="margin-right:8px;color:#16A34A"></i>Property Insurance</a></li>
+        <li><a href="/products/health-insurance.html">Health Insurance Plans</a></li>
+        <li><a href="/products/motor-insurance.html">Motor Insurance Plans</a></li>
+        <li><a href="/products/travel-insurance.html">Travel Insurance Plans</a></li>
+        <li><a href="/products/property-insurance.html">Property Insurance</a></li>
       </ul>
     </li>
     <li class="nav-dropdown">
-      <a href="/claims/" class="nav-dropdown-trigger">Claims <i class="fa-solid fa-chevron-down" style="font-size:.7rem"></i></a>
+      <a href="/claims/" class="nav-dropdown-trigger">Claims &#9660;</a>
       <ul class="nav-dropdown-menu">
-        <li><a href="/claims-assistance/"><i class="fa-solid fa-shield-heart" style="margin-right:8px;color:var(--orange)"></i>Claims Assistance Hub</a></li>
-        <li><a href="/claims/health-insurance.html"><i class="fa-solid fa-hospital-user" style="margin-right:8px;color:#4A7C59"></i>Health Insurance</a></li>
-        <li><a href="/claims/motor-insurance.html"><i class="fa-solid fa-car" style="margin-right:8px;color:var(--orange)"></i>Motor Insurance</a></li>
-        <li><a href="/claims/travel-insurance.html"><i class="fa-solid fa-plane" style="margin-right:8px;color:#4A9CC7"></i>Travel Insurance</a></li>
-        <li><a href="/insurance-helplines/"><i class="fa-solid fa-phone" style="margin-right:8px;color:#0B1F3A"></i>Insurer Helplines</a></li>
+        <li><a href="/claims-assistance/">Claims Assistance Hub</a></li>
+        <li><a href="/claims/health-insurance.html">Health Insurance</a></li>
+        <li><a href="/claims/motor-insurance.html">Motor Insurance</a></li>
+        <li><a href="/claims/travel-insurance.html">Travel Insurance</a></li>
+        <li><a href="/insurance-helplines/">Insurer Helplines</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown">
+      <a href="#" class="nav-dropdown-trigger">Product Guide &#9660;</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="/health-insurance/">Health Insurance Guide</a></li>
+        <li><a href="/motor-insurance/">Motor Insurance Guide</a></li>
+        <li><a href="/travel-insurance/">Travel Insurance Guide</a></li>
       </ul>
     </li>
     <li><a href="/#about">About Us</a></li>
@@ -200,7 +226,34 @@ footer a{color:var(--teal)}
     <a href="https://wa.me/919930140305?text=Hi%20Policy%20Aid%2C%20I%20need%20travel%20insurance%20help" class="btn-ghost">Get Quote</a>
     <a href="/#contact" class="btn-nav">Talk to Us →</a>
   </div>
+  <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="/" onclick="closeMobileNav()"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="/health-insurance/" onclick="closeMobileNav()"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i> Health Insurance Guide</a></li>
+    <li><a href="/motor-insurance/" onclick="closeMobileNav()"><i class="fa-solid fa-car" style="color:var(--orange)"></i> Motor Insurance Guide</a></li>
+    <li><a href="/travel-insurance/" onclick="closeMobileNav()"><i class="fa-solid fa-plane" style="color:#2563eb"></i> Travel Insurance Guide</a></li>
+    <li><a href="/products/health-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-hospital-user" style="color:var(--teal-dark)"></i> Health Insurance Plans</a></li>
+    <li><a href="/products/motor-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-car" style="color:var(--orange)"></i> Motor Insurance Plans</a></li>
+    <li><a href="/products/travel-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-plane" style="color:#2563eb"></i> Travel Insurance Plans</a></li>
+    <li><a href="/products/property-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-house" style="color:#16A34A"></i> Property Insurance</a></li>
+    <li><a href="/claims-assistance/" onclick="closeMobileNav()"><i class="fa-solid fa-shield-heart" style="color:var(--orange)"></i> Claims Assistance Hub</a></li>
+    <li><a href="/claims/health-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-file-medical" style="color:#4A7C59"></i> Health Insurance Claims</a></li>
+    <li><a href="/claims/motor-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-car-burst" style="color:var(--orange)"></i> Motor Insurance Claims</a></li>
+    <li><a href="/claims/travel-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-plane-departure" style="color:#4A9CC7"></i> Travel Insurance Claims</a></li>
+    <li><a href="/insurance-helplines/" onclick="closeMobileNav()"><i class="fa-solid fa-phone" style="color:#0B1F3A"></i> Insurance Helplines</a></li>
+    <li><a href="/#about" onclick="closeMobileNav()"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+    <li><a href="/#contact" onclick="closeMobileNav()"><i class="fa-solid fa-phone"></i> Contact</a></li>
+  </ul>
+  <div class="mobile-nav-cta">
+    <a href="https://wa.me/919930140305?text=Hi%20Policy%20Aid%2C%20I%20need%20travel%20insurance%20help" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:13px;background:#25D366;color:#fff;border-radius:50px;font-weight:700;font-size:.9rem">Chat on WhatsApp</a>
+    <a href="/#contact" onclick="closeMobileNav()" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:13px;background:var(--dark);color:#fff;border-radius:50px;font-weight:700;font-size:.9rem">Talk to Us →</a>
+  </div>
+</div>
 
 <div class="breadcrumb">
   <a href="/">Home</a><span>›</span>Products<span>›</span>Travel Insurance
@@ -249,6 +302,38 @@ footer a{color:var(--teal)}
       </div>
     </div>
 
+  </div>
+</div>
+
+<div class="section" id="coverage">
+  <div class="section-inner">
+    <div class="section-label">Read the Fine Print</div>
+    <h2>What's Covered — and What's Usually Excluded</h2>
+    <p class="section-sub">A comprehensive travel policy bundles several distinct types of protection. Here's what to expect.</p>
+    <div class="docs-grid">
+      <div class="doc-card"><div class="doc-icon"><i class="fa-solid fa-kit-medical"></i></div><div><h4>Emergency Medical Treatment</h4><p>Hospitalisation, surgery, doctor consultations abroad</p></div></div>
+      <div class="doc-card"><div class="doc-icon"><i class="fa-solid fa-plane-circle-exclamation"></i></div><div><h4>Medical Evacuation</h4><p>Emergency transport to the nearest adequate facility, or repatriation to India</p></div></div>
+      <div class="doc-card"><div class="doc-icon"><i class="fa-solid fa-suitcase"></i></div><div><h4>Baggage Loss/Delay</h4><p>Compensation for lost, stolen or significantly delayed checked baggage</p></div></div>
+      <div class="doc-card"><div class="doc-icon"><i class="fa-solid fa-clock"></i></div><div><h4>Flight Delay/Cancellation</h4><p>Fixed payouts for delays beyond a threshold (e.g. 6+ hours)</p></div></div>
+      <div class="doc-card"><div class="doc-icon"><i class="fa-solid fa-passport"></i></div><div><h4>Passport Loss</h4><p>Cost of obtaining an emergency replacement passport abroad</p></div></div>
+      <div class="doc-card"><div class="doc-icon"><i class="fa-solid fa-calendar-xmark"></i></div><div><h4>Trip Cancellation/Curtailment</h4><p>Reimbursement for non-refundable costs if a covered reason forces cancellation</p></div></div>
+      <div class="doc-card"><div class="doc-icon"><i class="fa-solid fa-scale-balanced"></i></div><div><h4>Personal Liability</h4><p>Covers legal liability if you accidentally injure someone or damage property</p></div></div>
+      <div class="doc-card"><div class="doc-icon"><i class="fa-solid fa-house-medical"></i></div><div><h4>Hijack/Detention Cover</h4><p>Daily allowance if your flight is hijacked or you're detained</p></div></div>
+    </div>
+    <h3 style="margin-top:2rem;font-size:1rem;font-weight:700">Common exclusions to watch for</h3>
+    <ul style="margin-top:1rem;padding-left:1.2rem;display:flex;flex-direction:column;gap:8px;font-size:.88rem;color:var(--mid);line-height:1.7">
+      <li><strong>Pre-existing medical conditions</strong> — usually excluded unless a specific PED add-on is purchased.</li>
+      <li><strong>Travel against medical advice</strong> — if you travel despite a doctor advising against it, related claims will be denied.</li>
+      <li><strong>Adventure sports</strong> — activities like skiing, scuba diving or bungee jumping often need a separate add-on.</li>
+      <li><strong>Travel to countries under government advisory</strong> — claims may be void if you travel to a region India has issued an advisory against.</li>
+      <li><strong>Self-inflicted injury, intoxication-related incidents, and war/terrorism</strong> (though some policies do cover terrorism — check specifically).</li>
+      <li><strong>Cosmetic, dental (beyond emergency), and routine check-ups</strong> — travel insurance is for emergencies, not routine care.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="section section-alt">
+  <div class="section-inner">
     <div class="plans-cta-box">
       <h2>Compare All 10 Travel Insurance Plans</h2>
       <p>We've analysed premiums, sum insured, claim ratios and coverage features for every major travel insurer in India.</p>
@@ -522,14 +607,17 @@ function toggle(el){
   if(a.style.display==='block'){a.style.display='none';icon.className='fa-solid fa-plus';}
   else{a.style.display='block';icon.className='fa-solid fa-minus';}
 }
+function toggleMobileNav(){var n=document.getElementById('mobileNav'),b=document.getElementById('hamburger');n.classList.toggle('open');b.classList.toggle('open');}
+function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
+document.addEventListener('click',function(e){var n=document.getElementById('mobileNav'),b=document.getElementById('hamburger');if(n&&n.classList.contains('open')&&!n.contains(e.target)&&!b.contains(e.target)){closeMobileNav();}});
 (function(){
-  var dd=document.querySelector('.nav-dropdown');
-  if(!dd)return;
-  var t;
-  dd.addEventListener('mouseenter',function(){clearTimeout(t);dd.classList.add('open');});
-  dd.addEventListener('mouseleave',function(){t=setTimeout(function(){dd.classList.remove('open');},200);});
-  var menu=dd.querySelector('.nav-dropdown-menu');
-  if(menu)menu.addEventListener('mouseenter',function(){clearTimeout(t);});
+  document.querySelectorAll('.nav-dropdown').forEach(function(dd){
+    var t;
+    dd.addEventListener('mouseenter',function(){clearTimeout(t);dd.classList.add('open');});
+    dd.addEventListener('mouseleave',function(){t=setTimeout(function(){dd.classList.remove('open');},200);});
+    var menu=dd.querySelector('.nav-dropdown-menu');
+    if(menu)menu.addEventListener('mouseenter',function(){clearTimeout(t);});
+  });
 })();
 </script>
 </body>
