@@ -20,6 +20,7 @@ Static website for Policy Aid, an IRDAI-licensed insurance advisory business bas
 ├── health-insurance/, motor-insurance/, travel-insurance/   # Long-form pillar/guide pages
 ├── health-insurance-portability/, insurance-by-city/, insurance-helplines/  # Supporting pillar pages
 ├── images/heroes/              # Locally-hosted hero images (no external CDN dependency)
+├── images/logos/               # Insurer logos used in plans/*-comparison.html tables. Sourced from Wikimedia Commons where available; insurers without a stable free logo source (ICICI Lombard, SBI General, Aditya Birla, Royal Sundaram, IndusInd) use styled initials badges instead — see the comparison page markup for the mapping
 ├── resources/                  # Downloadable assets (PDF checklist, etc.)
 ├── scripts/                    # Utility scripts (e.g. seo-blog-agent.mjs)
 ├── sitemap.xml                 # Submitted to Google Search Console
