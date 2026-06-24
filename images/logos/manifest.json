@@ -1,0 +1,32 @@
+{
+  "_comment": "Master reference for every insurer logo used on the site. Use this file to look up the correct /images/logos/<file> path instead of re-searching the internet. 'type':'logo' = real official logo (sourced from Wikimedia Commons, freely licensed). 'type':'badge' = generated initials badge (no stable freely-licensed logo found at time of creation).",
+  "insurers": [
+    { "name": "HDFC ERGO General Insurance",            "aliases": ["HDFC Ergo", "HDFC ERGO"],            "file": "hdfc-ergo.svg",        "type": "logo" },
+    { "name": "Bajaj Allianz General Insurance",        "aliases": ["Bajaj Allianz"],                      "file": "bajaj-allianz.svg",    "type": "logo" },
+    { "name": "Star Health and Allied Insurance",       "aliases": ["Star Health"],                        "file": "star-health.svg",      "type": "logo" },
+    { "name": "Care Health Insurance",                  "aliases": ["Care Health", "Religare Health"],     "file": "care-health.png",      "type": "logo" },
+    { "name": "New India Assurance",                    "aliases": [],                                     "file": "new-india.svg",        "type": "logo" },
+    { "name": "Niva Bupa Health Insurance",              "aliases": ["Niva Bupa", "Max Bupa"],              "file": "niva-bupa.jpg",        "type": "logo" },
+    { "name": "Tata AIG General Insurance",              "aliases": ["Tata AIG"],                           "file": "tata-aig.png",         "type": "logo" },
+    { "name": "Go Digit General Insurance",              "aliases": ["Digit", "Go Digit"],                  "file": "digit.jpg",            "type": "logo" },
+    { "name": "Future Generali India Insurance",         "aliases": ["Future Generali"],                    "file": "future-generali.jpg",  "type": "logo" },
+    { "name": "Reliance General Insurance",              "aliases": ["Reliance General"],                  "file": "reliance-general.svg", "type": "logo" },
+    { "name": "Acko General Insurance",                  "aliases": ["Acko"],                               "file": "acko.svg",             "type": "logo" },
+    { "name": "Zurich Kotak General Insurance",          "aliases": ["Zurich Kotak", "Kotak General"],      "file": "zurich-kotak.png",     "type": "logo" },
+    { "name": "Liberty General Insurance",                "aliases": ["Liberty General"],                   "file": "liberty-general.png",  "type": "logo" },
+    { "name": "Universal Sompo General Insurance",        "aliases": ["Universal Sompo"],                   "file": "universal-sompo.svg",  "type": "logo" },
+    { "name": "IFFCO Tokio General Insurance",            "aliases": ["IFFCO Tokio"],                       "file": "iffco-tokio.svg",       "type": "logo" },
+    { "name": "Cholamandalam MS General Insurance",       "aliases": ["Cholamandalam", "Chola MS"],         "file": "cholamandalam.jpg",     "type": "logo" },
+    { "name": "United India Insurance",                   "aliases": ["United India"],                      "file": "united-india.svg",      "type": "logo" },
+    { "name": "ICICI Lombard General Insurance",          "aliases": ["ICICI Lombard"],                     "file": "icici-lombard.svg",     "type": "badge" },
+    { "name": "SBI General Insurance",                    "aliases": ["SBI General"],                       "file": "sbi-general.svg",       "type": "badge" },
+    { "name": "Aditya Birla Health Insurance",            "aliases": ["Aditya Birla"],                      "file": "aditya-birla.svg",      "type": "badge" },
+    { "name": "IndusInd General Insurance",               "aliases": ["IndusInd"],                          "file": "indusind.svg",          "type": "badge" },
+    { "name": "Royal Sundaram General Insurance",         "aliases": ["Royal Sundaram"],                    "file": "royal-sundaram.svg",    "type": "badge" },
+    { "name": "ManipalCigna Health Insurance",            "aliases": ["ManipalCigna", "Manipal Cigna"],     "file": "manipalcigna.svg",      "type": "badge" },
+    { "name": "Edelweiss Tokio General Insurance",        "aliases": ["Edelweiss Tokio", "Edelweiss"],      "file": "edelweiss-tokio.svg",   "type": "badge" },
+    { "name": "Raheja QBE General Insurance",             "aliases": ["Raheja QBE"],                         "file": "raheja-qbe.svg",        "type": "badge" },
+    { "name": "National Insurance Company",               "aliases": ["National Insurance"],                "file": "national-insurance.svg","type": "badge" },
+    { "name": "Oriental Insurance Company",                "aliases": ["Oriental Insurance"],                "file": "oriental-insurance.svg","type": "badge" }
+  ]
+}
