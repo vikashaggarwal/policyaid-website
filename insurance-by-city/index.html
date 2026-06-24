@@ -342,5 +342,11 @@ footer a{color:var(--teal)}
   <p>&copy; 2026 Policy Aid &nbsp;&middot;&nbsp; IRDAI Licensed Agent &nbsp;&middot;&nbsp; <a href="/">policyaid.co.in</a> &nbsp;&middot;&nbsp; <a href="/insurance-helplines/">Insurance Helplines</a> &nbsp;&middot;&nbsp; <a href="/#contact">Contact Us</a></p>
 </footer>
 
+<script>
+function toggleMobileNav(){var n=document.getElementById('mobileNav'),b=document.getElementById('hamburger');n.classList.toggle('open');b.classList.toggle('open');}
+function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
+document.addEventListener('click',function(e){var n=document.getElementById('mobileNav'),b=document.getElementById('hamburger');if(n&&n.classList.contains('open')&&!n.contains(e.target)&&!b.contains(e.target)){closeMobileNav();}});
+</script>
+
 </body>
 </html>

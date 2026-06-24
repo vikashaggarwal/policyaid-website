@@ -377,6 +377,9 @@ footer a{color:var(--teal)}
 </footer>
 
 <script>
+function toggleMobileNav(){var n=document.getElementById('mobileNav'),b=document.getElementById('hamburger');n.classList.toggle('open');b.classList.toggle('open');}
+function closeMobileNav(){document.getElementById('mobileNav').classList.remove('open');document.getElementById('hamburger').classList.remove('open');}
+document.addEventListener('click',function(e){var n=document.getElementById('mobileNav'),b=document.getElementById('hamburger');if(n&&n.classList.contains('open')&&!n.contains(e.target)&&!b.contains(e.target)){closeMobileNav();}});
 function toggle(el){
   var a=el.nextElementSibling;
   var icon=el.querySelector('.faq-icon i');
