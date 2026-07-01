@@ -58,6 +58,11 @@ This project has been developed primarily through Claude Code / Claude in an age
 
 No destructive or credential-entering actions (account creation, payments, deleting the repo, etc.) are performed automatically — those are always confirmed with the site owner first.
 
+## Analytics & tracking
+
+- **Metricool** — site-wide visitor tracking. The Metricool beacon script is injected into `</head>` on every page (hash: `960f8c1951639b19f5f1d974cca6f630`). Managed at [app.metricool.com](https://app.metricool.com).
+- **Google Search Console** — indexing status, search analytics, sitemap submission. Connected via MCP in Claude sessions.
+
 ## Key conventions
 
 - Design tokens (colors, etc.) are defined as CSS custom properties at the top of each page's `<style>` block — see any page's `:root` selector for the palette (teal/orange/blue theme).
