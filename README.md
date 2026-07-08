@@ -63,6 +63,10 @@ No destructive or credential-entering actions (account creation, payments, delet
 - **Metricool** — site-wide visitor tracking. The Metricool beacon script is injected into `</head>` on every page (hash: `960f8c1951639b19f5f1d974cca6f630`). Managed at [app.metricool.com](https://app.metricool.com).
 - **Google Search Console** — indexing status, search analytics, sitemap submission. Connected via MCP in Claude sessions.
 
+## SEO work log
+
+- **2026-07-08**: Full technical SEO pass — trimmed 67 page titles to <60 chars (dropping mid-pipe insurer segments), trimmed 52 meta descriptions to <155 chars, added footer link to `about-vikash-aggarwal.html` across all 82 non-city pages (was a full orphan), added internal links to 3 near-orphan blog posts (EV insurance, group vs individual health, personal accident).
+
 ## Key conventions
 
 - Design tokens (colors, etc.) are defined as CSS custom properties at the top of each page's `<style>` block — see any page's `:root` selector for the palette (teal/orange/blue theme).
