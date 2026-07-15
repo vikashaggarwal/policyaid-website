@@ -79,7 +79,7 @@
       "name": "What is Policy Aid and how is it different from Policybazaar?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Policy Aid is a licensed IRDAI insurance agent focused on personalised service. Unlike aggregator websites, we assign you a dedicated advisor who helps you choose the right plan, assists during claims, and follows up until your claim is settled. We're not just a marketplace — we're your insurance partner."
+        "text": "Policy Aid is a licensed IRDAI insurance agent focused on personalised service. Unlike aggregator websites, we assign you a dedicated advisor who helps you choose the right plan, assists during claims, and follows up until your claim is settled. We're not just a marketplace. We're your insurance partner."
       }
     },
     {
@@ -87,7 +87,7 @@
       "name": "Is it safe to buy insurance online through Policy Aid?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely. Policy Aid is an IRDAI-registered insurance agent. All payments are processed through encrypted, RBI-approved payment gateways. You receive your original policy document directly from the insurer via email — we never hold your policy documents."
+        "text": "Absolutely. Policy Aid is an IRDAI-registered insurance agent. All payments are processed through encrypted, RBI-approved payment gateways. You receive your original policy document directly from the insurer via email; we never hold your policy documents."
       }
     },
     {
@@ -95,7 +95,7 @@
       "name": "How do I make a health insurance claim?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For cashless claims, simply go to a network hospital and show your e-insurance card. The hospital will coordinate directly with the insurer. For reimbursement claims, collect all bills, discharge summary and reports, then contact our claims team — we will guide you through every step."
+        "text": "For cashless claims, simply go to a network hospital and show your e-insurance card. The hospital will coordinate directly with the insurer. For reimbursement claims, collect all bills, discharge summary and reports, then contact our claims team, and we will guide you through every step."
       }
     },
     {
@@ -126,7 +126,7 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 :root {
@@ -151,7 +151,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
 h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.15}
 a{text-decoration:none;color:inherit}
 img{max-width:100%}
@@ -495,12 +495,11 @@ section{padding:88px 6%}
   border-radius:16px;
   padding:22px 22px 20px;
   border:1.5px solid var(--border);
-  border-left:4px solid var(--teal);
   display:flex;flex-direction:column;gap:10px;
   transition:all .22s;
 }
 .addon-card:hover{
-  border-left-color:var(--orange);
+  border-color:var(--orange);
   box-shadow:0 8px 28px rgba(58,181,200,.14);
   transform:translateY(-3px);
 }
@@ -647,7 +646,7 @@ section{padding:88px 6%}
   background:linear-gradient(135deg,#e0f7fa 0%,#b2ebf2 50%,#e8f5e9 100%);
   border:2px solid var(--teal-mid);
   color:var(--dark);
-  border-radius:32px;
+  border-radius:16px;
   padding:66px 6%;
   text-align:center;
   position:relative;overflow:hidden;
@@ -1417,9 +1416,6 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
     <li><a href="/travel-insurance/" onclick="closeMobileNav()"><i class="fa-solid fa-plane" style="color:#2563eb"></i> Travel Insurance Guide</a></li>
     <li><a href="/products/property-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-house" style="color:#16A34A"></i> Property Insurance</a></li>
     <li><a href="/claims-assistance/" onclick="closeMobileNav()"><i class="fa-solid fa-shield-heart" style="color:var(--orange)"></i> Claims Assistance Hub</a></li>
-    <li><a href="/claims/health-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-file-medical" style="color:#4A7C59"></i> Health Insurance Claims</a></li>
-    <li><a href="/claims/motor-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-car-burst" style="color:var(--orange)"></i> Motor Insurance Claims</a></li>
-    <li><a href="/claims/travel-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-plane-departure" style="color:#4A9CC7"></i> Travel Insurance Claims</a></li>
     <li><a href="/insurance-helplines/" onclick="closeMobileNav()"><i class="fa-solid fa-phone" style="color:#0B1F3A"></i> Insurance Helplines</a></li>
     <li><a href="#" onclick="showSection('contact');closeMobileNav()"><i class="fa-solid fa-phone"></i> Contact</a></li>
   </ul>
@@ -1448,7 +1444,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
       for Every Indian
     </h1>
     <p class="hero-sub">
-      Policy Aid is your <strong>First Aid for Insurance</strong> — compare Health, Motor &amp; Travel plans from top IRDAI-approved insurers and get covered in minutes.
+      Policy Aid is your <strong>First Aid for Insurance</strong>: compare Health, Motor &amp; Travel plans from top IRDAI-approved insurers and get covered in minutes.
     </p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="scrollToQuote()"><i class="fa-solid fa-shield-halved" style="color:var(--teal-dark)"></i> Get Free Quote</button>
@@ -1801,7 +1797,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 <section class="how">
   <div class="s-label">How It Works</div>
   <h2 class="s-title">Get Covered in 4 Simple Steps</h2>
-  <p class="s-sub">No jargon. No paperwork. Just the right insurance, fast.</p>
+  <p class="s-sub">Clear advice, minimal paperwork, and the right policy, fast.</p>
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
@@ -1948,7 +1944,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   <div class="why-text">
     <div class="s-label">Why Policy Aid</div>
     <h2 class="s-title">We're Your First Aid Kit When Insurance Gets Complicated</h2>
-    <p style="font-size:.95rem;color:var(--mid);line-height:1.75;margin-bottom:1rem">Most Indians find insurance confusing and expensive. We fix that — with honest advice, transparent pricing and real human support.</p>
+    <p style="font-size:.95rem;color:var(--mid);line-height:1.75;margin-bottom:1rem">Most Indians find insurance confusing and expensive. We fix that with honest advice, transparent pricing, and real human support.</p>
     <ul class="why-list">
       <li><div class="tick">✓</div> We compare 20+ insurers so you always get the best price</li>
       <li><div class="tick">✓</div> No hidden charges — what you see is what you pay</li>
@@ -2002,7 +1998,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   <div class="t-grid">
     <div class="t-card feature">
       <div class="stars">★★★★★</div>
-      <p class="t-text">"When my mother was hospitalised, the Policy Aid team handled everything — pre-authorisation, discharge, follow-up. I didn't have to worry about a single form."</p>
+      <p class="t-text">"When my mother was hospitalised, the Policy Aid team handled everything: pre-authorisation, discharge, follow-up. I didn't have to worry about a single form."</p>
       <div class="t-author">
         <div class="t-avatar">RK</div>
         <div><div class="t-name">Rahul Krishnan</div><div class="t-loc">Mumbai, Maharashtra</div></div>
@@ -2076,19 +2072,19 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
   <div class="faq-inner">
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What is Policy Aid and how is it different from Policybazaar? <div class="faq-toggle">+</div></div>
-      <div class="faq-a">Policy Aid is a licensed IRDAI insurance agent focused on personalised service. Unlike aggregator websites, we assign you a dedicated advisor who helps you choose the right plan, assists during claims, and follows up until your claim is settled. We're not just a marketplace — we're your insurance partner.</div>
+      <div class="faq-a">Policy Aid is a licensed IRDAI insurance agent focused on personalised service. Unlike aggregator websites, we assign you a dedicated advisor who helps you choose the right plan, assists during claims, and follows up until your claim is settled. We're not just a marketplace. We're your insurance partner.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Is it safe to buy insurance online through Policy Aid? <div class="faq-toggle">+</div></div>
-      <div class="faq-a">Absolutely. Policy Aid is an IRDAI-registered insurance agent. All payments are processed through encrypted, RBI-approved payment gateways. You receive your original policy document directly from the insurer via email — we never hold your policy documents.</div>
+      <div class="faq-a">Absolutely. Policy Aid is an IRDAI-registered insurance agent. All payments are processed through encrypted, RBI-approved payment gateways. You receive your original policy document directly from the insurer via email; we never hold your policy documents.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">How do I make a health insurance claim? <div class="faq-toggle">+</div></div>
-      <div class="faq-a">For cashless claims, simply go to a network hospital and show your e-insurance card. The hospital will coordinate directly with the insurer. For reimbursement claims, collect all bills, discharge summary and reports, then contact our claims team — we will guide you through every step and follow up with the insurer on your behalf.</div>
+      <div class="faq-a">For cashless claims, simply go to a network hospital and show your e-insurance card. The hospital will coordinate directly with the insurer. For reimbursement claims, collect all bills, discharge summary and reports, then contact our claims team, and we will guide you through every step and follow up with the insurer on your behalf.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">Can I port my existing health insurance to a better plan? <div class="faq-toggle">+</div></div>
-      <div class="faq-a">Yes! Under IRDAI's portability guidelines, you can switch your health insurance to any insurer without losing your accumulated no-claim bonus or waiting period credits. Policy Aid's advisors specialise in porting — contact us at least 45 days before your renewal date.</div>
+      <div class="faq-a">Yes! Under IRDAI's portability guidelines, you can switch your health insurance to any insurer without losing your accumulated no-claim bonus or waiting period credits. Policy Aid's advisors specialise in porting. Contact us at least 45 days before your renewal date.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q" onclick="toggleFaq(this)">What documents do I need to buy motor insurance online? <div class="faq-toggle">+</div></div>
@@ -2188,7 +2184,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
         <div class="addon-title">Critical Illness Cover</div>
         <span class="addon-badge">Most Important</span>
       </div>
-      <p class="addon-desc">Diagnosed with cancer, heart attack, stroke or kidney failure? You receive a fixed lump sum — paid directly to you, no hospital bills needed. Use it for treatment, lost income, or recovery.</p>
+      <p class="addon-desc">Diagnosed with cancer, heart attack, stroke or kidney failure? You receive a fixed lump sum, paid directly to you with no hospital bills needed. Use it for treatment, lost income, or recovery.</p>
       <div class="addon-tip">Best for: Anyone above 35 with a family history of serious illness</div>
     </div>
 
@@ -2206,7 +2202,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
         <div class="addon-emoji"><i class="fa-solid fa-bed-pulse" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">Room Rent Waiver</div>
       </div>
-      <p class="addon-desc">Many plans cap hospital rooms at ₹1,000–₹3,000/day. Choosing a better room reduces your entire claim — including doctor fees. This add-on removes that cap completely.</p>
+      <p class="addon-desc">Many plans cap hospital rooms at ₹1,000–₹3,000/day. Choosing a better room reduces your entire claim, including doctor fees. This add-on removes that cap completely.</p>
       <div class="addon-tip">Without this, a room upgrade can cut your claim by 30–40%</div>
     </div>
 
@@ -2215,7 +2211,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
         <div class="addon-emoji"><i class="fa-solid fa-stethoscope" style="color:var(--teal-dark)"></i></div>
         <div class="addon-title">OPD (Outpatient) Cover</div>
       </div>
-      <p class="addon-desc">Standard plans only cover hospital stays. OPD cover pays for doctor consultations, diagnostic tests, and medicines outside the hospital — expenses you have every month.</p>
+      <p class="addon-desc">Standard plans only cover hospital stays. OPD cover pays for doctor consultations, diagnostic tests, and medicines outside the hospital: expenses you have every month.</p>
       <div class="addon-tip">Ideal for families with young children or elderly parents</div>
     </div>
 

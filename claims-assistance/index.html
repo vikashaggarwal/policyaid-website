@@ -30,13 +30,13 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://policyaid.co.in/"},{"@type":"ListItem","position":2,"name":"Claims Assistance","item":"https://policyaid.co.in/claims-assistance/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is claims assistance from Policy Aid really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Policy Aid is paid a commission by the insurer when you buy a policy through us — there is no separate charge for claims support, whether or not you bought the policy through us."}},{"@type":"Question","name":"What is the single biggest reason health insurance claims get rejected in India?","acceptedAnswer":{"@type":"Answer","text":"Non-disclosure of pre-existing medical conditions or lifestyle habits (like smoking) at the time of buying the policy is the leading cause of claim rejection and policy cancellation in India."}},{"@type":"Question","name":"How long does an insurer have to settle a claim in India?","acceptedAnswer":{"@type":"Answer","text":"As per IRDAI's Protection of Policyholders' Interests Regulations, insurers must settle or reject a claim within 30 days of receiving all required documents. For claims requiring investigation, this can extend to 45 days from the date of receipt of the claim."}},{"@type":"Question","name":"What can I do if my claim is rejected unfairly?","acceptedAnswer":{"@type":"Answer","text":"First, write to the insurer's Grievance Redressal Officer. If unresolved within 30 days (or you're unsatisfied with the response), escalate to the Insurance Ombudsman via the Bima Bharosa portal — this is a free, time-bound resolution mechanism for claims up to ₹50 lakh."}},{"@type":"Question","name":"Will Policy Aid help with a claim even if I bought the policy elsewhere?","acceptedAnswer":{"@type":"Answer","text":"We prioritise our existing customers, but we're happy to guide anyone on the correct claims process, documentation and escalation steps. For hands-on liaison with the insurer, we work most effectively with policies bought through us."}},{"@type":"Question","name":"What is the IRDAI Bima Bharosa portal?","acceptedAnswer":{"@type":"Answer","text":"Bima Bharosa (bimabharosa.irdai.gov.in) is IRDAI's centralised grievance management system where policyholders can register complaints against insurers, track status, and escalate to the Insurance Ombudsman if unresolved."}},{"@type":"Question","name":"Can a claim be reopened after it's rejected?","acceptedAnswer":{"@type":"Answer","text":"Yes. If you have additional documents or evidence, you can request the insurer to review the rejection. Many 'final' rejections are overturned once a missing document, clarification or correction is submitted — this is one of the most common things our team helps with."}},{"@type":"Question","name":"Does a cashless claim rejection mean my health insurance claim is denied entirely?","acceptedAnswer":{"@type":"Answer","text":"No. A cashless (pre-authorisation) rejection only means the hospital cannot bill the insurer directly. You can still pay the hospital and file a reimbursement claim for the same treatment, which is assessed independently."}},{"@type":"Question","name":"What documents should I never throw away after a hospitalisation, accident or trip mishap?","acceptedAnswer":{"@type":"Answer","text":"Keep originals (or certified copies) of: discharge summaries, all bills and payment receipts, diagnostic reports, the FIR or motor survey report for accidents, and any property irregularity report (PIR) for travel baggage/flight issues. These are the documents claims most often get rejected for lack of."}},{"@type":"Question","name":"How quickly should I inform the insurer after an accident, hospitalisation or travel mishap?","acceptedAnswer":{"@type":"Answer","text":"As soon as possible — ideally within 24-48 hours for emergencies, and immediately for planned hospitalisation or motor accidents. Delayed intimation, even for a genuinely valid claim, is one of the most common technical grounds insurers use to reject or reduce settlements."}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 :root{--teal:#3AB5C8;--teal-dark:#2896A8;--teal-pale:#EAF8FB;--orange:#E84E1B;--orange-pale:#FEF0EB;--dark:#12202A;--mid:#3D5568;--muted:#7E9BAD;--border:#DDE8EC;--cream:#F7FBFC;--sage:#4A7C59;--sage-pale:#EAF4EC;--sky:#4A9CC7;--sky-pale:#EAF5FB}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--cream);color:var(--dark);padding-top:72px;font-size:16px}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--cream);color:var(--dark);padding-top:72px;font-size:16px}
 h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.15}
 a{text-decoration:none;color:inherit}
 p{line-height:1.8}
@@ -102,7 +102,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(247,251,252,
 .stat-box span{font-size:.78rem;color:var(--mid);font-weight:600}
 /* REASON ACCORDION */
 .reason-list{display:flex;flex-direction:column;gap:10px;max-width:880px}
-.reason-item{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;border-left:4px solid var(--orange)}
+.reason-item{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;border-top:3px solid var(--orange)}
 .reason-q{padding:18px 20px;font-weight:800;font-size:.96rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--dark)}
 .reason-q:hover{color:var(--teal-dark)}
 .reason-num{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--orange-pale);color:var(--orange);font-size:.78rem;font-weight:900;margin-right:10px;flex-shrink:0}
@@ -161,8 +161,8 @@ table.compare td:first-child{font-weight:800;color:var(--dark);white-space:nowra
 .tl-content a{color:var(--teal-dark);font-weight:700;text-decoration:underline}
 /* FAQ */
 .faq-list{display:flex;flex-direction:column;gap:10px;max-width:820px}
-.faq-item{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;border-left:4px solid transparent;transition:border-color .2s}
-.faq-item.open{border-left-color:var(--orange)}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:background-color .2s}
+.faq-item.open{background:var(--orange-pale)}
 .faq-q{padding:16px 20px;font-weight:700;font-size:.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--dark)}
 .faq-q:hover{color:var(--teal-dark)}
 .faq-icon{font-size:1rem;color:var(--muted);flex-shrink:0;transition:transform .2s}
@@ -259,9 +259,6 @@ footer a{color:var(--teal)}
     <li><a href="/products/travel-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-plane" style="color:#2563eb"></i> Travel Insurance Plans</a></li>
     <li><a href="/products/property-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-house" style="color:#16A34A"></i> Property Insurance</a></li>
     <li><a href="/claims-assistance/" onclick="closeMobileNav()"><i class="fa-solid fa-shield-heart" style="color:var(--orange)"></i> Claims Assistance Hub</a></li>
-    <li><a href="/claims/health-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-file-medical" style="color:#4A7C59"></i> Health Insurance Claims</a></li>
-    <li><a href="/claims/motor-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-car-burst" style="color:var(--orange)"></i> Motor Insurance Claims</a></li>
-    <li><a href="/claims/travel-insurance.html" onclick="closeMobileNav()"><i class="fa-solid fa-plane-departure" style="color:#4A9CC7"></i> Travel Insurance Claims</a></li>
     <li><a href="/insurance-helplines/" onclick="closeMobileNav()"><i class="fa-solid fa-phone" style="color:#0B1F3A"></i> Insurance Helplines</a></li>
     <li><a href="/#about" onclick="closeMobileNav()"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
     <li><a href="/#contact" onclick="closeMobileNav()"><i class="fa-solid fa-phone"></i> Contact</a></li>
