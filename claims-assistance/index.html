@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
-:root{--teal:#3AB5C8;--teal-dark:#2896A8;--teal-pale:#EAF8FB;--orange:#E84E1B;--orange-pale:#FEF0EB;--dark:#12202A;--mid:#3D5568;--muted:#7E9BAD;--border:#DDE8EC;--cream:#F7FBFC;--sage:#4A7C59;--sage-pale:#EAF4EC;--sky:#4A9CC7;--sky-pale:#EAF5FB}
+:root{--teal:#0EA5E9;--teal-dark:#0369A1;--teal-pale:#F0F9FF;--orange:#E11D48;--orange-pale:#FFF1F2;--dark:#12202A;--mid:#3D5568;--muted:#7E9BAD;--border:#DDE8EC;--cream:#F7FBFC;--sage:#4A7C59;--sage-pale:#EAF4EC;--sky:#4A9CC7;--sky-pale:#EAF5FB}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Hanken Grotesk',sans-serif;background:var(--cream);color:var(--dark);padding-top:72px;font-size:16px}
@@ -43,7 +43,7 @@ p{line-height:1.8}
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(247,251,252,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:72px}
 .logo{display:flex;align-items:center;gap:12px}
-.logo-img{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#5dcfdf,#3AB5C8);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(58,181,200,.35);overflow:hidden}
+.logo-img{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#38BDF8,#0EA5E9);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(14,165,233,.35);overflow:hidden}
 .logo-img img{width:100%;height:100%;object-fit:cover;border-radius:50%}
 .logo-text{display:flex;flex-direction:column;line-height:1}
 .logo-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--teal-dark);letter-spacing:-.3px}
@@ -62,20 +62,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(247,251,252,
 .btn-ghost{padding:9px 20px;border-radius:50px;font-size:.88rem;font-weight:600;color:var(--teal-dark);border:2px solid var(--teal);transition:all .2s;cursor:pointer;background:none;font-family:inherit}
 .btn-ghost:hover{background:var(--teal-pale)}
 .btn-nav{padding:9px 22px;border-radius:50px;background:var(--orange);color:#fff;font-size:.88rem;font-weight:700;border:none;cursor:pointer;font-family:inherit;transition:all .2s;display:inline-block}
-.btn-nav:hover{background:#f4763e;transform:translateY(-1px)}
+.btn-nav:hover{background:#F43F5E;transform:translateY(-1px)}
 /* BREADCRUMB */
 .breadcrumb{background:#fff;border-bottom:1px solid var(--border);padding:10px 6%;font-size:.8rem;color:var(--mid)}
 .breadcrumb a{color:var(--teal-dark);font-weight:600}
 .breadcrumb a:hover{text-decoration:underline}
 .breadcrumb span{margin:0 6px;color:var(--muted)}
 /* HERO */
-.hero{background:linear-gradient(rgba(11,51,64,.72),rgba(40,150,168,.55)),url('/images/heroes/claims.jpg') center/cover no-repeat;padding:64px 6% 40px;color:#fff;text-align:center}
+.hero{background:linear-gradient(rgba(11,51,64,.72),rgba(3,105,161,.55)),url('/images/heroes/claims.jpg') center/cover no-repeat;padding:64px 6% 40px;color:#fff;text-align:center}
 .hero-label{font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px}
 .hero h1{font-size:clamp(2rem,4vw,2.8rem);font-weight:900;margin-bottom:16px;max-width:820px;margin-left:auto;margin-right:auto}
 .hero p{font-size:1rem;color:rgba(255,255,255,.85);max-width:640px;margin:0 auto 32px;line-height:1.75}
 .hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn-hero-primary{background:var(--orange);color:#fff;font-weight:800;font-size:.95rem;padding:14px 36px;border-radius:50px;display:inline-block;transition:all .2s}
-.btn-hero-primary:hover{background:#f4763e;transform:translateY(-2px)}
+.btn-hero-primary:hover{background:#F43F5E;transform:translateY(-2px)}
 .btn-hero-secondary{background:rgba(255,255,255,.15);color:#fff;font-weight:700;font-size:.95rem;padding:14px 32px;border-radius:50px;display:inline-block;border:1px solid rgba(255,255,255,.3);transition:all .2s}
 .btn-hero-secondary:hover{background:rgba(255,255,255,.25)}
 .hero-stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin:28px 0 8px}
@@ -122,7 +122,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(247,251,252,
 .pclaim:nth-child(even) > *{direction:ltr}
 .pclaim-icon{width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff;margin-bottom:16px}
 .pclaim.health .pclaim-icon{background:linear-gradient(135deg,var(--sage),#6aa37a)}
-.pclaim.motor .pclaim-icon{background:linear-gradient(135deg,var(--orange),#f4763e)}
+.pclaim.motor .pclaim-icon{background:linear-gradient(135deg,var(--orange),#F43F5E)}
 .pclaim.travel .pclaim-icon{background:linear-gradient(135deg,var(--sky),#7cc0e3)}
 .pclaim h3{font-size:1.4rem;font-weight:900;margin-bottom:12px}
 .pclaim p{font-size:.92rem;color:var(--mid);margin-bottom:14px}
