@@ -698,6 +698,21 @@ section{padding:88px 6%}
 }
 .q-btn:hover{background:var(--teal);transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,150,168,.4)}
 
+/* ── QUOTE FORM PILL SELECTOR ── */
+.q-pill-group{width:100%;text-align:left;margin-bottom:.2rem}
+.q-pill-label{font-size:.78rem;font-weight:700;color:var(--teal-dark);margin-bottom:.55rem;letter-spacing:.02em}
+.q-pills{display:flex;flex-wrap:wrap;gap:.55rem}
+.q-pill{
+  padding:11px 18px;border-radius:50px;
+  border:2px solid var(--teal-mid);
+  font-family:inherit;font-size:.85rem;font-weight:600;
+  background:rgba(255,255,255,.85);color:var(--dark);
+  cursor:pointer;transition:all .2s;
+  box-shadow:0 2px 8px rgba(58,181,200,.08);
+}
+.q-pill:hover{border-color:var(--teal-dark);background:#fff}
+.q-pill.active{background:var(--teal-dark);border-color:var(--teal-dark);color:#fff;box-shadow:0 4px 14px rgba(42,150,168,.32)}
+
 /* ── VS STRIP ── */
 .vs-section{background:var(--dark);padding:72px 6%;overflow:hidden;position:relative}
 .vs-section::before{
@@ -1840,16 +1855,19 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
       <!-- ── HEALTH FIELDS ── -->
       <div id="healthFields" class="q-conditional">
+        <div class="q-pill-group">
+          <div class="q-pill-label">₹ Sum Insured</div>
+          <div class="q-pills" role="group" aria-label="Sum Insured">
+            <button type="button" class="q-pill" data-target="quoteSumInsured" data-value="10 Lacs">₹10 Lacs</button>
+            <button type="button" class="q-pill" data-target="quoteSumInsured" data-value="15 Lacs">₹15 Lacs</button>
+            <button type="button" class="q-pill" data-target="quoteSumInsured" data-value="20 Lacs">₹20 Lacs</button>
+            <button type="button" class="q-pill" data-target="quoteSumInsured" data-value="25 Lacs">₹25 Lacs</button>
+            <button type="button" class="q-pill" data-target="quoteSumInsured" data-value="50 Lacs">₹50 Lacs</button>
+            <button type="button" class="q-pill" data-target="quoteSumInsured" data-value="100 Lacs">₹1 Crore</button>
+          </div>
+          <input type="hidden" id="quoteSumInsured" value="">
+        </div>
         <div class="q-fields-row">
-          <select class="q-select" id="quoteSumInsured">
-            <option value=""><i class="fa-solid fa-indian-rupee-sign" style="color:var(--teal-dark)"></i> Sum Insured</option>
-            <option value="10 Lacs">₹10 Lacs</option>
-            <option value="15 Lacs">₹15 Lacs</option>
-            <option value="20 Lacs">₹20 Lacs</option>
-            <option value="25 Lacs">₹25 Lacs</option>
-            <option value="50 Lacs">₹50 Lacs</option>
-            <option value="100 Lacs">₹1 Crore</option>
-          </select>
           <select class="q-select" id="quoteMembers">
             <option value="">👨‍👩‍👧‍👦 Family Members</option>
             <option value="1">1 Member</option>
@@ -1878,16 +1896,19 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
       <!-- ── MOTOR FIELDS ── -->
       <div id="motorFields" class="q-conditional">
+        <div class="q-pill-group">
+          <div class="q-pill-label">📋 Claim Made Last Year?</div>
+          <div class="q-pills" role="group" aria-label="Claim Made Last Year">
+            <button type="button" class="q-pill" data-target="quoteClaimMade" data-value="No">No — No claim made</button>
+            <button type="button" class="q-pill" data-target="quoteClaimMade" data-value="Yes">Yes — Claim was made</button>
+          </div>
+          <input type="hidden" id="quoteClaimMade" value="">
+        </div>
         <div class="q-fields-row">
           <input class="q-input" type="text" id="quoteRegNumber"
             placeholder="🚗 Registration Number (e.g. MH01AB1234)"
             maxlength="12" style="text-transform:uppercase"
             oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,12)">
-          <select class="q-select" id="quoteClaimMade">
-            <option value="">📋 Claim Made Last Year?</option>
-            <option value="No">No — No claim made</option>
-            <option value="Yes">Yes — Claim was made</option>
-          </select>
           <select class="q-select" id="quoteRenewalMonth">
             <option value="">🗓️ Month of Renewal</option>
             <option value="January">January</option>
@@ -1908,16 +1929,19 @@ footer{background:var(--dark);color:rgba(255,255,255,.55);padding:60px 6% 28px}
 
       <!-- ── TRAVEL FIELDS ── -->
       <div id="travelFields" class="q-conditional">
+        <div class="q-pill-group">
+          <div class="q-pill-label">✈️ Travel Destination</div>
+          <div class="q-pills" role="group" aria-label="Travel Destination">
+            <button type="button" class="q-pill" data-target="quoteDestination" data-value="Africa">Africa</button>
+            <button type="button" class="q-pill" data-target="quoteDestination" data-value="Asia">Asia</button>
+            <button type="button" class="q-pill" data-target="quoteDestination" data-value="Australia & NZ">Australia &amp; NZ</button>
+            <button type="button" class="q-pill" data-target="quoteDestination" data-value="Europe">Europe</button>
+            <button type="button" class="q-pill" data-target="quoteDestination" data-value="Middle East">Middle East</button>
+            <button type="button" class="q-pill" data-target="quoteDestination" data-value="US & Canada">US &amp; Canada</button>
+          </div>
+          <input type="hidden" id="quoteDestination" value="">
+        </div>
         <div class="q-fields-row">
-          <select class="q-select" id="quoteDestination">
-            <option value="">✈️ Travel Destination</option>
-            <option value="Africa">Africa</option>
-            <option value="Asia">Asia</option>
-            <option value="Australia & NZ">Australia &amp; NZ</option>
-            <option value="Europe">Europe</option>
-            <option value="Middle East">Middle East</option>
-            <option value="US & Canada">US &amp; Canada</option>
-          </select>
           <input class="q-input-num" type="number" id="quoteTravelDays"
             placeholder="📅 No. of Days" min="1" max="99" maxlength="2"
             oninput="this.value=this.value.slice(0,2)">
@@ -3119,6 +3143,17 @@ async function submitExitForm(e){
   a.click();
   a.remove();
 }
+
+// ── PILL SELECTOR (Sum Insured / Claim Made / Destination) ──
+document.querySelectorAll('.q-pill').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    const group = this.closest('.q-pills');
+    group.querySelectorAll('.q-pill').forEach(function(b){ b.classList.remove('active'); });
+    this.classList.add('active');
+    const hidden = document.getElementById(this.dataset.target);
+    if(hidden) hidden.value = this.dataset.value;
+  });
+});
 
 // ── PRODUCT FIELDS SHOW/HIDE ──
 function handleQuoteTypeChange(){
