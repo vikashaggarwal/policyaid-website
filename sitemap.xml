@@ -103,6 +103,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://policyaid.co.in/claim-ratios/</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://policyaid.co.in/claim-ratios/health-insurance-claim-ratio.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://policyaid.co.in/claim-ratios/motor-insurance-claim-ratio.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://policyaid.co.in/claim-ratios/travel-insurance-claim-ratio.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://policyaid.co.in/blog/how-to-reduce-health-insurance-premium-india.html</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
