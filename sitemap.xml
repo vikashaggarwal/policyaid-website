@@ -121,6 +121,12 @@
     <priority>0.75</priority>
   </url>
   <url>
+    <loc>https://policyaid.co.in/plans/bike-insurance-by-model.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
     <loc>https://policyaid.co.in/claim-ratios/</loc>
     <lastmod>2026-09-28</lastmod>
     <changefreq>yearly</changefreq>
